@@ -4,6 +4,7 @@ from fastapi import FastAPI,Query,Path,Body,Header
 from enum import Enum
 from typing import Dict
 from pydantic import BaseModel,Field,EmailStr
+import json
 
 
 app =  FastAPI()
@@ -13,32 +14,11 @@ app3 = FastAPI()
 app4 = FastAPI()
 
 
-
-#若是要使用先前建立過的class，要先from pydantic import BaseModel
-#class宣告時也要使用 class 名稱(BaseModel)才能用post、put...建立class
-
-
-class Item(BaseModel):
-    name:str = "Leo"
-    descri:Optional[str] = None
-    price :float =30000
-    tax:int=0
-
-class test(BaseModel):
-    subject:str
-    score:float
-
-
-    
-
-test2:test ={"science",55}
-    
 #進入網頁第一個程式
+
 @app.get("/")
 async def root():
     return {"message": "Hello World!!!"}
-
-
 
 
 # 指定 api 路徑 @app.函數(路徑)
@@ -48,13 +28,28 @@ async def root():
 def read_user(user_id: int, q: Optional[str] = None):
     return {"user_id": user_id, "q": q}
 
+#Diction的應用
+#這邊雖然前面key的值是int 但輸入的時候還是要有"
+
+@app.put("/Dict")
+def Dictionary(Type:Dict[int,int]):
+    return {str(Type[11])+" "+str(Type[40813])}
 
 
-
-
-#這邊使用put的原因為：get函數不能擁有程式主體
+#這邊使用put的原因為：get函數不能使用request body進行傳輸
 @app.put("/L_Sum")
-def List_Sum(L:List[int]=[], sum:int=0):
+def List_Sum(L:List[int]=[1,2,3], sum:int=0):
+    for item in L:
+        sum += item
+    result = "L_sum"+" = "+str(sum)
+    return result
+
+#解決方法，將List做為查詢函數傳遞
+#L_Sum_Query?L=1&L=2&L=3&sum=1516利用網址進行取用
+#有些type是沒辦法用Query的方法 用get進行取用ㄉ。 example:dict的型態，class的型態
+
+@app.get("/L_Sum_Query")
+def List_Sum(L:List[int]=Query(default=[1,2,3]), sum:int=0):
     for item in L:
         sum += item
     result = "L_sum"+" = "+str(sum)
@@ -62,17 +57,9 @@ def List_Sum(L:List[int]=[], sum:int=0):
 
 
 
-#Diction的應用
-
-@app.put("/Dict")
-def Dictionary(Type:Dict[int,int]):
-    return {str(Type[11])+" "+str(Type[40813])}
-
-
-
 #Enum的應用
 
-class Model(str,Enum):
+class Model(str,Enum):  
     alexnet = "alexnet"
     CN = "CNN"
     RNN = "RNN"
@@ -87,9 +74,6 @@ def ENUM(hey:Model):
         return {"R_Model ": hey}
     
 
-
-
-
 #可以藉由API的函數來取用已經宣告過的變數
     
 fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
@@ -100,24 +84,74 @@ async def read_item(skip: int = 0, limit: int = 10):
 
 
 
+#若是要使用先前建立過的class，要先from pydantic import BaseModel
+#class宣告時也要使用 class 名稱(BaseModel)才能用post、put...建立class
+
+
+
+class Item(BaseModel):
+    name:str = "Leo"
+    descri:Optional[str] = None
+    price :float = 30000
+    tax:int=0
+
+class test(BaseModel):
+    subject:str
+    score:float
+
+
+test2:test ={"science",55}
+
 
 #兩個藉由API創建 Class item 的應用
 
-@app.post("/Create Item")
+
+##注意這邊有問題的是，dict類型不能放在一個list裡面進行輸出
+@app.post("/Create_Item")
 async def Create(item:Item):
+    item_dict = item.dict()
     if item.tax:
-        item_dict = item.dict()
         money = item.price*0.9
         item_dict.update({"money":money})
+        #my_json = tuple(item_dict)
+        
     if(item.price<2000) :
         return ["生活費 = " + str(item.price) + " 小於2000 -> 生活拮据",item_dict]
     if (item.price>20000):
         return {"生活費 = " + str(item.price) +  " 大於20000 -> 生活富足",item_dict}
     else:
-        return {"生活費 = " + str(item.price),item_dict}
+        #return {"生活費 = " + str(item.price),item_dict}
+        return item_dict
+        '''      
+
+    if item.tax:
+        if(item.price<2000) :
+            return ["生活費 = " + str(item.price) + " 小於2000 -> 生活拮据",my_json]
+        if (item.price>20000):
+            return {"生活費 = " + str(item.price) +  " 大於20000 -> 生活富足",my_json}
+        else:
+            return {"生活費 = " + str(item.price),my_json}
+        
+    else:
+        if(item.price<2000) :
+            return ["生活費 = " + str(item.price) + " 小於2000 -> 生活拮据"]
+        if (item.price>20000):
+            return {"生活費 = " + str(item.price) +  " 大於20000 -> 生活富足"}
+        else:
+            return {"生活費 = " + str(item.price)}
+            '''
+
+@app.post("/item_test/")
+async def create_item(item: Item):
+    item_dict = item.dict()
+    if item.tax:
+        price_with_tax = item.price + item.tax
+        item_dict.update({"price_with_tax": price_with_tax})
+    return item_dict
+
 
 @app.post("/Midterm")
-async def Midterm(record:test):
+async def Midterm(record:test ):
     if (record.score >= 60) :
         return {"及格了，分數是 " :  record.score}
     else:
@@ -126,26 +160,23 @@ async def Midterm(record:test):
 
 
 #利用Query設定參數限制
-@app.get("/limit the length")
-async def limit_length(input:str=Query(default=None,min_length=3,max_length=8)):
+@app.get("/limit_the_length")
+async def limit_length(input:str=Query(default=None,min_length=3,max_length=8,alias="My input string",description="Hi")):
     result = "input = "+input
     return result
 
-
-
-
-
-
+@app.get("/limit_the_length_test")
+async def limit_length(input:str=None):
+    
+    input += "4564"
+    result = "input = "+input
+    return result
 
 #-----------------------------分界線(Boundary) Between app and app1----------------------------------#
 
 @app1.get("/")
 def root():
     return "Hello World!"
-
-
-
-
 
 #查詢函數,可以逐步增加項數
 @app1.get("/list")
@@ -158,7 +189,7 @@ async def L(q:list = Query(default = None,
 
 
 
-#可以逐步增加項的list ，並做運算，這邊即使有Body還是可以使用get，因為使用Query,Path等函數，不是直接使用類別，因此不會有錯。
+#使用Query,Path等函數，不是直接使用類別，因此不會有錯。
 #Alias 更改的是左半部參數名稱，Description 是右半部的敘述
 @app1.get("/list1")
 async def L(q:list = Query(default = None,
@@ -183,9 +214,13 @@ async def L2(q:List[int]=[]):
 
 
 #Path使用於此參數有出現在路徑上，若沒有->報錯 Unprocessable Entity
+#路徑參數不能給別名，會找不到value
+#Path函數也可以增加限制  gt(>),ge(>=),lt(<).le(<=) ，字串則可以使用min_length以及max_length
+#不使用Query的原因是：對於路徑參數是無法使用Query的
+
 @app1.get("/items/{item_id}")
 async def read_items(
-    item_id: int = Path(title="The ID of the item to get"),
+    item_id: int = Path(title="The ID =",alias="item_id",description="this is id",le=500),
     q: Union[str, None] = Query(default=None, alias="item-query")
 ):
     results = {"item_id": item_id}
@@ -197,7 +232,7 @@ async def read_items(
 
 
 
-#若不想要使用Query，設定沒有默認值的q，可以在最前面加上一個*
+#若不想要使用Query，設定沒有默認值的查詢函數q，可以在最前面加上一個*
 #此函數跟上面那段一模一樣
 '''
 @app.get("/items/{item_id}")
@@ -207,9 +242,6 @@ async def read_items(*, item_id: int = Path(title="The ID of the item to get"), 
         results.update({"q": q})
     return results
 '''
-
-
-
 
 #查詢函數的限制，數字有四種可以用 gt(>),ge(>=),lt(<).le(<=) ，字串則可以使用min_length以及max_length
 
@@ -364,7 +396,7 @@ async def read_items() -> Any:
 
 
 ##Extra Example
-#在下面這個例子當中，User裡面能輸出的值並不包含password，且只有Full_name 為int 時才可以成功輸出
+#在下面這個例子當中，User裡面能輸出的值並不包含password
 class User_in(BaseModel):
     username:str 
     password:str
@@ -476,14 +508,14 @@ async def status(item:int):
 #-----------------------------分界線(Boundary) Between app3 and app4----------------------------------#
 from fastapi import Form,File,UploadFile
 
-@app4.get("/")
+@app.get("/")
 def root():
     return "Hi,This is the root page!"
 
 
 ##如何導入表單
 
-@app4.post("/login")
+@app.post("/login")
 async def login(username : str = Form() , password : str = Form()):
     return {"username":username}
 
