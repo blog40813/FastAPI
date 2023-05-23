@@ -1,10 +1,13 @@
 from typing import Optional
 from typing import List,Union,Any
-from fastapi import FastAPI,Query,Path,Body,Header
+from fastapi import FastAPI,Query,Path,Body,Header,HTTPException,Depends
 from enum import Enum
 from typing import Dict
 from pydantic import BaseModel,Field,EmailStr
+from fastapi.security import OAuth2PasswordBearer,OAuth2PasswordRequestForm
 import json
+from jose import JWTError, jwt
+from passlib.context import CryptContext
 
 
 app =  FastAPI()
@@ -122,24 +125,7 @@ async def Create(item:Item):
     else:
         #return {"生活費 = " + str(item.price),item_dict}
         return item_dict
-        '''      
 
-    if item.tax:
-        if(item.price<2000) :
-            return ["生活費 = " + str(item.price) + " 小於2000 -> 生活拮据",my_json]
-        if (item.price>20000):
-            return {"生活費 = " + str(item.price) +  " 大於20000 -> 生活富足",my_json}
-        else:
-            return {"生活費 = " + str(item.price),my_json}
-        
-    else:
-        if(item.price<2000) :
-            return ["生活費 = " + str(item.price) + " 小於2000 -> 生活拮据"]
-        if (item.price>20000):
-            return {"生活費 = " + str(item.price) +  " 大於20000 -> 生活富足"}
-        else:
-            return {"生活費 = " + str(item.price)}
-            '''
 
 @app.post("/item_test/")
 async def create_item(item: Item):
@@ -159,34 +145,18 @@ async def Midterm(record:test ):
     
 
 
-#利用Query設定參數限制
+#利用Query設定參數限制 ，查詢函數的限制，數字有四種可以用 gt(>),ge(>=),lt(<).le(<=) ，字串則可以使用min_length以及max_length
 @app.get("/limit_the_length")
 async def limit_length(input:str=Query(default=None,min_length=3,max_length=8,alias="My input string",description="Hi")):
     result = "input = "+input
     return result
 
-@app.get("/limit_the_length_test")
-async def limit_length(input:str=None):
-    
-    input += "4564"
-    result = "input = "+input
-    return result
 
 #-----------------------------分界線(Boundary) Between app and app1----------------------------------#
 
 @app1.get("/")
 def root():
     return "Hello World!"
-
-#查詢函數,可以逐步增加項數
-@app1.get("/list")
-async def L(q:list = Query(default = None,
-                           alias= "Queue is me",
-                           description= "This is a Queue")):
-    queue_item = {"q":q}
-    return queue_item
-
-
 
 
 #使用Query,Path等函數，不是直接使用類別，因此不會有錯。
@@ -199,18 +169,6 @@ async def L(q:list = Query(default = None,
         if(items =="Leo"):
             re_value = items
     return re_value
-
-
-
-
-
-#普通的List 好像無法直接用get函數，因此這邊使用put
-@app1.put("/list2")
-async def L2(q:List[int]=[]):
-    return {"q ":q}
-
-
-
 
 
 #Path使用於此參數有出現在路徑上，若沒有->報錯 Unprocessable Entity
@@ -230,8 +188,6 @@ async def read_items(
 
 
 
-
-
 #若不想要使用Query，設定沒有默認值的查詢函數q，可以在最前面加上一個*
 #此函數跟上面那段一模一樣
 '''
@@ -242,19 +198,6 @@ async def read_items(*, item_id: int = Path(title="The ID of the item to get"), 
         results.update({"q": q})
     return results
 '''
-
-#查詢函數的限制，數字有四種可以用 gt(>),ge(>=),lt(<).le(<=) ，字串則可以使用min_length以及max_length
-
-@app1.get("/int_limit")
-async def Limit(
-    *,num:int = Query(gt = 0,le=50000),name:str
-):
-    result = {"Money":str(num)}
-    if(name) :result.update({"名字":name})
-    return result
-    
-
-
 
 #-----------------------------分界線(Boundary) Between app1 and app2----------------------------------#
 @app2.get("/")
@@ -508,17 +451,304 @@ async def status(item:int):
 #-----------------------------分界線(Boundary) Between app3 and app4----------------------------------#
 from fastapi import Form,File,UploadFile
 
-@app.get("/")
+@app4.get("/")
 def root():
     return "Hi,This is the root page!"
 
 
 ##如何導入表單
 
-@app.post("/login")
+
+
+#如何上傳文件，下列是兩種可以上傳文件的方法
+#file會作為表單數據上傳
+
+
+#此方法會將檔案已bytes的形式讀取、接收
+#會把所有內容放在內存，適合小型文件
+@app4.post("/login")
 async def login(username : str = Form() , password : str = Form()):
     return {"username":username}
 
+
+@app4.post("/files/")
+async def create_file(file: bytes = File()):
+    return {"file_size": len(file)}
+
+#uploadfile比起file的優勢
+#當儲存在內存空間(ROM，cache)的文件超出上限的時候，會將檔案放在硬碟裡面
+#因此更適合處理圖片、影片、二進制文件，也不會佔用所有內存空間
+#file like接口?可以open read write
+
+#這邊read 要用await是因為我們在def的時候是使用async
+#若不是async 可以直接用file.read()
+#若是要使用readline 就用file.file.readline()
+
+@app4.post("/uploadfile/")
+async def create_upload_file(file: UploadFile):
+    # inp = await file.read()
+    input = file.file.readline()
+    return {"filename": file.filename,"input":input}
+
+
+#方法可以混用，目前還沒研究為甚麼要這樣，但可以加上description
+@app4.post("/uploadfile2/")
+async def create_upload_file(
+    file: UploadFile = File(description="A file read as UploadFile"),
+):
+    return {"filename": file.filename}
+
+
+@app4.post("/mul_files/")
+async def create_files(files: list[bytes] = File()):
+    return {"file_sizes": [len(file) for file in files]}
+
+
+@app4.post("/mul_uploadfiles/")
+async def create_upload_files(files: list[UploadFile]):
+    return {"filenames": [file.filename for file in files]}
+
+
+'''2023/05/19--version'''
+
+
+
+#HTTP exceptrion handling
+
+chk_list = ["my","favorite","fruit","is","the","banana","and","the","apple","?"]
+
+@app4.get("/exception")
+async def Exception(check:int):
+    if check > chk_list.count:
+        raise HTTPException(status_code=404,detail="pool you!")
+    return {"item = ":chk_list[check]}
+
+
+
+
+####################################################################################
+####################################################################################
+####################################################################################
+
+
+
+#密碼相關
+#這邊這個oauth2使得後端或是API可以獨立於對用戶進行身分驗證的服務器，URL是相對路徑(接收URL作為參數)
+oauth2_scheme1 = OAuth2PasswordBearer(tokenUrl="token1")
+#以這個例子來說，要前端要取用password這個功能之前要先進行身分驗證，而這個驗證的路徑就會是上面的tokenUrl(相對路徑，並為Post請求，也就是會引用/token)
+#而oauth2會接收一個str類型的token(身分驗證通過後會給的令牌)，方便下次帶這個token就可以通過身分驗證，其有一定的過期時間，過期後要重新驗證。
+
+@app4.get("/password")
+async def read_items(token: str = Depends(oauth2_scheme1)):
+    return {"token1": token}
+
+#獲取當前用戶
+
+class User(BaseModel):
+    username:str
+    email:Union[str,None] = None
+    full_name :Union[str,None] = None
+    disabled :Union[bool,None] = None
+
+def fake_decode_token(token):
+    return User(
+        username=token + "fakedecoded", email="john@example.com", full_name="John Doe"
+    )
+
+
+#DATA BASE FOR USER
+fake_users_db1 = {
+    "johndoe": {
+        "username": "johndoe",
+        "full_name": "John Doe",
+        "email": "johndoe@example.com",
+        "hashed_password": "fakehashedsecret",
+        "disabled": False,
+    },
+    "alice": {
+        "username": "alice",
+        "full_name": "Alice Wonderson",
+        "email": "alice@example.com",
+        "hashed_password": "fakehashedsecret2",
+        "disabled": True,
+    },
+}
+
+def fake_hash_password(password: str):
+    return "fakehashed" + password
+
+
+class UserInDB(User):
+    hashed_password: str
+    
+def get_user(db, username: str):
+    if username in db:
+        user_dict = db[username]
+        return UserInDB(**user_dict)
+    
+#原始代碼沒有辦法產生Inactive user的訊息，因為在fake_decoder_token中，disable = None
+'''
+async def get_current_user(token: str = Depends(oauth2_scheme)):
+    user = fake_decode_token(token)
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authentication credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    return user
+'''
+async def get_current_user(token: str = Depends(oauth2_scheme1)):
+    user_dict = fake_users_db1[token]
+    user = UserInDB(**user_dict)
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authentication credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    return user
+
+async def get_current_active_user(current_user: User = Depends(get_current_user)):
+    if current_user.disabled:
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user
+
+
+@app4.post("/token1")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    user_dict = fake_users_db1.get(form_data.username)
+    if not user_dict:
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
+    user = UserInDB(**user_dict)
+    hashed_password = fake_hash_password(form_data.password)
+    if not hashed_password == user.hashed_password:
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
+
+    return {"access_token": user.username, "token_type": "bearer"}
+
+
+@app4.get("/users/me1")
+async def read_users_me(current_user: User = Depends(get_current_active_user)):
+    return current_user   
+
+####################################################################################
+####################################################################################
+####################################################################################
+
+#利用openssl rand -hex 32 來生成我們的 secret key
+#01db80dacb3ba76233a60cf626346f4921205a29f4f7a6bccd05826e3f6f440e
+#Algorithm = 加密的算法
+#最下面的是設置令牌過期的時間
+SECRET_KEY = "01db80dacb3ba76233a60cf626346f4921205a29f4f7a6bccd05826e3f6f440e"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 60
+
+fake_users_db = {
+    "johndoe": {
+        "username": "johndoe",
+        "full_name": "John Doe",
+        "email": "johndoe@example.com",
+        "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW",
+        "disabled": False,
+    }
+}
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class TokenData(BaseModel):
+    username: Union[str, None] = None
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
+
+def get_password_hash(password):
+    return pwd_context.hash(password)
+
+
+def get_user(db, username: str):
+    if username in db:
+        user_dict = db[username]
+        return UserInDB(**user_dict)
+
+
+def authenticate_user(fake_db, username: str, password: str):
+    user = get_user(fake_db, username)
+    if not user:
+        return False
+    if not verify_password(password, user.hashed_password):
+        return False
+    return user
+
+
+def create_access_token(data: dict, expires_delta: Union[timedelta, None] = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.utcnow() + expires_delta
+    else:
+        expire = datetime.utcnow() + timedelta(minutes=15)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+
+async def get_current_user(token: str = Depends(oauth2_scheme)):
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username: str = payload.get("sub")
+        if username is None:
+            raise credentials_exception
+        token_data = TokenData(username=username)
+    except JWTError:
+        raise credentials_exception
+    user = get_user(fake_users_db, username=token_data.username)
+    if user is None:
+        raise credentials_exception
+    return user
+
+
+async def get_current_active_user(current_user: User = Depends(get_current_user)):
+    if current_user.disabled:
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user
+
+
+@app4.post("/token", response_model=Token)
+async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
+    user = authenticate_user(fake_users_db, form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(
+        data={"sub": user.username}, expires_delta=access_token_expires
+    )
+    return {"access_token": access_token, "token_type": "bearer"}
+
+
+@app4.get("/users/me/", response_model=User)
+async def read_users_me(current_user: User = Depends(get_current_active_user)):
+    return current_user
+
+
+@app4.get("/users/me/items/")
+async def read_own_items(current_user: User = Depends(get_current_active_user)):
+    return [{"item_id": "Foo", "owner": current_user.username}]
+
+'''2023/05/23--version (unfinished)'''
 
 
 ##可以使用額外數據類型

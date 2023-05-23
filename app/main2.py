@@ -23,7 +23,7 @@ def hello():
     return "Hello! This is my fastapi!"
 
 # 指定 api 路徑 @app.函數(路徑)
-#可以藉由Optional或是設置初值為None讓變數成為可選參數
+#可以藉由設置初值為None讓變數成為可選參數
 
 
 @app.get("/users/{user_id}") 
@@ -475,6 +475,7 @@ async def create_file(file: bytes = File()):
 
 @app.post("/uploadfile/")
 async def create_upload_file(file: UploadFile):
+    # inp = await file.read()
     input = file.file.readline()
     return {"filename": file.filename,"input":input}
 
