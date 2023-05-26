@@ -1,6 +1,6 @@
 from typing import Optional
 from typing import List,Union,Any
-from fastapi import FastAPI,Query,Path,Body,Header,HTTPException,Depends
+from fastapi import FastAPI,Query,Path,Body,Header,HTTPException,Depends,status
 from enum import Enum
 from typing import Dict
 from pydantic import BaseModel,Field,EmailStr
@@ -8,20 +8,81 @@ from fastapi.security import OAuth2PasswordBearer,OAuth2PasswordRequestForm
 import json
 from jose import JWTError, jwt
 from passlib.context import CryptContext
+from fastapi.openapi.docs import get_swagger_ui_html,get_swagger_ui_oauth2_redirect_html
+from fastapi.openapi.utils import get_openapi
+from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse,HTMLResponse,JSONResponse
+import json
 
-
+#app = FastAPI(docs_url=None, redoc_url=None)
 app =  FastAPI()
 app1 = FastAPI()
 app2 = FastAPI()
 app3 = FastAPI()
 app4 = FastAPI()
 
+origins = [
+    "http://140.96.83.18.tiangolo.com",
+    "https://140.96.83.18.tiangolo.com",
+    "http://140.96.83.18",
+    "http://140.96.83.18:8000",
+    "http://140.96.83.18:8000/docs",
+    "http://localhost",
+    "http://localhost:8000",
+    "http://localhost:3000",
+    "http://172.20.149.54:56795"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/openapi.json")
+def get_open_api_endpoint():
+    return get_openapi(title="Your API Title", version="1.0.0", routes=app.routes)
+
+@app.get("/", response_class=HTMLResponse)
+def home():
+    return """
+    <html>
+    <head>
+        <title>FastAPI Swagger UI</title>
+        <link rel="stylesheet" type="text/css" href="/static/swagger-ui.css">
+        <script src="/static/swagger-ui-bundle.js"></script>
+        <script src="/static/swagger-ui-standalone-preset.js"></script>
+    </head>
+    <body>
+        <div id="swagger-ui"></div>
+        <script>
+            const ui = SwaggerUIBundle({
+                url: "/openapi.json",
+                dom_id: "#swagger-ui",
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                layout: "BaseLayout"
+            })
+        </script>
+    </body>
+    </html>
+    """
+
+app.mount("/static", StaticFiles(directory="D:\exercise\static"), name="static")
+###########  External visit for swagger API success
 
 #進入網頁第一個程式
 
 @app.get("/")
 async def root():
     return {"message": "Hello World!!!"}
+
+
 
 
 # 指定 api 路徑 @app.函數(路徑)
@@ -442,7 +503,7 @@ class UserINDB(UserBase):
  
  ##response status code ，但不知道為何，輸入值還是會return 只是status code是 404 not found，然後測試發現從網址access的方法 只有get能用?，或是有其他方法
 @app3.get("/test_status",status_code=404)
-async def status(item:int):
+async def statuss(item:int):
     return item
 
 
@@ -636,13 +697,15 @@ async def read_users_me(current_user: User = Depends(get_current_active_user)):
 ####################################################################################
 ####################################################################################
 
+
+
 #利用openssl rand -hex 32 來生成我們的 secret key
 #01db80dacb3ba76233a60cf626346f4921205a29f4f7a6bccd05826e3f6f440e
 #Algorithm = 加密的算法
 #最下面的是設置令牌過期的時間
-SECRET_KEY = "01db80dacb3ba76233a60cf626346f4921205a29f4f7a6bccd05826e3f6f440e"
+SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 fake_users_db = {
     "johndoe": {
@@ -654,6 +717,7 @@ fake_users_db = {
     }
 }
 
+
 class Token(BaseModel):
     access_token: str
     token_type: str
@@ -661,12 +725,17 @@ class Token(BaseModel):
 class TokenData(BaseModel):
     username: Union[str, None] = None
 
+
+#使用bcrypt方法進行hash，後面那段指自動檢測和更新使用已棄用的密碼方案(一些被標記為不建議使用的功能會在需要時自動停用)
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
+
+#檢查明文密碼是否Hash過的密碼相匹配
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
+#將密碼進行hash
 def get_password_hash(password):
     return pwd_context.hash(password)
 
@@ -675,8 +744,9 @@ def get_user(db, username: str):
     if username in db:
         user_dict = db[username]
         return UserInDB(**user_dict)
-
-
+    
+    
+##fake_db裡面所存的內容是一組資訊，但密碼是hashed_password
 def authenticate_user(fake_db, username: str, password: str):
     user = get_user(fake_db, username)
     if not user:
@@ -686,6 +756,11 @@ def authenticate_user(fake_db, username: str, password: str):
     return user
 
 
+#datetime.uctnow() = 獲取現在的UTC日期與時間
+#data是一個dictionary，用於決定哪些資料放進access token裡面
+#expire_delta ，決定access token的過期時間
+#過期時間加進to_encode裡面
+#最後將to_encode的資料用指定的演算法以及金鑰產生一個編碼過後的JWT(Json Web Token)
 def create_access_token(data: dict, expires_delta: Union[timedelta, None] = None):
     to_encode = data.copy()
     if expires_delta:
@@ -696,6 +771,11 @@ def create_access_token(data: dict, expires_delta: Union[timedelta, None] = None
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
+#先寫一個exception，驗證失敗時用
+#payload裡面存取token的資料解碼過後的資料
+#將username從payload裡面取出，並宣告一個新的token_data 將username放進去
+#裡用getuser將fake_db裡面的user拿出來
+#return User
 
 async def get_current_user(token: str = Depends(oauth2_scheme)):
     credentials_exception = HTTPException(
@@ -716,12 +796,15 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         raise credentials_exception
     return user
 
+#看user有沒有disabled
 
 async def get_current_active_user(current_user: User = Depends(get_current_user)):
     if current_user.disabled:
         raise HTTPException(status_code=400, detail="Inactive user")
     return current_user
 
+
+#authenticate_user是從fake_db裡面提取user，並利用crtpy 的verify function 檢查明文密碼有沒有跟hashed code 一致
 
 @app4.post("/token", response_model=Token)
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
@@ -749,6 +832,73 @@ async def read_own_items(current_user: User = Depends(get_current_active_user)):
     return [{"item_id": "Foo", "owner": current_user.username}]
 
 '''2023/05/23--version (unfinished)'''
+'''2023/05/26 09:23 (finished translation)'''
+
+
+
+'''
+def custom_openapi():
+    if app.openapi_schema:
+        return app.openapi_schema
+    openapi_schema = get_openapi(
+        title="Custom FastAPI",
+        version="2.0",
+        description="This is a custom OpenAPI schema",
+        routes=app.routes,
+    )
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
+
+app.openapi = custom_openapi
+
+app.mount("/static", StaticFiles(directory="D:\exercise\static"), name="static")
+
+@app.get(app.swagger_ui_oauth2_redirect_url, include_in_schema=False)
+async def swagger_ui_redirect():
+    return get_swagger_ui_oauth2_redirect_html()
+
+@app.get("/", include_in_schema=False)
+async def redirect_to_docs():
+    return RedirectResponse(url="/docs")
+
+@app.get("/docs", include_in_schema=False)
+async def swagger_ui_html():
+    return get_swagger_ui_html(openapi_url="/openapi.json", title="API Documentation")
+
+#@app.get("/docs", include_in_schema=False)
+#async def get_docs():
+#   return RedirectResponse(url="/static/docs/index.html")
+
+
+@app.get("/docs", include_in_schema=False)
+async def custom_swagger_ui_html():
+    return get_swagger_ui_html(
+        openapi_url=app.openapi_url,
+        title=app.title + " - Swagger UI",
+        oauth2_redirect_url=app.swagger_ui_oauth2_redirect_url,
+        swagger_js_url="/static/swagger-ui-bundle.js",
+        swagger_css_url="/static/swagger-ui.css",
+    )
+
+@app.get("/docs", include_in_schema=False)
+async def get_docs():
+    with open("static/docs/index.html", "r") as f:
+        return HTMLResponse(f.read())
+
+
+@app.get(app.swagger_ui_oauth2_redirect_url)
+async def swagger_ui_redirect():
+    return get_swagger_ui_oauth2_redirect_html()
+
+app.openapi_url = "http://140.96.83.18:8000/docs"
+
+
+'''
+
+#2023/05/26 testing for external visit to the swagger UI (fail)
+
+
+
 
 
 ##可以使用額外數據類型
@@ -773,9 +923,16 @@ def Extra_Data_Type(
         "start_process" : start_process,
         "duration" : duration
     }
-    
 
 '''
+
+
+
+
+
+
+
+
 ##Cookie使用
 from fastapi import Cookie,Response
 '''
