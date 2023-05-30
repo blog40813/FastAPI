@@ -22,6 +22,39 @@ app2 = FastAPI()
 app3 = FastAPI()
 app4 = FastAPI()
 
+
+@app4.get("/", response_class=HTMLResponse)
+def home():
+    return """
+    <html>
+    <head>
+        <title>FastAPI Swagger UI</title>
+        <link rel="stylesheet" type="text/css" href="/sta/swagger-ui.css">
+        <script src="/sta/swagger-ui-bundle.js"></script>
+        <script src="/sta/swagger-ui-standalone-preset.js"></script>
+    </head>
+    <body>
+        <div id="swagger-ui"></div>
+        <script>
+            const ui = SwaggerUIBundle({
+                url: "/openapi.json",
+                dom_id: "#swagger-ui",
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                layout: "BaseLayout"
+            })
+        </script>
+    </body>
+    </html>
+    """
+    
+app4.mount("/sta", StaticFiles(directory="D:\exercise\sta"), name="sta")
+
+
+
+
 origins = [
     "http://140.96.83.18.tiangolo.com",
     "https://140.96.83.18.tiangolo.com",
@@ -75,6 +108,7 @@ def home():
 
 app.mount("/static", StaticFiles(directory="D:\exercise\static"), name="static")
 ###########  External visit for swagger API success
+
 
 #進入網頁第一個程式
 
@@ -833,6 +867,11 @@ async def read_own_items(current_user: User = Depends(get_current_active_user)):
 
 '''2023/05/23--version (unfinished)'''
 '''2023/05/26 09:23 (finished translation)'''
+
+
+
+
+
 
 
 
