@@ -10,17 +10,21 @@ from datetime import timedelta,datetime
 from routers.user import user
 from routers.init_web import web
 from routers.item import items
+import logger
 
 #把items下寫的功能都import進來，可以執行
 #但路徑不能為空
 
 
+import sys
+sys.path.append("D:\Fastapi\exercise")
 
 #在下面的code裡面，tags就是大標題，所有從這邊include進來的函數最上面會有大標作區段
 app = FastAPI()
-
+sta_path = "D:\Fastapi\exercise\sta"
 #目前設置http credential的方法只看到可以使用在有app裡面
 
+mylog = logger.log("Main Function")
 
 
 '''-------------------------------------------'''
@@ -30,21 +34,29 @@ from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 
 security = HTTPBasic()
-record :datetime
 
-async def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+##進入網頁之前需要驗證的code
+async def get_current_username(*,credentials: HTTPBasicCredentials = Depends(security)):
     correct_username = secrets.compare_digest(credentials.username, "user")
     correct_password = secrets.compare_digest(credentials.password, "password")
+
     if not (credentials.username and credentials.password):
+        mylog.debug("Incorrect email or password")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect email or password",
             headers={"WWW-Authenticate": "Basic"},
         )
+        
+    mylog.info("------------get_current_username function-----------")
+    mylog.debug("input username:"+credentials.username)
+    mylog.debug("input password:"+credentials.password)
+    mylog.debug("output(credential.username):"+credentials.username+"\n")
     
     return credentials.username
     
-
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url = None)
 from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.openapi.utils import get_openapi
@@ -85,7 +97,10 @@ async def authorize_request(request, call_next):
 '''
 
 @app.get("/do",tags=["Main"])
-def root():
+async def root():
+    
+    mylog.info("--------------do function-----------")
+    mylog.debug("output = Hello, Welcome to my FastAPI\n")
     return "Hello, Welcome to my FastAPI"
 
 app.include_router(items,tags=["Items"])
@@ -96,7 +111,7 @@ app.include_router(user,tags=["User"])
 
 # 将静态文件夹路径指向 Swagger UI 的文件夹路径
 #put the needed file to sta (index.jsx/swagger-ui.css/swagger-ui-bundle.js/swagger-ui-standalone-preset.js)
-app.mount("/sta", StaticFiles(directory="D:\exercise\sta"), name="sta")
+app.mount("/sta", StaticFiles(directory=sta_path), name="sta")
 
 
 "---------------------------2023/05/30 version import function from other .py file ------------------------------"
