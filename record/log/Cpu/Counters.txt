@@ -1,0 +1,9 @@
+\Processor Information(*)\% Processor Utility 
+\Processor Information(*)\% Processor Performance 
+\Processor(*)\% Processor Time 
+\LogicalDisk(*)\% Disk Time 
+\LogicalDisk(*)\% Free Space 
+\Memory\Available Bytes 
+\Memory\Available MBytes 
+\Memory\Cache Bytes 
+\Memory\Committed Bytes 

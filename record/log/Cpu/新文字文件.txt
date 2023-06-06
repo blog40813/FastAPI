@@ -1,0 +1,3 @@
+logman create counter 20230606 -cf D:\Fastapi\exercise\record\log\Cpu\Counters.txt -o D:\Fastapi\exercise\record\log\Cpu\20230606.log -si 60 -sc 1440
+
+typeperf -cf Counters.txt -sc 1440 -si 60 -f TSV -o 0606log.log
