@@ -1,0 +1,102 @@
+=========================2023-06-09 15:16:58=========================
+Device: C:\
+Mountpoint: C:\
+Total: 999961915392 bytes
+Used: 110080811008 bytes
+Free: 889881104384 bytes
+Percent: 11.0%
+
+Disk: PhysicalDrive0
+Usage Time: 127 ms
+===================================
+
+Device: D:\
+Mountpoint: D:\
+Total: 2000512086016 bytes
+Used: 3642396672 bytes
+Free: 1996869689344 bytes
+Percent: 0.2%
+
+Disk: PhysicalDrive1
+Usage Time: 2394 ms
+===================================
+
+Device: F:\
+Mountpoint: F:\
+Total: 2000270913536 bytes
+Used: 169897984 bytes
+Free: 2000101015552 bytes
+Percent: 0.0%
+
+Disk: PhysicalDrive2
+Usage Time: 0 ms
+===================================
+
+=========================2023-06-09 15:17:03=========================
+Device: C:\
+Mountpoint: C:\
+Total: 999961915392 bytes
+Used: 110080876544 bytes
+Free: 889881038848 bytes
+Percent: 11.0%
+
+Disk: PhysicalDrive0
+Usage Time: 127 ms
+===================================
+
+Device: D:\
+Mountpoint: D:\
+Total: 2000512086016 bytes
+Used: 3642400768 bytes
+Free: 1996869685248 bytes
+Percent: 0.2%
+
+Disk: PhysicalDrive1
+Usage Time: 2394 ms
+===================================
+
+Device: F:\
+Mountpoint: F:\
+Total: 2000270913536 bytes
+Used: 169897984 bytes
+Free: 2000101015552 bytes
+Percent: 0.0%
+
+Disk: PhysicalDrive2
+Usage Time: 0 ms
+===================================
+
+=========================2023-06-09 15:17:08=========================
+Device: C:\
+Mountpoint: C:\
+Total: 999961915392 bytes
+Used: 110080876544 bytes
+Free: 889881038848 bytes
+Percent: 11.0%
+
+Disk: PhysicalDrive0
+Usage Time: 127 ms
+===================================
+
+Device: D:\
+Mountpoint: D:\
+Total: 2000512086016 bytes
+Used: 3642400768 bytes
+Free: 1996869685248 bytes
+Percent: 0.2%
+
+Disk: PhysicalDrive1
+Usage Time: 2394 ms
+===================================
+
+Device: F:\
+Mountpoint: F:\
+Total: 2000270913536 bytes
+Used: 169897984 bytes
+Free: 2000101015552 bytes
+Percent: 0.0%
+
+Disk: PhysicalDrive2
+Usage Time: 0 ms
+===================================
+

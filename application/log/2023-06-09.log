@@ -1,0 +1,89 @@
+2023-06-09 10:06:11,224 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-09 10:06:11,224 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-09 10:06:11,225 - Main Function - DEBUG : input username:123
+2023-06-09 10:06:11,225 - Main Function - DEBUG : input username:123
+2023-06-09 10:06:11,225 - Main Function - DEBUG : input password:123
+2023-06-09 10:06:11,225 - Main Function - DEBUG : input password:123
+2023-06-09 10:06:11,226 - Main Function - DEBUG : output(credential.username):123
+
+2023-06-09 10:06:11,226 - Main Function - DEBUG : output(credential.username):123
+
+2023-06-09 10:06:17,957 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:07:07,823 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:07:19,675 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:07:34,004 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:08:46,818 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:09:01,434 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:12:15,637 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:12:15,638 - Item Function Logs - DEBUG : input :Item:Leo, description : string, price : 30000.0, tax : 0
+2023-06-09 10:13:39,473 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:13:39,474 - Item Function Logs - DEBUG : input :Item:Leo, description : string, price : 30000.0, tax : 0
+2023-06-09 10:13:39,474 - Item Function Logs - DEBUG : 生活費 = 30000.0 大於20000 -> 生活富足{'name': 'Leo', 'descri': 'string', 'price': 30000.0, 'tax': 0}
+2023-06-09 10:14:33,099 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:14:33,099 - Item Function Logs - DEBUG : input :Item:Leo, description : string, price : 30000.0, tax : 0
+2023-06-09 10:14:33,100 - Item Function Logs - DEBUG : 生活費 = 30000.0 大於20000 -> 生活富足{'name': 'Leo', 'descri': 'string', 'price': 30000.0, 'tax': 0}
+2023-06-09 10:14:51,734 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:14:51,735 - Item Function Logs - DEBUG : input :Item:Leo, description : string, price : 30000.0, tax : 0
+2023-06-09 10:14:51,735 - Item Function Logs - DEBUG : 生活費 = 30000.0 大於20000 -> 生活富足{'name': 'Leo', 'descri': 'string', 'price': 30000.0, 'tax': 0}
+2023-06-09 10:15:35,289 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-09 10:15:35,290 - Item Function Logs - DEBUG : input :Item:Leo, description : string, price : 30000.0, tax : 0
+2023-06-09 10:15:35,290 - Item Function Logs - DEBUG : 生活費 = 30000.0 大於20000 -> 生活富足 {'name': 'Leo', 'descri': 'string', 'price': 30000.0, 'tax': 0}
+2023-06-09 10:21:16,292 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-09 10:21:16,292 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-09 10:21:16,293 - Main Function - DEBUG : input username:123
+2023-06-09 10:21:16,293 - Main Function - DEBUG : input username:123
+2023-06-09 10:21:16,293 - Main Function - DEBUG : input password:123
+2023-06-09 10:21:16,293 - Main Function - DEBUG : input password:123
+2023-06-09 10:21:16,294 - Main Function - DEBUG : output(credential.username):123
+
+2023-06-09 10:21:16,294 - Main Function - DEBUG : output(credential.username):123
+
+2023-06-09 10:21:32,573 - Item Function Logs - INFO : ----------/Midterm--------
+2023-06-09 10:21:32,574 - Item Function Logs - DEBUG : input :Subject : Math  Score : 80.0
+2023-06-09 10:21:32,574 - Item Function Logs - DEBUG : output = 及格了，分數是 : 80.0
+
+2023-06-09 14:26:55,147 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-09 14:26:55,147 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-09 14:26:55,147 - Main Function - DEBUG : input username:123
+2023-06-09 14:26:55,147 - Main Function - DEBUG : input username:123
+2023-06-09 14:26:55,148 - Main Function - DEBUG : input password:123
+2023-06-09 14:26:55,148 - Main Function - DEBUG : input password:123
+2023-06-09 14:26:55,148 - Main Function - DEBUG : output(credential.username):123
+
+2023-06-09 14:26:55,148 - Main Function - DEBUG : output(credential.username):123
+
+2023-06-09 14:27:02,824 - User Function - INFO : ---------verify_password function--------------
+2023-06-09 14:27:02,824 - User Function - DEBUG : pwd_verfy...
+2023-06-09 14:27:03,102 - User Function - INFO : ---------create_access_token function--------------
+2023-06-09 14:27:03,102 - User Function - DEBUG : creating...
+2023-06-09 14:27:20,164 - Item Function Logs - INFO : ----------secret--------
+2023-06-09 14:27:20,164 - Item Function Logs - DEBUG : input :johndoe
+2023-06-09 14:27:20,164 - Item Function Logs - DEBUG : output : 
+Hello johndoe, Myname is Leo.
+Nice to meet you.
+My faviorate dessert is chocolate brownie!
+Don't tell anyone!!!!!!
+
+
+2023-06-09 14:46:36,385 - Item Function Logs - INFO : ----------/Midterm--------
+2023-06-09 14:46:36,386 - Item Function Logs - DEBUG : input :Subject : Algorithm  Score : 59.0
+2023-06-09 14:46:36,386 - Item Function Logs - DEBUG : output = Fail，分數是 : 59.0
+
+2023-06-09 14:47:11,150 - Item Function Logs - INFO : ----------/Create_Item--------
+2023-06-09 14:47:11,151 - Item Function Logs - DEBUG : input :Item:Leo, description : This is my Salary, price : 25000.0, tax : 0
+2023-06-09 14:47:11,151 - Item Function Logs - DEBUG : output = 生活費 = 25000.0 大於20000 -> 生活富足 {'name': 'Leo', 'descri': 'This is my Salary', 'price': 25000.0, 'tax': 0}
+
+2023-06-09 14:51:02,334 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-09 14:51:02,334 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-09 14:51:02,335 - Main Function - DEBUG : input username:123
+2023-06-09 14:51:02,335 - Main Function - DEBUG : input username:123
+2023-06-09 14:51:02,335 - Main Function - DEBUG : input password:123
+2023-06-09 14:51:02,335 - Main Function - DEBUG : input password:123
+2023-06-09 14:51:02,336 - Main Function - DEBUG : output(credential.username):123
+
+2023-06-09 14:51:02,336 - Main Function - DEBUG : output(credential.username):123
+
+2023-06-09 14:51:02,336 - Main Function - INFO : ------------Open Web-----------
+
+2023-06-09 14:51:02,336 - Main Function - INFO : ------------Open Web-----------
+

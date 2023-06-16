@@ -10,6 +10,8 @@ from datetime import timedelta,datetime
 from routers.user import user
 from routers.init_web import web
 from routers.item import items
+from routers.classes import classes
+
 import logger
 
 #把items下寫的功能都import進來，可以執行
@@ -63,6 +65,9 @@ from fastapi.openapi.utils import get_openapi
 
 @app.get("/openapi.json", include_in_schema=False)
 async def openapi(username: str = Depends(get_current_username)):
+    
+    mylog.info("------------Open Web-----------\n")
+    
     return get_openapi(title = "FastAPI", version="0.1.0", routes=app.routes)
 #include_in_schema是指要不要把此函數顯現在網頁上
 
@@ -106,6 +111,7 @@ async def root():
 app.include_router(items,tags=["Items"])
 app.include_router(web,tags=["Web"])
 app.include_router(user,tags=["User"])
+app.include_router(classes,tags=["Class"])
 
 
 

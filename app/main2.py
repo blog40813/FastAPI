@@ -118,11 +118,11 @@ async def Create(item:Item):
         #my_json = tuple(item_dict)
         
     if(item.price<2000) :
-        return ["生活費 = " + str(item.price) + " 小於2000 -> 生活拮据",item_dict]
+        return {"生活費 = " + str(item.price) + " 小於2000 -> 生活拮据",item_dict}
     if (item.price>20000):
         return {"生活費 = " + str(item.price) +  " 大於20000 -> 生活富足",item_dict}
     else:
-        #return {"生活費 = " + str(item.price),item_dict}
+        return {"生活費 = " + str(item.price),item_dict}
         return item_dict
         '''      
 

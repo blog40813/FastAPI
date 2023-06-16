@@ -1,0 +1,136 @@
+=========================2023-06-09 10:25:19=========================
+Device: C:\
+Mountpoint: C:\
+Total: 999961915392 bytes
+Used: 111176376320 bytes
+Free: 888785539072 bytes
+Percent: 11.1%
+
+Disk: PhysicalDrive0
+Usage Time: 126 ms
+===================================
+
+Device: D:\
+Mountpoint: D:\
+Total: 2000512086016 bytes
+Used: 3642335232 bytes
+Free: 1996869750784 bytes
+Percent: 0.2%
+
+Disk: PhysicalDrive1
+Usage Time: 2309 ms
+===================================
+
+Device: F:\
+Mountpoint: F:\
+Total: 2000270913536 bytes
+Used: 169897984 bytes
+Free: 2000101015552 bytes
+Percent: 0.0%
+
+Disk: PhysicalDrive2
+Usage Time: 0 ms
+===================================
+
+=========================2023-06-09 10:25:24=========================
+Device: C:\
+Mountpoint: C:\
+Total: 999961915392 bytes
+Used: 111176380416 bytes
+Free: 888785534976 bytes
+Percent: 11.1%
+
+Disk: PhysicalDrive0
+Usage Time: 126 ms
+===================================
+
+Device: D:\
+Mountpoint: D:\
+Total: 2000512086016 bytes
+Used: 3642339328 bytes
+Free: 1996869746688 bytes
+Percent: 0.2%
+
+Disk: PhysicalDrive1
+Usage Time: 2309 ms
+===================================
+
+Device: F:\
+Mountpoint: F:\
+Total: 2000270913536 bytes
+Used: 169897984 bytes
+Free: 2000101015552 bytes
+Percent: 0.0%
+
+Disk: PhysicalDrive2
+Usage Time: 0 ms
+===================================
+
+=========================2023-06-09 10:25:29=========================
+Device: C:\
+Mountpoint: C:\
+Total: 999961915392 bytes
+Used: 111176384512 bytes
+Free: 888785530880 bytes
+Percent: 11.1%
+
+Disk: PhysicalDrive0
+Usage Time: 126 ms
+===================================
+
+Device: D:\
+Mountpoint: D:\
+Total: 2000512086016 bytes
+Used: 3642339328 bytes
+Free: 1996869746688 bytes
+Percent: 0.2%
+
+Disk: PhysicalDrive1
+Usage Time: 2309 ms
+===================================
+
+Device: F:\
+Mountpoint: F:\
+Total: 2000270913536 bytes
+Used: 169897984 bytes
+Free: 2000101015552 bytes
+Percent: 0.0%
+
+Disk: PhysicalDrive2
+Usage Time: 0 ms
+===================================
+
+=========================2023-06-09 10:25:34=========================
+Device: C:\
+Mountpoint: C:\
+Total: 999961915392 bytes
+Used: 111176470528 bytes
+Free: 888785444864 bytes
+Percent: 11.1%
+
+Disk: PhysicalDrive0
+Usage Time: 126 ms
+===================================
+
+Device: D:\
+Mountpoint: D:\
+Total: 2000512086016 bytes
+Used: 3642339328 bytes
+Free: 1996869746688 bytes
+Percent: 0.2%
+
+Disk: PhysicalDrive1
+Usage Time: 2309 ms
+===================================
+
+Device: F:\
+Mountpoint: F:\
+Total: 2000270913536 bytes
+Used: 169897984 bytes
+Free: 2000101015552 bytes
+Percent: 0.0%
+
+Disk: PhysicalDrive2
+Usage Time: 0 ms
+===================================
+

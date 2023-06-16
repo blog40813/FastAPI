@@ -1,5 +1,7 @@
 from fastapi import APIRouter,Depends
 from fastapi.responses import HTMLResponse
+from pydantic import BaseModel
+from typing import Optional
 
 items = APIRouter()
 from application import main,logger
@@ -24,17 +26,19 @@ async def get_info(phone_number:str ,name:str):
     
     return {"Username":name,"telephone":phone_number}
 
+
+
 @items.get("/items/Your_name")
 async def Name(name:str):
-    
     mylog.info("----------/items/Your_name--------")
     mylog.debug("input :"+name)
     debug_msg = "output : \n" +"Hello " + name + ", Myname is Leo, Nice to meet you..." +"\n"
     mylog.debug(debug_msg)
-
     return {"Hello " + name + ", Myname is Leo","Nice to meet you..."}
 
 #可以利用引用其他文件，使用函數跟authorize的功能
+
+
 
 
 #這邊使用response_class = HTMLResponse只是因為希望可以正確應用到換行符號

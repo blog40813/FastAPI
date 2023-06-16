@@ -12,11 +12,12 @@ import json
 
 user = APIRouter()
 
-#import sys
-#sys.path.append("D:\Fastapi\exercise\\application")
+import sys
+sys.path.append("D:\Fastapi\exercise\\application")
 
 import logger
 mylog = logger.log("User Function")
+
 #密碼相關
 #這邊這個oauth2使得後端或是API可以獨立於對用戶進行身分驗證的服務器，URL是相對路徑(接收URL作為參數)
 t = "\""
@@ -199,10 +200,14 @@ async def read_items(token: str = Depends(oauth2_scheme)):
 
 
 def verify_password(plain_password, hashed_password):
+    mylog.info("---------verify_password function--------------")
+    mylog.debug("pwd_verfy...")
     return pwd_context.verify(plain_password, hashed_password)
 
 
 def get_password_hash(password):
+    mylog.info("---------get_password_hash function--------------")
+    mylog.debug("hashing...")
     return pwd_context.hash(password)
 
 
@@ -229,6 +234,8 @@ def create_access_token(data: dict, expires_delta: Union[timedelta, None] = None
         expire = datetime.utcnow() + timedelta(minutes=15)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    mylog.info("---------create_access_token function--------------")
+    mylog.debug("creating...")
     return encoded_jwt
 
 
