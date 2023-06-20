@@ -1,10 +1,9 @@
 version: '3'
-service:
-  core_api:
+services:
+  code:
     build:
-    contain_name: "fastapi_exercise"
+      context: .
     ports:
       - "8000:8000"
-
-    volume:
-      -./application/:/application
+    volumes:
+      - D:\Fastapi\exercise:/exercise
