@@ -15,8 +15,7 @@ from routers.classes import classes
 import logger
 
 #把items下寫的功能都import進來，可以執行
-#但路徑不能為空
-
+#但路徑不能為空123
 
 import sys
 sys.path.append("D:\Fastapi\exercise")
@@ -28,9 +27,9 @@ sta_path = "D:\Fastapi\exercise\sta"
 
 mylog = logger.log("Main Function")
 
-
 '''-------------------------------------------'''
-
+##123
+##456 
 import secrets
 from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials

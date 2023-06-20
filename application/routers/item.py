@@ -14,6 +14,8 @@ mylog = logger.log("Item Function Logs")
 t = "\""
 
 debug_msg:str
+#123
+#我我
 
 @items.get("/name")
 async def get_info(phone_number:str ,name:str):

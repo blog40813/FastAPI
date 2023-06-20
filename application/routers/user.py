@@ -74,6 +74,7 @@ fake_users_db1 = {
     },
 }
 
+#123456
 def fake_hash_password(password: str):
     return "fakehashed" + password
 
