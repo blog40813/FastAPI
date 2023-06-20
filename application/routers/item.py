@@ -4,7 +4,8 @@ from pydantic import BaseModel
 from typing import Optional
 
 items = APIRouter()
-from application import main,logger
+#from application import main,logger
+import main,logger
 from . import user
 import json
 

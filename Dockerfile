@@ -1,11 +1,11 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+FROM python:3.10.1
 
-WORKDIR /code
+WORKDIR /exercise
 
-COPY ./application /code/app
-COPY ./sta /code/sta
-COPY ./requirement.txt /code/requirement.txt
+COPY ./requirement.txt .
 
 RUN pip install --no-cache-dir -r ./requirement.txt
 
-CMD ["uvicorn", "main:app", "--host", "127.0.0.1", "--port", "8000"]
+WORKDIR /exercise/application
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

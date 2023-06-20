@@ -6,6 +6,8 @@ import datetime
 from datetime import timedelta,datetime
 #from fastapi.openapi.docs import get_swagger_ui_html
 #from fastapi.openapi.utils import get_openapi
+import sys
+sys.path.append("D:\Fastapi\exercise")
 
 from routers.user import user
 from routers.init_web import web
@@ -18,8 +20,6 @@ import logger
 #但路徑不能為空
 
 
-import sys
-sys.path.append("D:\Fastapi\exercise")
 
 #在下面的code裡面，tags就是大標題，所有從這邊include進來的函數最上面會有大標作區段
 app = FastAPI()
@@ -117,7 +117,7 @@ app.include_router(classes,tags=["Class"])
 
 # 将静态文件夹路径指向 Swagger UI 的文件夹路径
 #put the needed file to sta (index.jsx/swagger-ui.css/swagger-ui-bundle.js/swagger-ui-standalone-preset.js)
-app.mount("/sta", StaticFiles(directory=sta_path), name="sta")
+app.mount("/sta", StaticFiles(directory="./../sta"), name="sta")
 
 
 "---------------------------2023/05/30 version import function from other .py file ------------------------------"
