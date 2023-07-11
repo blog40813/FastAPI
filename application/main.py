@@ -11,7 +11,9 @@ from routers.user import user
 from routers.init_web import web
 from routers.item import items
 from routers.classes import classes
-
+from routers.file import handlefile
+from routers.function import funct
+from routers.chart import chart
 import logger
 
 #把items下寫的功能都import進來，可以執行
@@ -111,12 +113,15 @@ app.include_router(items,tags=["Items"])
 app.include_router(web,tags=["Web"])
 app.include_router(user,tags=["User"])
 app.include_router(classes,tags=["Class"])
+app.include_router(funct,tags=["Function"])
+app.include_router(handlefile,tags=["Files"])
+app.include_router(chart,tags=["Chart"])
 
 
 
 # 将静态文件夹路径指向 Swagger UI 的文件夹路径
 #put the needed file to sta (index.jsx/swagger-ui.css/swagger-ui-bundle.js/swagger-ui-standalone-preset.js)
-app.mount("/sta", StaticFiles(directory=sta_path), name="sta")
+app.mount("/sta", StaticFiles(directory="./../sta"), name="sta")
 
 
 "---------------------------2023/05/30 version import function from other .py file ------------------------------"

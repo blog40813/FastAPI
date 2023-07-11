@@ -1,0 +1,124 @@
+2023-07-07 09:27:40,249 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 09:27:40,249 - Main Function - DEBUG : input username:123
+2023-07-07 09:27:40,249 - Main Function - DEBUG : input password:123
+2023-07-07 09:27:40,249 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 09:27:40,249 - Main Function - INFO : ------------Open Web----------- 2023-07-07 09:31:49,910 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 09:31:49,910 - Main Function - DEBUG : input username:123
+2023-07-07 09:31:49,910 - Main Function - DEBUG : input password:123
+2023-07-07 09:31:49,910 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 09:31:49,910 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 09:31:53,595 - Funct Function Logs - INFO : --------------L_Sum_Query Function----------
+2023-07-07 09:33:34,426 - Funct Function Logs - INFO : --------------ENUM Function----------
+2023-07-07 09:33:34,426 - Funct Function Logs - DEBUG : output = A_Model :alexnet , de_Model :alexnet
+
+2023-07-07 09:34:00,758 - Funct Function Logs - INFO : --------------ENUM Function----------
+2023-07-07 09:34:00,758 - Funct Function Logs - DEBUG : output = A_Model :alexnet , de_Model :CNN
+
+2023-07-07 09:34:02,911 - Funct Function Logs - INFO : --------------ENUM Function----------
+2023-07-07 09:34:02,911 - Funct Function Logs - DEBUG : output = A_Model :alexnet , de_Model :CNN
+
+2023-07-07 09:34:06,752 - Funct Function Logs - INFO : --------------ENUM Function----------
+2023-07-07 09:34:06,753 - Funct Function Logs - DEBUG : output = C_Model :CNN
+
+2023-07-07 09:34:14,681 - Class Function Logs - INFO : ----------/Create_Item--------
+2023-07-07 09:34:14,682 - Class Function Logs - DEBUG : input :Item:Leo, description : string, price : 30000.0, tax : 0
+2023-07-07 09:34:14,682 - Class Function Logs - DEBUG : output = 生活費 = 30000.0 大於20000 -> 生活富足 {'name': 'Leo', 'descri': 'string', 'price': 30000.0, 'tax': 0}
+
+2023-07-07 09:36:10,159 - Funct Function Logs - INFO : --------------L_Sum_Query Function----------
+2023-07-07 09:37:21,382 - Funct Function Logs - INFO : --------------L_Sum_Query Function----------
+2023-07-07 09:37:34,580 - Funct Function Logs - INFO : --------------L_Sum_Query Function----------
+2023-07-07 09:37:34,580 - Funct Function Logs - DEBUG : input = 1 2 3 
+2023-07-07 09:37:34,580 - Funct Function Logs - DEBUG : output = L_sum = 6
+
+2023-07-07 09:38:46,276 - Funct Function Logs - INFO : --------------L_Sum_Query Function----------
+2023-07-07 09:38:57,367 - Funct Function Logs - INFO : --------------L_Sum_Query Function----------
+2023-07-07 09:38:57,367 - Funct Function Logs - DEBUG : input = 1 2 3 sum = 0
+2023-07-07 09:38:57,367 - Funct Function Logs - DEBUG : output = L_sum = 6
+
+2023-07-07 16:13:17,825 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 16:13:17,826 - Main Function - DEBUG : input username:123
+2023-07-07 16:13:17,826 - Main Function - DEBUG : input password:123
+2023-07-07 16:13:17,826 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 16:13:17,826 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 16:15:07,295 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 16:15:07,296 - Main Function - DEBUG : input username:123
+2023-07-07 16:15:07,296 - Main Function - DEBUG : input password:123
+2023-07-07 16:15:07,296 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 16:15:07,296 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 16:53:58,980 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 16:53:58,980 - Main Function - DEBUG : input username:123
+2023-07-07 16:53:58,980 - Main Function - DEBUG : input password:123
+2023-07-07 16:53:58,980 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 16:53:58,980 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:19:27,777 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:19:27,777 - Main Function - DEBUG : input username:123
+2023-07-07 17:19:27,777 - Main Function - DEBUG : input password:123
+2023-07-07 17:19:27,777 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:19:27,777 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:23:43,246 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:23:43,246 - Main Function - DEBUG : input username:123
+2023-07-07 17:23:43,246 - Main Function - DEBUG : input password:123
+2023-07-07 17:23:43,246 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:23:43,247 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:24:06,210 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:24:06,211 - Main Function - DEBUG : input username:123
+2023-07-07 17:24:06,211 - Main Function - DEBUG : input password:123
+2023-07-07 17:24:06,211 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:24:06,211 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:24:59,657 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:24:59,657 - Main Function - DEBUG : input username:123
+2023-07-07 17:24:59,657 - Main Function - DEBUG : input password:123
+2023-07-07 17:24:59,657 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:24:59,657 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:25:34,948 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:25:34,949 - Main Function - DEBUG : input username:123
+2023-07-07 17:25:34,949 - Main Function - DEBUG : input password:123
+2023-07-07 17:25:34,949 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:25:34,949 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:27:46,896 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:27:46,896 - Main Function - DEBUG : input username:123
+2023-07-07 17:27:46,896 - Main Function - DEBUG : input password:123
+2023-07-07 17:27:46,896 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:27:46,896 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:29:41,924 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:29:41,924 - Main Function - DEBUG : input username:123
+2023-07-07 17:29:41,924 - Main Function - DEBUG : input password:123
+2023-07-07 17:29:41,924 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:29:41,924 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:30:59,181 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:30:59,181 - Main Function - DEBUG : input username:123
+2023-07-07 17:30:59,181 - Main Function - DEBUG : input password:123
+2023-07-07 17:30:59,181 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:30:59,181 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-07 17:33:49,077 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-07 17:33:49,077 - Main Function - DEBUG : input username:123
+2023-07-07 17:33:49,077 - Main Function - DEBUG : input password:123
+2023-07-07 17:33:49,077 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-07 17:33:49,077 - Main Function - INFO : ------------Open Web-----------
+

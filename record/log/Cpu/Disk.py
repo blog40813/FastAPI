@@ -7,7 +7,6 @@ def get_disk_usage():
     partitions = psutil.disk_partitions()
     disk_usage = []
 
-
     for partition in partitions:
         if 'rw' in partition.opts:
             usage = psutil.disk_usage(partition.mountpoint)

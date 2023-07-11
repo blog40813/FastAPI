@@ -49,7 +49,6 @@ def List_Sum(L:List[int]=[1,2,3], sum:int=0):
     return result
 
 
-
 #解決方法，將List做為查詢函數傳遞
 #L_Sum_Query?L=1&L=2&L=3&sum=1516利用網址進行取用
 #有些type是沒辦法用Query的方法 用get進行取用ㄉ。 example:dict的型態，class的型態

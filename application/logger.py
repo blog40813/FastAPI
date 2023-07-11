@@ -11,7 +11,7 @@ def log(log_name):
     logger.setLevel(logging.DEBUG)
     # 紀錄格式
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s : %(message)s')
-    logdir = "D:\Fastapi\exercise\\application\log"
+    logdir = "log"
 
     # 建立以日期開頭的 log 文件123
     logtime = time.strftime('%Y-%m-%d')
