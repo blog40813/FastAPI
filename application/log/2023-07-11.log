@@ -820,3 +820,24 @@
 2023-07-11 13:35:53,501 - Chart Function Logs - DEBUG : output dir =D:\Fastapi\exercise\application\log\usage
 2023-07-11 13:35:53,501 - Chart Function Logs - DEBUG : save image =usage_20230721_1.png
 2023-07-11 13:35:53,699 - Chart Function Logs - DEBUG : date update to 20230722
+2023-07-11 16:01:00,008 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-11 16:01:00,008 - Main Function - DEBUG : input username:123
+2023-07-11 16:01:00,008 - Main Function - DEBUG : input password:13
+2023-07-11 16:01:00,008 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-11 16:01:00,008 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-11 16:02:44,432 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-11 16:02:44,432 - Main Function - DEBUG : input username:123
+2023-07-11 16:02:44,432 - Main Function - DEBUG : input password:13
+2023-07-11 16:02:44,432 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-11 16:02:44,432 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-11 16:10:07,618 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-11 16:10:07,618 - Main Function - DEBUG : input username:123
+2023-07-11 16:10:07,618 - Main Function - DEBUG : input password:13
+2023-07-11 16:10:07,618 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-11 16:10:07,618 - Main Function - INFO : ------------Open Web-----------
+

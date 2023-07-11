@@ -12,7 +12,9 @@ import json
 
 user = APIRouter()
 import sys
-sys.path.append("D:\Fastapi\exercise\\application")
+import os
+pwd = os.getcwd()
+sys.path.append(pwd)
 import logger
 mylog = logger.log("User Function")
 

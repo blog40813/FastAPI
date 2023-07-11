@@ -6,9 +6,7 @@ web = APIRouter()
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 import sys
-sys.path.append("D:\Fastapi\exercise")
-#from application import main
-#from application import main
+
 import main,logger
 
 
