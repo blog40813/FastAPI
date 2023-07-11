@@ -13,8 +13,9 @@ import json
 user = APIRouter()
 
 import sys
-sys.path.append("/home/a50559/Documents/fast_api//application")
-
+import os
+pwd = os.getcwd()
+sys.path.append(pwd)
 import logger
 mylog = logger.log("User Function")
 

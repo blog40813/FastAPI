@@ -162,3 +162,10 @@
 
 2023-07-11 00:14:44,551 - Main Function - INFO : ------------Open Web-----------
 
+2023-07-11 05:26:07,456 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-11 05:26:07,456 - Main Function - DEBUG : input username:123
+2023-07-11 05:26:07,456 - Main Function - DEBUG : input password:123
+2023-07-11 05:26:07,456 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-11 05:26:07,456 - Main Function - INFO : ------------Open Web-----------
+

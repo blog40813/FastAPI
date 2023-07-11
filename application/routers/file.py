@@ -35,6 +35,6 @@ async def create_files(files: list[bytes] = File()):
     mylog.info("--------------mul_files function-------------")
     mylog.debug("output = ")
     for i in files:
-        mylog.debug("filelen = "+len(i))
+        mylog.debug("filelen = "+str(len(i)))
     mylog.debug("")
     return {"file_sizes": [len(file) for file in files]}
