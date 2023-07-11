@@ -1,7 +1,7 @@
 from fastapi import APIRouter,Depends
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional,List
 
 classes = APIRouter()
 #from application import main,logger
@@ -35,6 +35,7 @@ class test(BaseModel):
 
 
 test2:test ={"science",55}
+
 
 
 #兩個藉由API創建 Class item 的應用
@@ -82,3 +83,58 @@ async def Midterm(record:test ):
         mylog.debug(f"output = Fail，分數是 : {record.score}\n")
         return {"Fail，分數是 " : record.score}
     
+    
+    
+### Multiple structure 
+class Student(BaseModel):
+    name:str = "Leo" 
+    id:int = 13
+
+class Classroom(BaseModel):
+    grade:int = 4
+    room:int = 8
+    student:List[Student]
+    
+class School(BaseModel):
+    region:str ="Taoyuan"
+    classroom:List[Classroom]
+    
+
+##可以建立multiple structure
+@classes.put("/multiple_structure")
+def Structure(school:School =None):
+    mylog.info("----------------multiple_struct function-------------")
+    mylog.debug("input = "+str(school))
+    
+    for item in school.classroom:
+        if item.grade == 4:
+            result = item
+    
+    mylog.debug("output = "+str(result)+"\n")
+    return result
+
+
+##修改schema的方法 1.使用class config 2.利用Body = example = {....} 3. 直接設定初值
+##下面提供了幾種可以修改schema裡面內容的code
+
+class Example(BaseModel):
+    name:str
+    telephone:str
+    sex:str
+    
+    class Config:
+        schema_extra = {
+            "example":{
+                "name":"Leo",
+                "telephone":"09569708**",
+                "sex":"male"
+            }
+        }
+
+@classes.put("/extra_example")
+def example(people:Example):
+    mylog.info("----------------extra_example function-------------")
+    mylog.debug("input = "+str(people))
+    mylog.debug("output = "+str(people)+"\n")
+    return people
+

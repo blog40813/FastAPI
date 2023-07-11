@@ -6,4 +6,4 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - D:\Fastapi\exercise:/exercise
+      - /home/a50559/Documents/fast_api:/fastapi

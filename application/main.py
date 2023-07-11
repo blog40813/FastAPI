@@ -7,12 +7,14 @@ from datetime import timedelta,datetime
 #from fastapi.openapi.docs import get_swagger_ui_html
 #from fastapi.openapi.utils import get_openapi
 import sys
-sys.path.append("D:\Fastapi\exercise")
+sys.path.append("/home/a50559/Documents/fast_api/")
 
 from routers.user import user
 from routers.init_web import web
 from routers.item import items
 from routers.classes import classes
+from routers.function import funct
+from routers.file import handlefile
 
 import logger
 
@@ -23,7 +25,7 @@ import logger
 
 #在下面的code裡面，tags就是大標題，所有從這邊include進來的函數最上面會有大標作區段
 app = FastAPI()
-sta_path = "D:\Fastapi\exercise\sta"
+sta_path = "/home/a50559/Documents/fast_api/sta"
 #目前設置http credential的方法只看到可以使用在有app裡面
 
 mylog = logger.log("Main Function")
@@ -112,6 +114,8 @@ app.include_router(items,tags=["Items"])
 app.include_router(web,tags=["Web"])
 app.include_router(user,tags=["User"])
 app.include_router(classes,tags=["Class"])
+app.include_router(funct,tags=["Function"])
+app.include_router(handlefile,tags=["Files"])
 
 
 
