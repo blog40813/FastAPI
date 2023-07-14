@@ -1,0 +1,14 @@
+2023-07-14 00:37:18,336 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 00:37:18,336 - Main Function - DEBUG : input username:123
+2023-07-14 00:37:18,336 - Main Function - DEBUG : input password:123
+2023-07-14 00:37:18,337 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 00:37:18,337 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 00:39:07,819 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 00:39:07,820 - Main Function - DEBUG : input username:123
+2023-07-14 00:39:07,820 - Main Function - DEBUG : input password:123
+2023-07-14 00:39:07,821 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 00:39:07,821 - Main Function - INFO : ------------Open Web-----------
+
