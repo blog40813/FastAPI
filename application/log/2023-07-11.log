@@ -524,3 +524,203 @@ Don't tell anyone!!!!!!
 
 2023-07-11 08:17:15,856 - Main Function - INFO : ------------Open Web-----------
 
+2023-07-11 08:25:23,132 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-11 08:25:23,132 - Main Function - DEBUG : input username:123
+2023-07-11 08:25:23,132 - Main Function - DEBUG : input password:123
+2023-07-11 08:25:23,132 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-11 08:25:23,133 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-11 08:26:24,439 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-11 08:26:24,439 - Main Function - DEBUG : input username:123
+2023-07-11 08:26:24,439 - Main Function - DEBUG : input password:123
+2023-07-11 08:26:24,439 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-11 08:26:24,439 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-11 08:26:36,603 - Chart Function Logs - INFO : ----------------plot function-------------
+2023-07-11 08:26:36,603 - Chart Function Logs - DEBUG : input = <starlette.datastructures.UploadFile object at 0x7f4ae7b0bd90> date  = 20220701
+2023-07-11 08:26:36,603 - Chart Function Logs - DEBUG : read data
+2023-07-11 08:26:38,252 - Chart Function Logs - DEBUG : read data
+2023-07-11 08:26:38,257 - Chart Function Logs - DEBUG : figure size  = (12,8)
+2023-07-11 08:26:38,257 - Chart Function Logs - DEBUG : get column size and column name
+2023-07-11 08:26:38,265 - Chart Function Logs - DEBUG : Split data region start =1 end = 1439
+
+2023-07-11 08:26:38,339 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:38,359 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:38,380 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:38,400 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:38,458 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:38,478 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:38,498 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:38,518 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:38,538 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:38,558 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:39,434 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:39,434 - Chart Function Logs - DEBUG : save image =usage_20220701_1.png
+2023-07-11 08:26:39,627 - Chart Function Logs - DEBUG : date update to 20220702
+2023-07-11 08:26:39,635 - Chart Function Logs - DEBUG : Split data region start =1440 end = 2879
+
+2023-07-11 08:26:39,710 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:39,730 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:39,750 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:39,770 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:39,790 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:39,810 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:39,830 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:39,850 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:39,870 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:39,891 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:40,760 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:40,761 - Chart Function Logs - DEBUG : save image =usage_20220702_1.png
+2023-07-11 08:26:40,951 - Chart Function Logs - DEBUG : date update to 20220703
+2023-07-11 08:26:40,959 - Chart Function Logs - DEBUG : Split data region start =2880 end = 4319
+
+2023-07-11 08:26:41,094 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:41,114 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:41,134 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:41,154 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:41,174 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:41,193 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:41,213 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:41,233 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:41,253 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:41,273 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:42,154 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:42,154 - Chart Function Logs - DEBUG : save image =usage_20220703_1.png
+2023-07-11 08:26:42,346 - Chart Function Logs - DEBUG : date update to 20220704
+2023-07-11 08:26:42,354 - Chart Function Logs - DEBUG : Split data region start =4320 end = 5759
+
+2023-07-11 08:26:42,427 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:42,447 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:42,468 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:42,488 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:42,508 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:42,528 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:42,548 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:42,567 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:42,587 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:42,607 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:43,473 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:43,473 - Chart Function Logs - DEBUG : save image =usage_20220704_1.png
+2023-07-11 08:26:43,720 - Chart Function Logs - DEBUG : date update to 20220705
+2023-07-11 08:26:43,728 - Chart Function Logs - DEBUG : Split data region start =5760 end = 7199
+
+2023-07-11 08:26:43,801 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:43,820 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:43,840 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:43,860 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:43,880 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:43,901 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:43,920 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:43,941 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:43,960 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:43,980 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:44,826 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:44,826 - Chart Function Logs - DEBUG : save image =usage_20220705_1.png
+2023-07-11 08:26:45,019 - Chart Function Logs - DEBUG : date update to 20220706
+2023-07-11 08:26:45,026 - Chart Function Logs - DEBUG : Split data region start =7200 end = 8639
+
+2023-07-11 08:26:45,099 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:45,119 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:45,139 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:45,159 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:45,179 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:45,199 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:45,219 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:45,239 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:45,259 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:45,279 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:46,200 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:46,200 - Chart Function Logs - DEBUG : save image =usage_20220706_1.png
+2023-07-11 08:26:46,392 - Chart Function Logs - DEBUG : date update to 20220707
+2023-07-11 08:26:46,400 - Chart Function Logs - DEBUG : Split data region start =8640 end = 10079
+
+2023-07-11 08:26:46,473 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:46,493 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:46,514 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:46,534 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:46,553 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:46,574 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:46,593 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:46,613 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:46,633 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:46,652 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:47,517 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:47,517 - Chart Function Logs - DEBUG : save image =usage_20220707_1.png
+2023-07-11 08:26:47,710 - Chart Function Logs - DEBUG : date update to 20220708
+2023-07-11 08:26:47,718 - Chart Function Logs - DEBUG : Split data region start =10080 end = 11518
+
+2023-07-11 08:26:47,790 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:47,811 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:47,831 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:47,851 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:47,871 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:47,891 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:47,911 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:47,994 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:48,014 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:48,034 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:48,902 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:48,902 - Chart Function Logs - DEBUG : save image =usage_20220708_1.png
+2023-07-11 08:26:49,093 - Chart Function Logs - DEBUG : date update to 20220709
+2023-07-11 08:26:49,101 - Chart Function Logs - DEBUG : Split data region start =11519 end = 12958
+
+2023-07-11 08:26:49,174 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:49,195 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:49,215 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:49,235 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:49,255 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:49,275 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:49,294 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:49,315 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:49,334 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:49,354 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:50,203 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:50,203 - Chart Function Logs - DEBUG : save image =usage_20220709_1.png
+2023-07-11 08:26:50,395 - Chart Function Logs - DEBUG : date update to 20220710
+2023-07-11 08:26:50,403 - Chart Function Logs - DEBUG : Split data region start =12959 end = 14398
+
+2023-07-11 08:26:50,476 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:50,497 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:50,516 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:50,536 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:50,615 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:50,635 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:50,654 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:50,674 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:50,694 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:50,714 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:51,562 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:51,562 - Chart Function Logs - DEBUG : save image =usage_20220710_1.png
+2023-07-11 08:26:51,756 - Chart Function Logs - DEBUG : date update to 20220711
+2023-07-11 08:26:51,764 - Chart Function Logs - DEBUG : Split data region start =14399 end = 15837
+
+2023-07-11 08:26:51,836 - Chart Function Logs - DEBUG : plot time
+2023-07-11 08:26:51,857 - Chart Function Logs - DEBUG : plot kbmemfree
+2023-07-11 08:26:51,877 - Chart Function Logs - DEBUG : plot kbmemused
+2023-07-11 08:26:51,897 - Chart Function Logs - DEBUG : plot memused
+2023-07-11 08:26:51,918 - Chart Function Logs - DEBUG : plot kbbuffers
+2023-07-11 08:26:51,938 - Chart Function Logs - DEBUG : plot kbcached
+2023-07-11 08:26:51,957 - Chart Function Logs - DEBUG : plot kbcommit
+2023-07-11 08:26:51,977 - Chart Function Logs - DEBUG : plot commit
+2023-07-11 08:26:51,997 - Chart Function Logs - DEBUG : plot kbactive
+2023-07-11 08:26:52,017 - Chart Function Logs - DEBUG : plot kbinact
+2023-07-11 08:26:52,858 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-11 08:26:52,858 - Chart Function Logs - DEBUG : save image =usage_20220711_1.png
+2023-07-11 08:26:53,053 - Chart Function Logs - DEBUG : date update to 20220712
+2023-07-11 08:42:35,016 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-11 08:42:35,016 - Main Function - DEBUG : input username:123
+2023-07-11 08:42:35,016 - Main Function - DEBUG : input password:123
+2023-07-11 08:42:35,016 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-11 08:42:35,016 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 00:23:27,827 - Main Function - DEBUG : Incorrect email or password
+2023-07-14 00:23:29,626 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 00:23:29,626 - Main Function - DEBUG : input username:123
+2023-07-14 00:23:29,627 - Main Function - DEBUG : input password:123
+2023-07-14 00:23:29,627 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 00:23:29,627 - Main Function - INFO : ------------Open Web-----------
+

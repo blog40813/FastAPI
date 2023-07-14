@@ -1,0 +1,785 @@
+2023-07-14 03:44:36,875 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 03:44:36,875 - Main Function - DEBUG : input username:123
+2023-07-14 03:44:36,875 - Main Function - DEBUG : input password:132
+2023-07-14 03:44:36,875 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 03:44:36,875 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 03:44:59,080 - File Function Logs - INFO : --------------txt_to_csv function-------------
+2023-07-14 03:44:59,080 - File Function Logs - DEBUG : input = cpu_usage.log
+2023-07-14 03:45:26,821 - File Function Logs - INFO : --------------txt_to_csv function-------------
+2023-07-14 03:45:26,821 - File Function Logs - DEBUG : input = cpu_usage.log
+2023-07-14 03:50:30,309 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 03:50:30,310 - Main Function - DEBUG : input username:123
+2023-07-14 03:50:30,310 - Main Function - DEBUG : input password:132
+2023-07-14 03:50:30,310 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 03:50:30,310 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 03:50:36,707 - File Function Logs - INFO : --------------txt_to_csv function-------------
+2023-07-14 03:50:36,707 - File Function Logs - DEBUG : input = cpu_usage.log
+2023-07-14 03:52:08,510 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 03:52:08,511 - Main Function - DEBUG : input username:123
+2023-07-14 03:52:08,511 - Main Function - DEBUG : input password:132
+2023-07-14 03:52:08,511 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 03:52:08,511 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 03:52:15,224 - File Function Logs - INFO : --------------txt_to_csv function-------------
+2023-07-14 03:52:15,224 - File Function Logs - DEBUG : input = cpu_usage.log
+2023-07-14 04:59:05,802 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 04:59:05,803 - Main Function - DEBUG : input username:123
+2023-07-14 04:59:05,803 - Main Function - DEBUG : input password:132
+2023-07-14 04:59:05,803 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 04:59:05,803 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 04:59:14,309 - File Function Logs - INFO : --------------txt_to_csv function-------------
+2023-07-14 04:59:14,309 - File Function Logs - DEBUG : input = cpu_usage.log
+2023-07-14 04:59:35,831 - File Function Logs - INFO : --------------txt_to_csv function-------------
+2023-07-14 04:59:35,832 - File Function Logs - DEBUG : input = cpu_usage.log
+2023-07-14 05:09:07,810 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 05:09:07,811 - Main Function - DEBUG : input username:123
+2023-07-14 05:09:07,811 - Main Function - DEBUG : input password:132
+2023-07-14 05:09:07,811 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 05:09:07,811 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 05:09:43,048 - Chart Function Logs - INFO : ----------------plot function-------------
+2023-07-14 05:09:43,048 - Chart Function Logs - DEBUG : input = cpu_usage.log.xlsx date  = 20000101
+2023-07-14 05:09:44,810 - Chart Function Logs - DEBUG : read data
+2023-07-14 05:09:44,815 - Chart Function Logs - DEBUG : figure size  = (12,8)
+2023-07-14 05:09:44,815 - Chart Function Logs - DEBUG : get column size and column name
+2023-07-14 05:09:44,820 - Chart Function Logs - DEBUG : Split data region start =1 end = 856
+
+2023-07-14 05:09:44,870 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:44,888 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:44,906 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:44,924 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:44,942 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:44,960 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:44,978 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:45,619 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:45,619 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000101_1.png
+2023-07-14 05:09:45,795 - Chart Function Logs - DEBUG : date update to 20000102
+2023-07-14 05:09:45,803 - Chart Function Logs - DEBUG : Split data region start =857 end = 2296
+
+2023-07-14 05:09:45,873 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:45,892 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:45,913 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:45,932 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:45,952 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:45,972 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:45,992 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:46,569 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:46,569 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000102_1.png
+2023-07-14 05:09:46,703 - Chart Function Logs - DEBUG : date update to 20000103
+2023-07-14 05:09:46,710 - Chart Function Logs - DEBUG : Split data region start =2297 end = 3736
+
+2023-07-14 05:09:46,781 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:46,802 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:46,821 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:46,841 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:46,861 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:46,881 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:46,901 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:47,484 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:47,484 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000103_1.png
+2023-07-14 05:09:47,617 - Chart Function Logs - DEBUG : date update to 20000104
+2023-07-14 05:09:47,625 - Chart Function Logs - DEBUG : Split data region start =3737 end = 5176
+
+2023-07-14 05:09:47,695 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:47,716 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:47,736 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:47,755 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:47,836 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:47,856 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:47,875 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:48,448 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:48,448 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000104_1.png
+2023-07-14 05:09:48,580 - Chart Function Logs - DEBUG : date update to 20000105
+2023-07-14 05:09:48,588 - Chart Function Logs - DEBUG : Split data region start =5177 end = 6616
+
+2023-07-14 05:09:48,658 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:48,678 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:48,697 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:48,717 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:48,737 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:48,757 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:48,778 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:49,377 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:49,377 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000105_1.png
+2023-07-14 05:09:49,510 - Chart Function Logs - DEBUG : date update to 20000106
+2023-07-14 05:09:49,518 - Chart Function Logs - DEBUG : Split data region start =6617 end = 8056
+
+2023-07-14 05:09:49,589 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:49,609 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:49,629 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:49,649 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:49,668 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:49,688 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:49,708 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:50,295 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:50,295 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000106_1.png
+2023-07-14 05:09:50,485 - Chart Function Logs - DEBUG : date update to 20000107
+2023-07-14 05:09:50,493 - Chart Function Logs - DEBUG : Split data region start =8057 end = 9496
+
+2023-07-14 05:09:50,562 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:50,581 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:50,601 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:50,621 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:50,640 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:50,660 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:50,680 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:51,273 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:51,273 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000107_1.png
+2023-07-14 05:09:51,405 - Chart Function Logs - DEBUG : date update to 20000108
+2023-07-14 05:09:51,413 - Chart Function Logs - DEBUG : Split data region start =9497 end = 10936
+
+2023-07-14 05:09:51,483 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:51,503 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:51,523 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:51,542 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:51,562 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:51,582 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:51,601 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:52,190 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:52,190 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000108_1.png
+2023-07-14 05:09:52,323 - Chart Function Logs - DEBUG : date update to 20000109
+2023-07-14 05:09:52,331 - Chart Function Logs - DEBUG : Split data region start =10937 end = 12376
+
+2023-07-14 05:09:52,401 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:52,422 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:52,441 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:52,461 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:52,481 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:52,500 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:52,587 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:53,171 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:53,171 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000109_1.png
+2023-07-14 05:09:53,303 - Chart Function Logs - DEBUG : date update to 20000110
+2023-07-14 05:09:53,311 - Chart Function Logs - DEBUG : Split data region start =12377 end = 13816
+
+2023-07-14 05:09:53,381 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:53,400 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:53,420 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:53,440 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:53,459 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:53,479 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:53,499 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:54,081 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:54,081 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000110_1.png
+2023-07-14 05:09:54,214 - Chart Function Logs - DEBUG : date update to 20000111
+2023-07-14 05:09:54,222 - Chart Function Logs - DEBUG : Split data region start =13817 end = 15256
+
+2023-07-14 05:09:54,294 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:54,314 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:54,334 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:54,354 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:54,373 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:54,393 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:54,413 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:54,991 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:54,991 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000111_1.png
+2023-07-14 05:09:55,124 - Chart Function Logs - DEBUG : date update to 20000112
+2023-07-14 05:09:55,132 - Chart Function Logs - DEBUG : Split data region start =15257 end = 16696
+
+2023-07-14 05:09:55,202 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:55,222 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:55,303 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:55,322 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:55,342 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:55,362 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:55,381 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:55,972 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:55,972 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000112_1.png
+2023-07-14 05:09:56,105 - Chart Function Logs - DEBUG : date update to 20000113
+2023-07-14 05:09:56,108 - Chart Function Logs - DEBUG : Split data region start =16697 end = 17278
+
+2023-07-14 05:09:56,147 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:09:56,166 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:09:56,185 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:09:56,203 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:09:56,222 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:09:56,241 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:09:56,259 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:09:56,814 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:09:56,814 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000113_1.png
+2023-07-14 05:09:56,946 - Chart Function Logs - DEBUG : date update to 20000114
+2023-07-14 05:10:54,307 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 05:10:54,307 - Main Function - DEBUG : input username:123
+2023-07-14 05:10:54,307 - Main Function - DEBUG : input password:132
+2023-07-14 05:10:54,307 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 05:10:54,308 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 05:12:41,716 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 05:12:41,716 - Main Function - DEBUG : input username:123
+2023-07-14 05:12:41,716 - Main Function - DEBUG : input password:132
+2023-07-14 05:12:41,716 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 05:12:41,716 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 05:24:30,387 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 05:24:30,388 - Main Function - DEBUG : input username:123
+2023-07-14 05:24:30,388 - Main Function - DEBUG : input password:132
+2023-07-14 05:24:30,388 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 05:24:30,388 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 05:24:39,217 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 05:24:39,218 - Main Function - DEBUG : input username:123
+2023-07-14 05:24:39,218 - Main Function - DEBUG : input password:132
+2023-07-14 05:24:39,218 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 05:24:39,218 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 05:24:49,657 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 05:24:49,657 - Main Function - DEBUG : input username:123
+2023-07-14 05:24:49,657 - Main Function - DEBUG : input password:132
+2023-07-14 05:24:49,657 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 05:24:49,657 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 05:25:23,412 - Chart Function Logs - INFO : ----------------plot function-------------
+2023-07-14 05:25:23,412 - Chart Function Logs - DEBUG : input = cpu_usage.log.xlsx date  = 20100101
+2023-07-14 05:25:25,150 - Chart Function Logs - DEBUG : read data
+2023-07-14 05:25:25,155 - Chart Function Logs - DEBUG : figure size  = (12,8)
+2023-07-14 05:25:25,155 - Chart Function Logs - DEBUG : get column size and column name
+2023-07-14 05:25:25,160 - Chart Function Logs - DEBUG : Split data region start =1 end = 856
+
+2023-07-14 05:25:25,214 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:25,240 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:25,258 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:25,275 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:25,294 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:25,312 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:25,329 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:25,971 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:25,971 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100101_1.png
+2023-07-14 05:25:26,148 - Chart Function Logs - DEBUG : date update to 20100102
+2023-07-14 05:25:26,156 - Chart Function Logs - DEBUG : Split data region start =857 end = 2296
+
+2023-07-14 05:25:26,228 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:26,247 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:26,268 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:26,287 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:26,307 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:26,327 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:26,347 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:26,919 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:26,919 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100102_1.png
+2023-07-14 05:25:27,054 - Chart Function Logs - DEBUG : date update to 20100103
+2023-07-14 05:25:27,062 - Chart Function Logs - DEBUG : Split data region start =2297 end = 3736
+
+2023-07-14 05:25:27,133 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:27,154 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:27,173 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:27,193 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:27,214 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:27,234 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:27,254 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:27,832 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:27,832 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100103_1.png
+2023-07-14 05:25:27,965 - Chart Function Logs - DEBUG : date update to 20100104
+2023-07-14 05:25:27,973 - Chart Function Logs - DEBUG : Split data region start =3737 end = 5176
+
+2023-07-14 05:25:28,046 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:28,067 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:28,087 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:28,106 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:28,183 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:28,203 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:28,226 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:28,805 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:28,805 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100104_1.png
+2023-07-14 05:25:28,937 - Chart Function Logs - DEBUG : date update to 20100105
+2023-07-14 05:25:28,945 - Chart Function Logs - DEBUG : Split data region start =5177 end = 6616
+
+2023-07-14 05:25:29,019 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:29,039 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:29,059 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:29,079 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:29,099 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:29,119 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:29,139 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:29,729 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:29,729 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100105_1.png
+2023-07-14 05:25:29,862 - Chart Function Logs - DEBUG : date update to 20100106
+2023-07-14 05:25:29,870 - Chart Function Logs - DEBUG : Split data region start =6617 end = 8056
+
+2023-07-14 05:25:29,943 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:29,963 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:29,983 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:30,003 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:30,024 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:30,044 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:30,064 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:30,663 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:30,663 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100106_1.png
+2023-07-14 05:25:30,850 - Chart Function Logs - DEBUG : date update to 20100107
+2023-07-14 05:25:30,858 - Chart Function Logs - DEBUG : Split data region start =8057 end = 9496
+
+2023-07-14 05:25:30,928 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:30,948 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:30,968 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:30,987 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:31,007 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:31,028 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:31,048 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:31,632 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:31,632 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100107_1.png
+2023-07-14 05:25:31,765 - Chart Function Logs - DEBUG : date update to 20100108
+2023-07-14 05:25:31,773 - Chart Function Logs - DEBUG : Split data region start =9497 end = 10936
+
+2023-07-14 05:25:31,844 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:31,865 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:31,884 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:31,904 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:31,924 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:31,943 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:31,963 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:32,547 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:32,547 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100108_1.png
+2023-07-14 05:25:32,680 - Chart Function Logs - DEBUG : date update to 20100109
+2023-07-14 05:25:32,688 - Chart Function Logs - DEBUG : Split data region start =10937 end = 12376
+
+2023-07-14 05:25:32,759 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:32,780 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:32,800 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:32,821 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:32,840 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:32,860 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:32,940 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:33,524 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:33,524 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100109_1.png
+2023-07-14 05:25:33,656 - Chart Function Logs - DEBUG : date update to 20100110
+2023-07-14 05:25:33,664 - Chart Function Logs - DEBUG : Split data region start =12377 end = 13816
+
+2023-07-14 05:25:33,737 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:33,756 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:33,776 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:33,796 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:33,815 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:33,834 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:33,854 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:34,434 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:34,434 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100110_1.png
+2023-07-14 05:25:34,566 - Chart Function Logs - DEBUG : date update to 20100111
+2023-07-14 05:25:34,574 - Chart Function Logs - DEBUG : Split data region start =13817 end = 15256
+
+2023-07-14 05:25:34,647 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:34,667 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:34,687 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:34,707 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:34,727 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:34,747 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:34,767 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:35,342 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:35,343 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100111_1.png
+2023-07-14 05:25:35,478 - Chart Function Logs - DEBUG : date update to 20100112
+2023-07-14 05:25:35,486 - Chart Function Logs - DEBUG : Split data region start =15257 end = 16696
+
+2023-07-14 05:25:35,558 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:35,577 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:35,654 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:35,674 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:35,693 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:35,713 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:35,733 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:36,321 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:36,321 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100112_1.png
+2023-07-14 05:25:36,454 - Chart Function Logs - DEBUG : date update to 20100113
+2023-07-14 05:25:36,458 - Chart Function Logs - DEBUG : Split data region start =16697 end = 17278
+
+2023-07-14 05:25:36,498 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:25:36,516 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:25:36,536 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:25:36,554 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:25:36,573 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:25:36,592 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:25:36,610 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:25:37,163 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:25:37,164 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20100113_1.png
+2023-07-14 05:25:37,297 - Chart Function Logs - DEBUG : date update to 20100114
+2023-07-14 05:35:48,510 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 05:35:48,510 - Main Function - DEBUG : input username:123
+2023-07-14 05:35:48,510 - Main Function - DEBUG : input password:132
+2023-07-14 05:35:48,510 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 05:35:48,510 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 05:44:24,414 - Chart Function Logs - INFO : ----------------plot function-------------
+2023-07-14 05:44:24,414 - Chart Function Logs - DEBUG : input = cpu_usage.log.xlsx date  = 20230714
+2023-07-14 05:44:26,097 - Chart Function Logs - DEBUG : read data
+2023-07-14 05:44:26,098 - Chart Function Logs - DEBUG : figure size  = (12,8)
+2023-07-14 05:44:26,098 - Chart Function Logs - DEBUG : get column size and column name
+2023-07-14 05:44:26,103 - Chart Function Logs - DEBUG : Split data region start =1 end = 856
+
+2023-07-14 05:44:26,155 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:26,173 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:26,192 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:26,210 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:26,228 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:26,246 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:26,263 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:26,902 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:26,902 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230714_1.png
+2023-07-14 05:44:27,075 - Chart Function Logs - DEBUG : date update to 20230715
+2023-07-14 05:44:27,083 - Chart Function Logs - DEBUG : Split data region start =857 end = 2296
+
+2023-07-14 05:44:27,155 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:27,175 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:27,195 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:27,215 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:27,234 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:27,255 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:27,274 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:27,851 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:27,851 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230715_1.png
+2023-07-14 05:44:27,986 - Chart Function Logs - DEBUG : date update to 20230716
+2023-07-14 05:44:27,994 - Chart Function Logs - DEBUG : Split data region start =2297 end = 3736
+
+2023-07-14 05:44:28,066 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:28,085 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:28,106 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:28,125 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:28,145 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:28,165 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:28,184 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:28,768 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:28,768 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230716_1.png
+2023-07-14 05:44:28,902 - Chart Function Logs - DEBUG : date update to 20230717
+2023-07-14 05:44:28,910 - Chart Function Logs - DEBUG : Split data region start =3737 end = 5176
+
+2023-07-14 05:44:28,982 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:29,002 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:29,023 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:29,042 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:29,062 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:29,146 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:29,166 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:29,740 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:29,740 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230717_1.png
+2023-07-14 05:44:29,873 - Chart Function Logs - DEBUG : date update to 20230718
+2023-07-14 05:44:29,881 - Chart Function Logs - DEBUG : Split data region start =5177 end = 6616
+
+2023-07-14 05:44:29,953 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:29,973 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:29,993 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:30,012 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:30,033 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:30,052 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:30,072 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:30,674 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:30,674 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230718_1.png
+2023-07-14 05:44:30,808 - Chart Function Logs - DEBUG : date update to 20230719
+2023-07-14 05:44:30,816 - Chart Function Logs - DEBUG : Split data region start =6617 end = 8056
+
+2023-07-14 05:44:30,889 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:30,909 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:30,929 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:30,949 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:30,969 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:30,989 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:31,010 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:31,598 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:31,598 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230719_1.png
+2023-07-14 05:44:31,733 - Chart Function Logs - DEBUG : date update to 20230720
+2023-07-14 05:44:31,740 - Chart Function Logs - DEBUG : Split data region start =8057 end = 9496
+
+2023-07-14 05:44:31,873 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:31,893 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:31,912 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:31,932 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:31,952 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:31,971 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:31,991 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:32,582 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:32,582 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230720_1.png
+2023-07-14 05:44:32,716 - Chart Function Logs - DEBUG : date update to 20230721
+2023-07-14 05:44:32,724 - Chart Function Logs - DEBUG : Split data region start =9497 end = 10936
+
+2023-07-14 05:44:32,796 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:32,815 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:32,836 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:32,855 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:32,875 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:32,895 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:32,915 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:33,503 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:33,503 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230721_1.png
+2023-07-14 05:44:33,637 - Chart Function Logs - DEBUG : date update to 20230722
+2023-07-14 05:44:33,644 - Chart Function Logs - DEBUG : Split data region start =10937 end = 12376
+
+2023-07-14 05:44:33,716 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:33,736 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:33,756 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:33,776 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:33,796 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:33,816 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:33,835 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:34,481 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:34,481 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230722_1.png
+2023-07-14 05:44:34,616 - Chart Function Logs - DEBUG : date update to 20230723
+2023-07-14 05:44:34,624 - Chart Function Logs - DEBUG : Split data region start =12377 end = 13816
+
+2023-07-14 05:44:34,697 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:34,717 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:34,737 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:34,756 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:34,776 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:34,796 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:34,816 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:35,402 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:35,402 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230723_1.png
+2023-07-14 05:44:35,536 - Chart Function Logs - DEBUG : date update to 20230724
+2023-07-14 05:44:35,544 - Chart Function Logs - DEBUG : Split data region start =13817 end = 15256
+
+2023-07-14 05:44:35,617 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:35,638 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:35,658 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:35,678 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:35,698 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:35,718 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:35,738 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:36,321 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:36,321 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230724_1.png
+2023-07-14 05:44:36,458 - Chart Function Logs - DEBUG : date update to 20230725
+2023-07-14 05:44:36,466 - Chart Function Logs - DEBUG : Split data region start =15257 end = 16696
+
+2023-07-14 05:44:36,540 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:36,560 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:36,580 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:36,661 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:36,681 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:36,701 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:36,721 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:37,317 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:37,317 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230725_1.png
+2023-07-14 05:44:37,452 - Chart Function Logs - DEBUG : date update to 20230726
+2023-07-14 05:44:37,455 - Chart Function Logs - DEBUG : Split data region start =16697 end = 17278
+
+2023-07-14 05:44:37,497 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 05:44:37,515 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 05:44:37,534 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 05:44:37,554 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 05:44:37,572 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 05:44:37,591 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 05:44:37,610 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 05:44:38,165 - Chart Function Logs - DEBUG : output dir =/fastapi/application/log/usage
+2023-07-14 05:44:38,165 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20230726_1.png
+2023-07-14 05:44:38,300 - Chart Function Logs - DEBUG : date update to 20230727
+2023-07-14 06:01:37,695 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 06:01:37,695 - Main Function - DEBUG : input username:123
+2023-07-14 06:01:37,695 - Main Function - DEBUG : input password:132
+2023-07-14 06:01:37,695 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 06:01:37,695 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 06:07:50,056 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 06:07:50,056 - Main Function - DEBUG : input username:123
+2023-07-14 06:07:50,056 - Main Function - DEBUG : input password:132
+2023-07-14 06:07:50,056 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 06:07:50,057 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 06:14:46,420 - Main Function - DEBUG : Incorrect email or password
+2023-07-14 06:16:01,246 - Main Function - DEBUG : Incorrect email or password
+2023-07-14 06:18:22,129 - Main Function - DEBUG : Incorrect email or password
+2023-07-14 07:05:01,877 - Main Function - INFO : ------------get_current_username function-----------
+2023-07-14 07:05:01,878 - Main Function - DEBUG : input username:123
+2023-07-14 07:05:01,878 - Main Function - DEBUG : input password:132
+2023-07-14 07:05:01,878 - Main Function - DEBUG : output(credential.username):123
+
+2023-07-14 07:05:01,878 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 07:05:26,586 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 07:05:57,256 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 07:08:07,659 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 07:08:23,274 - Chart Function Logs - INFO : ----------------plot function-------------
+2023-07-14 07:08:23,275 - Chart Function Logs - DEBUG : input = cpu_usage.log.xlsx date  = 20000000
+2023-07-14 07:08:25,029 - Chart Function Logs - DEBUG : read data
+2023-07-14 07:08:25,034 - Chart Function Logs - DEBUG : figure size  = (12,8)
+2023-07-14 07:08:25,035 - Chart Function Logs - DEBUG : get column size and column name
+2023-07-14 07:08:25,040 - Chart Function Logs - DEBUG : Split data region start =1 end = 856
+
+2023-07-14 07:08:25,091 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:08:25,109 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:08:25,127 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:08:25,146 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:08:25,164 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:08:25,183 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:08:25,201 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:08:25,841 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:08:25,841 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000000_1.png
+2023-07-14 07:12:05,384 - Chart Function Logs - INFO : ----------------plot function-------------
+2023-07-14 07:12:05,385 - Chart Function Logs - DEBUG : input = cpu_usage.log.xlsx date  = 20000101
+2023-07-14 07:12:07,006 - Chart Function Logs - DEBUG : read data
+2023-07-14 07:12:07,007 - Chart Function Logs - DEBUG : figure size  = (12,8)
+2023-07-14 07:12:07,007 - Chart Function Logs - DEBUG : get column size and column name
+2023-07-14 07:12:07,011 - Chart Function Logs - DEBUG : Split data region start =1 end = 856
+
+2023-07-14 07:12:07,063 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:07,081 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:07,099 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:07,154 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:07,172 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:07,190 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:07,209 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:07,838 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:07,838 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000101_1.png
+2023-07-14 07:12:07,972 - Chart Function Logs - DEBUG : date update to 20000102
+2023-07-14 07:12:07,980 - Chart Function Logs - DEBUG : Split data region start =857 end = 2296
+
+2023-07-14 07:12:08,050 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:08,070 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:08,090 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:08,110 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:08,131 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:08,151 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:08,171 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:08,745 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:08,745 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000102_1.png
+2023-07-14 07:12:08,879 - Chart Function Logs - DEBUG : date update to 20000103
+2023-07-14 07:12:08,887 - Chart Function Logs - DEBUG : Split data region start =2297 end = 3736
+
+2023-07-14 07:12:08,958 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:08,978 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:08,998 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:09,018 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:09,038 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:09,058 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:09,078 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:09,657 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:09,657 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000103_1.png
+2023-07-14 07:12:09,843 - Chart Function Logs - DEBUG : date update to 20000104
+2023-07-14 07:12:09,851 - Chart Function Logs - DEBUG : Split data region start =3737 end = 5176
+
+2023-07-14 07:12:09,922 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:09,942 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:09,962 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:09,982 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:10,002 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:10,022 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:10,043 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:10,612 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:10,612 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000104_1.png
+2023-07-14 07:12:10,746 - Chart Function Logs - DEBUG : date update to 20000105
+2023-07-14 07:12:10,754 - Chart Function Logs - DEBUG : Split data region start =5177 end = 6616
+
+2023-07-14 07:12:10,825 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:10,845 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:10,865 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:10,885 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:10,905 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:10,925 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:10,945 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:11,537 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:11,537 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000105_1.png
+2023-07-14 07:12:11,673 - Chart Function Logs - DEBUG : date update to 20000106
+2023-07-14 07:12:11,681 - Chart Function Logs - DEBUG : Split data region start =6617 end = 8056
+
+2023-07-14 07:12:11,752 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:11,772 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:11,793 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:11,813 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:11,833 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:11,912 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:11,932 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:12,519 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:12,519 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000106_1.png
+2023-07-14 07:12:12,655 - Chart Function Logs - DEBUG : date update to 20000107
+2023-07-14 07:12:12,663 - Chart Function Logs - DEBUG : Split data region start =8057 end = 9496
+
+2023-07-14 07:12:12,734 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:12,755 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:12,775 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:12,794 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:12,815 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:12,834 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:12,854 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:13,443 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:13,443 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000107_1.png
+2023-07-14 07:12:13,580 - Chart Function Logs - DEBUG : date update to 20000108
+2023-07-14 07:12:13,588 - Chart Function Logs - DEBUG : Split data region start =9497 end = 10936
+
+2023-07-14 07:12:13,661 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:13,681 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:13,701 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:13,721 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:13,741 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:13,761 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:13,781 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:14,369 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:14,369 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000108_1.png
+2023-07-14 07:12:14,503 - Chart Function Logs - DEBUG : date update to 20000109
+2023-07-14 07:12:14,511 - Chart Function Logs - DEBUG : Split data region start =10937 end = 12376
+
+2023-07-14 07:12:14,641 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:14,661 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:14,681 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:14,701 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:14,721 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:14,741 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:14,761 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:15,344 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:15,344 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000109_1.png
+2023-07-14 07:12:15,479 - Chart Function Logs - DEBUG : date update to 20000110
+2023-07-14 07:12:15,487 - Chart Function Logs - DEBUG : Split data region start =12377 end = 13816
+
+2023-07-14 07:12:15,558 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:15,578 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:15,600 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:15,620 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:15,640 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:15,661 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:15,680 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:16,264 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:16,264 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000110_1.png
+2023-07-14 07:12:16,399 - Chart Function Logs - DEBUG : date update to 20000111
+2023-07-14 07:12:16,407 - Chart Function Logs - DEBUG : Split data region start =13817 end = 15256
+
+2023-07-14 07:12:16,478 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:16,497 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:16,518 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:16,538 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:16,558 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:16,578 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:16,598 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:17,243 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:17,244 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000111_1.png
+2023-07-14 07:12:17,378 - Chart Function Logs - DEBUG : date update to 20000112
+2023-07-14 07:12:17,388 - Chart Function Logs - DEBUG : Split data region start =15257 end = 16696
+
+2023-07-14 07:12:17,463 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:17,485 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:17,504 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:17,524 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:17,545 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:17,564 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:17,584 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:18,180 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:18,180 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000112_1.png
+2023-07-14 07:12:18,315 - Chart Function Logs - DEBUG : date update to 20000113
+2023-07-14 07:12:18,318 - Chart Function Logs - DEBUG : Split data region start =16697 end = 17278
+
+2023-07-14 07:12:18,359 - Chart Function Logs - DEBUG : plot CPU
+2023-07-14 07:12:18,379 - Chart Function Logs - DEBUG : plot %user
+2023-07-14 07:12:18,398 - Chart Function Logs - DEBUG : plot %nice
+2023-07-14 07:12:18,417 - Chart Function Logs - DEBUG : plot %system
+2023-07-14 07:12:18,436 - Chart Function Logs - DEBUG : plot %iowait
+2023-07-14 07:12:18,455 - Chart Function Logs - DEBUG : plot %steal
+2023-07-14 07:12:18,474 - Chart Function Logs - DEBUG : plot %idle
+2023-07-14 07:12:19,028 - Chart Function Logs - DEBUG : output dir =/fastapi/application/data/usage_image
+2023-07-14 07:12:19,029 - Chart Function Logs - DEBUG : save image =cpu_usage.log.xlsx_20000113_1.png
+2023-07-14 07:12:19,164 - Chart Function Logs - DEBUG : date update to 20000114
+2023-07-14 07:54:03,691 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 08:20:01,150 - Main Function - INFO : ------------Open Web-----------
+
+2023-07-14 08:20:16,041 - File Function Logs - INFO : --------------Upload_txt function-------------
+2023-07-14 08:36:54,674 - File Function Logs - INFO : --------------Upload_txt function-------------

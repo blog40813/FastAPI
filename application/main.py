@@ -6,36 +6,36 @@ import datetime
 from datetime import timedelta,datetime
 #from fastapi.openapi.docs import get_swagger_ui_html
 #from fastapi.openapi.utils import get_openapi
-import sys
-import os
-pwd = os.path.dirname(os.getcwd())
-sys.path.append(pwd)
 
 from routers.user import user
 from routers.init_web import web
 from routers.item import items
 from routers.classes import classes
-from routers.function import funct
 from routers.file import handlefile
+from routers.function import funct
 from routers.chart import chart
-
 import logger
+import os
 
 #把items下寫的功能都import進來，可以執行
-#但路徑不能為空
+#但路徑不能為空123
 
+import sys
+pwd = os.path.dirname(os.getcwd())
+sys.path.append(pwd)
 
 
 #在下面的code裡面，tags就是大標題，所有從這邊include進來的函數最上面會有大標作區段
 app = FastAPI()
+
 sta_path = os.path.join(pwd,"sta")
 #目前設置http credential的方法只看到可以使用在有app裡面
 
 mylog = logger.log("Main Function")
 
-
 '''-------------------------------------------'''
-
+##123
+##456 
 import secrets
 from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
@@ -45,31 +45,14 @@ security = HTTPBasic()
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 ##進入網頁之前需要驗證的code
-async def get_current_username(*,credentials: HTTPBasicCredentials = Depends(security)):
-    correct_username = secrets.compare_digest(credentials.username, "user")
-    correct_password = secrets.compare_digest(credentials.password, "password")
 
-    if not (credentials.username and credentials.password):
-        mylog.debug("Incorrect email or password")
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect email or password",
-            headers={"WWW-Authenticate": "Basic"},
-        )
-        
-    mylog.info("------------get_current_username function-----------")
-    mylog.debug("input username:"+credentials.username)
-    mylog.debug("input password:"+credentials.password)
-    mylog.debug("output(credential.username):"+credentials.username+"\n")
-    
-    return credentials.username
     
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url = None)
 from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.openapi.utils import get_openapi
 
 @app.get("/openapi.json", include_in_schema=False)
-async def openapi(username: str = Depends(get_current_username)):
+async def openapi():
     
     mylog.info("------------Open Web-----------\n")
     
@@ -120,6 +103,7 @@ app.include_router(classes,tags=["Class"])
 app.include_router(funct,tags=["Function"])
 app.include_router(handlefile,tags=["Files"])
 app.include_router(chart,tags=["Chart"])
+
 
 
 # 将静态文件夹路径指向 Swagger UI 的文件夹路径
