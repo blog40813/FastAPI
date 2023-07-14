@@ -45,31 +45,14 @@ security = HTTPBasic()
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 ##進入網頁之前需要驗證的code
-async def get_current_username(*,credentials: HTTPBasicCredentials = Depends(security)):
-    correct_username = secrets.compare_digest(credentials.username, "user")
-    correct_password = secrets.compare_digest(credentials.password, "password")
 
-    if not (credentials.username and credentials.password):
-        mylog.debug("Incorrect email or password")
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect email or password",
-            headers={"WWW-Authenticate": "Basic"},
-        )
-        
-    mylog.info("------------get_current_username function-----------")
-    mylog.debug("input username:"+credentials.username)
-    mylog.debug("input password:"+credentials.password)
-    mylog.debug("output(credential.username):"+credentials.username+"\n")
-    
-    return credentials.username
     
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url = None)
 from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.openapi.utils import get_openapi
 
 @app.get("/openapi.json", include_in_schema=False)
-async def openapi(username: str = Depends(get_current_username)):
+async def openapi():
     
     mylog.info("------------Open Web-----------\n")
     

@@ -16,6 +16,14 @@ mylog = logger.log("Chart Function Logs")
 
 
 
+@chart.get("/GetChart/{filename}")
+async def GetFile(filename:str = Path(description= "Filename",example="filename.filetype_YYYYMMDD_number")):
+    filepath = os.path.join(os.getcwd(),"log","usage",f"{filename}.png")
+    return FileResponse(filepath,media_type="image/png")
+
+
+
+
 @chart.post("/plot")
 async def plot(
     date :str ="yyyymmdd",
@@ -26,11 +34,24 @@ async def plot(
         tmp_path = tmp.name
         
     mylog.info("----------------plot function-------------")
-    mylog.debug(f"input = {file} date  = {date}")
+    mylog.debug(f"input = {file.filename} date  = {date}")
+    
+
+    if file.filename.endswith( ".csv"):
+        # 处理 CSV 文件
+        data = pd.read_csv(tmp_path)
+    elif file.filename.endswith((".xls", ".xlsx")):
+        # 处理 Excel 文件
+        data = pd.read_excel(tmp_path)
+    else:
+        # 未知文件类型，进行适当的错误处理或提示用户
+        return {"error": "Unsupported file format"}
+
+    
     
     #sheets = pd.ExcelFile(tmp_path)
     #for sheet in sheets:
-    data = pd.read_excel(tmp_path)
+    #data = pd.read_excel(tmp_path)
     mylog.debug("read data")
     
     #data = pd.read_excel(tmp_path,sheet_name = page)
@@ -66,10 +87,20 @@ async def plot(
             end = current-1
             mylog.debug(f"Split data region start ={start} end = {end}\n")
             subx = x[start:end]
-            x_str = subx.apply(lambda t: t.strftime("%H:%M:%S"))   #將datetime轉換為字串格式
-            x_values = datestr2num(x_str)           # 將字串格式資料轉換為數值型別
+            check =0
             
-            for i,col_name in zip(range(1,cols),col_names):
+            for item in subx:
+                if isinstance(item,str):
+                    check = 1
+                    
+            if check==0:
+                x_str = subx.apply(lambda t: t.strftime("%H:%M:%S"))   #將datetime轉換為字串格式 
+            else:
+                x_str = subx
+                
+            x_values = datestr2num(x_str)# 將字串格式資料轉換為數值型別
+            
+            for i,col_name in zip(range(1,cols),col_names[1:]):
                 y = data.iloc[start:end,i]
                 plt.subplot(4,3,i)
                 plt.plot(x_values, y)
@@ -81,23 +112,24 @@ async def plot(
                 plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M:%S'))
             
             current = os.getcwd()
-            folder = os.path.join(current,"log","usage")
+            folder = os.path.join(current,"data","usage")
+            
             if not os.path.exists(folder):
                 os.makedirs(folder)
             files = os.listdir(folder)
             if files:
-                existcount = sum(1 for f in files if f.startswith("usage_"+date+"_"))
+                existcount = sum(1 for f in files if f.startswith(f"{file.filename}"+date+"_"))
                 #maxnum = max([int(f.split('.')[0]) for f in files])  #獲取檔案裏面數字最大的
                 next = existcount + 1
             else : 
                 next = 1 
                 
-            plt.suptitle(f"usage_{date}_{next}")
+            plt.suptitle(f"{file.filename}_{date}_{next}")
             plt.tight_layout()
             # 繪製折線圖
             # 將圖片儲存到本地
                 
-            image_name = f"usage_{date}_{next}.png"
+            image_name = f"{file.filename}_{date}_{next}.png"
             image_path = os.path.join(folder,image_name)
             plt.savefig(image_path)
             mylog.debug(f"output dir ={folder}")
@@ -112,4 +144,6 @@ async def plot(
     
     # 將圖片作為響應返回到網頁上
     return FileResponse(image_path, media_type="image/png")
-    
+
+
+
