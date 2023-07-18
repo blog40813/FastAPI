@@ -1,8 +1,7 @@
 import logging
 import os 
 import time
-#from configs import *
-
+from configs import *
 
 def log(log_name):
     # logger 命名為：file_conversion
@@ -10,8 +9,9 @@ def log(log_name):
     # 設置級別
     logger.setLevel(logging.DEBUG)
     # 紀錄格式
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s : %(message)s')
-    logdir = "log"
+    formatter = logging.Formatter('%(asctime)s | FastAPI | %(levelname)s : %(message)s (%(name)s)', datefmt="%Y-%m-%d %H:%M:%S")
+
+    logdir = LOG_PATH
 
     # 建立以日期開頭的 log 文件
     logtime = time.strftime('%Y-%m-%d')

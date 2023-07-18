@@ -3,6 +3,8 @@ services:
   code:
     build:
       context: .
+      args: 
+        - IMAGE_NAME=fastapi
     ports:
       - "8000:8000"
     volumes:

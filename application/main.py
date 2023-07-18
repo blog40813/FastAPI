@@ -16,19 +16,18 @@ from routers.function import funct
 from routers.chart import chart
 import logger
 import os
+from configs import *
 
 #把items下寫的功能都import進來，可以執行
 #但路徑不能為空123
 
 import sys
-pwd = os.path.dirname(os.getcwd())
-sys.path.append(pwd)
+sys.path.append(CURRENT_PATH)
 
 
 #在下面的code裡面，tags就是大標題，所有從這邊include進來的函數最上面會有大標作區段
 app = FastAPI()
 
-sta_path = os.path.join(pwd,"sta")
 #目前設置http credential的方法只看到可以使用在有app裡面
 
 mylog = logger.log("Main Function")

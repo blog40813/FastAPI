@@ -9,13 +9,13 @@ from typing import Union
 from fastapi import FastAPI
 from datetime import datetime, timedelta
 import json
+from configs import *
 
 user = APIRouter()
-
 import sys
 import os
-pwd = os.getcwd()
-sys.path.append(pwd)
+
+sys.path.append(CURRENT_PATH)
 import logger
 mylog = logger.log("User Function")
 
@@ -75,6 +75,7 @@ fake_users_db1 = {
     },
 }
 
+#123456
 def fake_hash_password(password: str):
     return "fakehashed" + password
 
