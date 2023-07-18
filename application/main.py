@@ -88,6 +88,7 @@ async def authorize_request(request, call_next):
     return response
 '''
 
+
 @app.get("/do",tags=["Main"])
 async def root():
     
