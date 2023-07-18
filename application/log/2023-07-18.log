@@ -217,3 +217,131 @@
 2023-07-18 09:24:15 | FastAPI | DEBUG : input : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg5NjQ1MTYyfQ.1tfkMgxL1fl8UA5sgGphZlZ04MfXtnpFJpdlYyjHPbo (User Function)
 2023-07-18 09:24:15 | FastAPI | DEBUG : output: {"token1": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg5NjQ1MTYyfQ.1tfkMgxL1fl8UA5sgGphZlZ04MfXtnpFJpdlYyjHPbo"}
  (User Function)
+2023-07-18 11:38:06 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 11:40:29 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 12:57:33 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:01:09 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:01:18 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:01:25 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:01:30 | FastAPI | INFO : --------------do function----------- (Main Function)
+2023-07-18 13:01:30 | FastAPI | DEBUG : output = Hello, Welcome to my FastAPI
+ (Main Function)
+2023-07-18 13:02:56 | FastAPI | INFO : --------------Upload_txt function------------- (File Function Logs)
+2023-07-18 13:02:56 | FastAPI | DEBUG : File :cpu_usage.log Saved. (File Function Logs)
+2023-07-18 13:03:39 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:03:49 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:04:37 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:04:37 | FastAPI | DEBUG : input :565 (Item Function Logs)
+2023-07-18 13:04:37 | FastAPI | DEBUG : output : 
+Hello 565, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:05:57 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:06:08 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:06:08 | FastAPI | DEBUG : input :565 (Item Function Logs)
+2023-07-18 13:06:08 | FastAPI | DEBUG : output : 
+Hello 565, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:07:38 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:07:38 | FastAPI | DEBUG : input :565 (Item Function Logs)
+2023-07-18 13:07:38 | FastAPI | DEBUG : output : 
+Hello 565, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:08:15 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:08:15 | FastAPI | DEBUG : input :56554658 (Item Function Logs)
+2023-07-18 13:08:15 | FastAPI | DEBUG : output : 
+Hello 56554658, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:15:19 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:15:29 | FastAPI | INFO : --------------Upload_txt function------------- (File Function Logs)
+2023-07-18 13:15:29 | FastAPI | DEBUG : File :cpu_usage.log Saved. (File Function Logs)
+2023-07-18 13:15:49 | FastAPI | INFO : ---------GetFile Function--------- (File Function Logs)
+2023-07-18 13:15:49 | FastAPI | DEBUG : input = cpu_usage.log (File Function Logs)
+2023-07-18 13:15:49 | FastAPI | DEBUG : File Exist, file_path = D:\Fastapi\exercise\application\data\txt\cpu_usage.log (File Function Logs)
+2023-07-18 13:16:20 | FastAPI | INFO : --------------Upload_txt function------------- (File Function Logs)
+2023-07-18 13:16:20 | FastAPI | DEBUG : File :cpu_usage.log Saved. (File Function Logs)
+2023-07-18 13:18:01 | FastAPI | INFO : --------------Upload_txt function------------- (File Function Logs)
+2023-07-18 13:18:01 | FastAPI | DEBUG : File :cpu_usage.log Saved. (File Function Logs)
+2023-07-18 13:18:01 | FastAPI | DEBUG : File :mem_usage (1).log Saved. (File Function Logs)
+2023-07-18 13:18:01 | FastAPI | INFO : --------------Upload_txt function------------- (File Function Logs)
+2023-07-18 13:18:01 | FastAPI | DEBUG : File :cpu_usage.log Saved. (File Function Logs)
+2023-07-18 13:18:01 | FastAPI | DEBUG : File :mem_usage (1).log Saved. (File Function Logs)
+2023-07-18 13:18:36 | FastAPI | INFO : --------------Upload_txt function------------- (File Function Logs)
+2023-07-18 13:18:36 | FastAPI | DEBUG : File :cpu_usage.log Saved. (File Function Logs)
+2023-07-18 13:18:36 | FastAPI | DEBUG : File :mem_usage (1).log Saved. (File Function Logs)
+2023-07-18 13:18:48 | FastAPI | INFO : ----------name function-------- (Item Function Logs)
+2023-07-18 13:18:48 | FastAPI | DEBUG : input : phone_number = 0556 name = ewf (Item Function Logs)
+2023-07-18 13:18:48 | FastAPI | DEBUG : output : 
+{"Username": "ewf", "telephone": "0556"}
+ (Item Function Logs)
+2023-07-18 13:30:49 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:31:00 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:31:00 | FastAPI | DEBUG : input :51561 (Item Function Logs)
+2023-07-18 13:31:00 | FastAPI | DEBUG : output : 
+Hello 51561, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:31:56 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:31:56 | FastAPI | DEBUG : input :8948465 (Item Function Logs)
+2023-07-18 13:31:56 | FastAPI | DEBUG : output : 
+Hello 8948465, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:32:34 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:32:34 | FastAPI | DEBUG : input :8948465 (Item Function Logs)
+2023-07-18 13:32:34 | FastAPI | DEBUG : output : 
+Hello 8948465, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:33:57 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:34:13 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:34:13 | FastAPI | DEBUG : input :5415681 (Item Function Logs)
+2023-07-18 13:34:13 | FastAPI | DEBUG : output : 
+Hello 5415681, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:35:30 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:35:40 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:35:40 | FastAPI | DEBUG : input :1265 (Item Function Logs)
+2023-07-18 13:35:40 | FastAPI | DEBUG : output : 
+Hello 1265, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:36:22 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-07-18 13:36:22 | FastAPI | DEBUG : input :1265 (Item Function Logs)
+2023-07-18 13:36:22 | FastAPI | DEBUG : output : 
+Hello 1265, Myname is Leo, Nice to meet you...
+ (Item Function Logs)
+2023-07-18 13:36:32 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:36:33 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:36:35 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:36:36 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:36:37 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:37:03 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:47:41 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:53:10 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:53:37 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:56:32 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 13:58:35 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 14:24:12 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-07-18 14:54:06 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
