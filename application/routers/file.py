@@ -1,7 +1,7 @@
 from fastapi import APIRouter,FastAPI,Path
 
 handlefile = APIRouter()
-from fastapi.responses import HTMLResponse,JSONResponse,FileResponse
+from fastapi.responses import HTMLResponse,JSONResponse,FileResponse,StreamingResponse
 from fastapi.staticfiles import StaticFiles
 import sys
 
@@ -20,6 +20,7 @@ import pandas as pd
 import os
 import shutil
 from datetime import datetime
+from configs import *
 
 
 mylog = logger.log("File Function Logs")
@@ -28,8 +29,28 @@ mylog = logger.log("File Function Logs")
 #方法可以混用，目前還沒研究為甚麼要這樣，但可以加上description
 @handlefile.get("/GetFile/{filename}")
 async def GetFile(filename:str = Path(description= "Complete_Filename (abc.txt)")):
-    filepath = os.path.join(os.getcwd(),"data",f"{filename}")
-    return FileResponse(filepath,filename=filename)
+    mylog.info("---------GetFile Function---------")
+    mylog.debug(f"input = {filename}")
+    
+    if filename.endswith(".txt") or filename.endswith(".log"):
+        filepath = os.path.join(DATA_TXT_PATH,f"{filename}")
+        if not os.path.exists(filepath):
+            filepath = os.path.join(DATA_TXT_FINISH_PATH,f"{filename}")
+    
+        if os.path.exists(filepath):
+                mylog.debug(f"File Exist, file_path = {filepath}")
+                return StreamingResponse(open(filepath, "rb"), media_type="application/octet-stream",headers={"Content-Disposition": f"attachment; filename={filename}"})  #讓.txt或.log回傳形式是檔案
+        
+    elif filename.endswith(".xlsx") or filename.endswith(".csv"):
+        filepath = os.path.join(DATA_CSV_PATH,f"{filename}")
+        if not os.path.exists(filepath):
+            filepath = os.path.join(DATA_CSV_FINISH_PATH,f"{filename}")
+            
+    if os.path.exists(filepath):
+        mylog.debug(f"File Exist, file_path = {filepath}")
+        return FileResponse(filepath,filename=filename)
+    else:
+        return "File does not exist"
 
 @handlefile.post("/uploadfile2/")
 async def create_upload_file(
@@ -62,17 +83,16 @@ async def Upload_txt(
 ):
     mylog.info("--------------Upload_txt function-------------")
     
-    
-    folder = os.path.join(os.getcwd(),"data","txt")
-    os.makedirs(folder, exist_ok=True)
+    os.makedirs(DATA_TXT_PATH, exist_ok=True)
     
     file_list = []
     
     for file in files:
-        file_path = os.path.join(folder, file.filename)
+        file_path = os.path.join(DATA_TXT_PATH, file.filename)
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
         file_list.append(file.filename)
+        mylog.debug(f"File :{file.filename} Saved.")
     
     return {"file":file_list }
 
@@ -103,12 +123,11 @@ async def create_upload_file(
 
     data_txtDF = pd.DataFrame(data_txt,columns= column_names)
 
-    folder = os.path.join(os.getcwd(),"data","csv_xlsx")
     
-    if not os.path.exists(folder):
-        os.mkdir(folder)
+    if not os.path.exists(DATA_CSV_PATH):
+        os.mkdir(DATA_CSV_PATH)
     
-    path = os.path.join(folder,file.filename)
+    path = os.path.join(DATA_CSV_PATH,file.filename)
     
     data_txtDF.to_csv(f"{path}.csv",index= False)
     data_txtDF.to_excel(f"{path}.xlsx",index= False)
@@ -118,16 +137,14 @@ async def create_upload_file(
 
 @handlefile.post("/txt_to_csv_all/")
 async def to_csv():
-    txt_dir = os.path.join(os.getcwd(),"data","txt")
-    finished = os.path.join(txt_dir,"finished")
-    
-    if not os.path.exists(txt_dir):
-        os.mkdir(txt_dir)
-    if not os.path.exists(finished):
-        os.mkdir(finished)
+    mylog.info("---------txt_to_csv_all Function---------")
+    if not os.path.exists(DATA_TXT_PATH):
+        os.mkdir(DATA_TXT_PATH)
+    if not os.path.exists(DATA_TXT_FINISH_PATH):
+        os.mkdir(DATA_TXT_FINISH_PATH)
     
             
-    data_list = os.listdir(txt_dir)
+    data_list = os.listdir(DATA_TXT_PATH)
     
     deal = 0
     deal_list =[]
@@ -136,10 +153,13 @@ async def to_csv():
         if not f=="finished":
             deal = 1
             deal_list.append(f)
-            read_path = os.path.join(txt_dir,f)
+            read_path = os.path.join(DATA_TXT_PATH,f)
             with open(read_path, "r", encoding="utf-8") as file:
                 lines = file.readlines()
 
+            mylog.debug(f"Open file{f} and readlines ")
+            mylog.debug("Dealing with data")
+            
             data_txt = []
             column_names = lines[2].strip().split()
             column_names[0] = "time"
@@ -158,31 +178,36 @@ async def to_csv():
                     #date = pd.to_datetime(time_str,format="%H時%M分%S秒")
 
             data_txtDF = pd.DataFrame(data_txt,columns= column_names)
-            
+            mylog.debug("Complete transfer data to DataFrame")
             #data_txtDF[column_names[0]] = data_txtDF[column_names[0]].dt.time
             #data_txtDF[column_names[0]] = datetime.strftime(data_txtDF[column_names[0]],format="%H:%M:%S")
             #data_txtDF[column_names[0]] = data_txtDF[column_names[0]].astype(str)
             #data_txtDF[2:] = data_txtDF[2:].astype(float)
             
-            folder = os.path.join(os.getcwd(),"data","csv_xlsx")
             
-            if not os.path.exists(folder):
-                os.mkdir(folder)
+            if not os.path.exists(DATA_CSV_PATH):
+                os.mkdir(DATA_CSV_PATH)
             
-            path = os.path.join(folder,f)
+            path = os.path.join(DATA_CSV_PATH,f)
             
+            mylog.debug(f"Saving {f}.csv file")
             data_txtDF.to_csv(f"{path}.csv",index= False)
+            mylog.debug(f"Saving {f}.xlsx file")
             data_txtDF.to_excel(f"{path}.xlsx",index= False)
-            path += ".xlsx"
+            mylog.debug("Finish saving files")
             file.close()
-        
-    
-            src_path = os.path.join(txt_dir,f)
-            des_path = os.path.join(finished,f)
-            shutil.move(src_path,des_path)
             
-    if deal: 
+            src_path = os.path.join(DATA_TXT_PATH,f)
+            des_path = os.path.join(DATA_TXT_FINISH_PATH,f) 
+            
+            shutil.move(src_path,des_path)
+            mylog.debug(f"{f} moved to {des_path}")
+            mylog.debug("-------------------------------")
+            
+    if deal:
+        mylog.debug(f"Transfile :{deal_list}") 
         return {"Transfer file":deal_list}
     else:
+        mylog.debug("No data exist")
         return "No data exist"
 

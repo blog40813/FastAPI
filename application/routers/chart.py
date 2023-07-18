@@ -10,6 +10,7 @@ from datetime import datetime
 import datetime
 from matplotlib.dates import DateFormatter
 from matplotlib.dates import date2num,datestr2num
+from configs import *
 
 chart = APIRouter()
 mylog = logger.log("Chart Function Logs")
@@ -18,10 +19,15 @@ mylog = logger.log("Chart Function Logs")
 
 @chart.get("/GetChart/{filename}")
 async def GetFile(filename:str = Path(description= "Filename",example="filename.filetype_YYYYMMDD_number")):
-    filepath = os.path.join(os.getcwd(),"log","usage",f"{filename}.png")
-    return FileResponse(filepath,media_type="image/png")
-
-
+    mylog.info("----------------GetChart function-------------")
+    filepath = os.path.join(DATA_USAGE_PATH,f"{filename}.png")
+    mylog.debug(f"Finding Chart {filename}")
+    if os.path.exists(filepath):
+        mylog.debug(f"Chart exist, return {filename}")
+        return FileResponse(filepath,media_type="image/png")
+    else:
+        mylog.debug(f"{filename} does not exist")
+        return f"{filename} does not exist"
 
 
 @chart.post("/plot")
@@ -111,12 +117,11 @@ async def plot(
                 mylog.debug(f"plot {col_name}")
                 plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M:%S'))
             
-            current = os.getcwd()
-            folder = os.path.join(current,"data","usage")
             
-            if not os.path.exists(folder):
-                os.makedirs(folder)
-            files = os.listdir(folder)
+            
+            if not os.path.exists(DATA_USAGE_PATH):
+                os.makedirs(DATA_USAGE_PATH)
+            files = os.listdir(DATA_USAGE_PATH)
             if files:
                 existcount = sum(1 for f in files if f.startswith(f"{file.filename}"+date+"_"))
                 #maxnum = max([int(f.split('.')[0]) for f in files])  #獲取檔案裏面數字最大的
@@ -130,9 +135,9 @@ async def plot(
             # 將圖片儲存到本地
                 
             image_name = f"{file.filename}_{date}_{next}.png"
-            image_path = os.path.join(folder,image_name)
+            image_path = os.path.join(DATA_USAGE_PATH,image_name)
             plt.savefig(image_path)
-            mylog.debug(f"output dir ={folder}")
+            mylog.debug(f"output dir ={DATA_USAGE_PATH}")
             mylog.debug(f"save image ={image_name}")
            
             plt.clf()
