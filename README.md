@@ -48,6 +48,15 @@ uvicorn main:app --reload
 ```
 <br>
 
+* 在電腦上建立虛擬環境，執行FastAPI(影片示範)
+
+<a href="https://www.youtube.com/watch?v=iZnWB5UkSIE&list=PLaJlXBE6wMy_gOHV2Bkvcd7eM8tpt_I1I&index=6" target="_blank">
+  <img src="https://res.cloudinary.com/marcomontalbano/image/upload/v1689907729/video_to_markdown/images/youtube--iZnWB5UkSIE-c05b58ac6eb4c4700831b2b3070cd403.jpg" alt="FastAPI venv" style="width: 450px; height: auto;">
+</a><br><br>
+
+<!-- [![FastAPI venv](https://res.cloudinary.com/marcomontalbano/image/upload/v1689907729/video_to_markdown/images/youtube--iZnWB5UkSIE-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=iZnWB5UkSIE&list=PLaJlXBE6wMy_gOHV2Bkvcd7eM8tpt_I1I&index=6 "FastAPI venv")
+-->
+
 
 <br>
 
@@ -63,10 +72,8 @@ uvicorn main:app --reload
 ```
 docker-compose up
 ```
+
 <br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nV48E4oxDlA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 
 * 查看執行中的container<br>
 
@@ -82,6 +89,20 @@ docker ps
 docker images
 ```
 
+* 藉由docker 啟動 API(影片)<br>
+
+<a href="https://www.youtube.com/watch?v=nV48E4oxDlA&list=PLaJlXBE6wMy_gOHV2Bkvcd7eM8tpt_I1I&index=5" target="_blank">
+  <img src="https://res.cloudinary.com/marcomontalbano/image/upload/v1689899668/video_to_markdown/images/youtube--nV48E4oxDlA-c05b58ac6eb4c4700831b2b3070cd403.jpg" alt="API with docker-compose up" style="width: 300px; height: auto;">
+</a><br><br>
+
+* docker重啟API(影片)<br>
+
+<a href="https://www.youtube.com/watch?v=Qtk01MIYQr8&list=PLaJlXBE6wMy_gOHV2Bkvcd7eM8tpt_I1I&index=4" target="_blank">
+  <img src="https://res.cloudinary.com/marcomontalbano/image/upload/v1689903494/video_to_markdown/images/youtube--Qtk01MIYQr8-c05b58ac6eb4c4700831b2b3070cd403.jpg" alt="docker restart" style="width: 300px; height: auto;">
+</a><br><br>
+
+<!-- [![docker restart](https://res.cloudinary.com/marcomontalbano/image/upload/v1689903494/video_to_markdown/images/youtube--Qtk01MIYQr8-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=Qtk01MIYQr8&list=PLaJlXBE6wMy_gOHV2Bkvcd7eM8tpt_I1I&index=4 "docker restart")  -->
+
 
 ## Go to Web<br>
 
@@ -93,6 +114,8 @@ docker images
   若IP設定 0.0.0.0 可以使用 ipconfig 查看自己IP位置再連上 `http://IP:8000` 或使用 `http://127.0.0.1:8000`
 
 * **注意，127.0.0.1只能給本機使用，若要同區域網內可連接，需使用 `http://IP:8000`**
+
+
     
 
 
