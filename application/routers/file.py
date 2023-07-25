@@ -109,8 +109,23 @@ async def create_upload_file(
     lines = content.decode("utf-8").split("\n")
 
     data_txt = []
+    
+    device_start_index = lines[0].find('(')
+    device_end_index = lines[0].find(')')
+    device = lines[0][device_start_index+1:device_end_index].strip()
+    
+    data_date_index = lines[0].find("西元")
+    data_obj = lines[0][data_date_index+2:data_date_index+13]
+    data_date = datetime.strptime(data_obj,"%Y年%m月%d日").date()
+
+    print(data_date)
+    
     column_names = lines[2].strip().split()
     column_names[0] = "time"
+    
+    column_names.append(device)
+    column_names.append(data_date)
+
     
     for line in lines[3:-2]:
         if line:
@@ -118,7 +133,7 @@ async def create_upload_file(
             
             time_str = column[0]
             date = datetime.strptime(time_str,"%H時%M分%S秒").time()
-            data_txt.append([date]+[convert(x) for x in column[1:]])
+            data_txt.append([date]+[convert(x) for x in column[1:]]+[None]*2)
             
 
     data_txtDF = pd.DataFrame(data_txt,columns= column_names)
@@ -127,9 +142,11 @@ async def create_upload_file(
     if not os.path.exists(DATA_CSV_PATH):
         os.mkdir(DATA_CSV_PATH)
     
-    path = os.path.join(DATA_CSV_PATH,file.filename)
+    if file.filename.endswith(".txt") or file.filename.endswith(".log") :
+        store_name = device + "_" + file.filename.rsplit('.',1)[0]
+        path = os.path.join(DATA_CSV_PATH,store_name)
     
-    data_txtDF.to_csv(f"{path}.csv",index= False)
+    data_txtDF.to_csv(f"{path}.csv",index= False,encoding="utf-8")
     data_txtDF.to_excel(f"{path}.xlsx",index= False)
     path += ".xlsx"
     return {"file":path}
@@ -148,6 +165,8 @@ async def to_csv():
     
     deal = 0
     deal_list =[]
+    
+    
 
     for f in data_list:
         if not f=="finished":
@@ -160,17 +179,30 @@ async def to_csv():
             mylog.debug(f"Open file{f} and readlines ")
             mylog.debug("Dealing with data")
             
+            
+            device_start_index = lines[0].find('(')
+            device_end_index = lines[0].find(')')
+            device = lines[0][device_start_index+1:device_end_index].strip()
+            
+            data_date_index = lines[0].find("西元")
+            data_obj = lines[0][data_date_index+2:data_date_index+13]
+            data_date = datetime.strptime(data_obj,"%Y年%m月%d日").date()
+            
             data_txt = []
             column_names = lines[2].strip().split()
             column_names[0] = "time"
             
+            column_names.append(device)
+            column_names.append(data_date)
+        
+
             for line in lines[3:-2]:
                 if line:
                     column = line.strip().split()
                     
                     time_str = column[0]
                     date = datetime.strptime(time_str,"%H時%M分%S秒").time()
-                    data_txt.append([date]+[convert(x) for x in column[1:]])
+                    data_txt.append([date]+[convert(x) for x in column[1:]]+[None]*2)
                     
                     #data_txt.append([convert(x) for x in column[:]])
                     
@@ -188,7 +220,10 @@ async def to_csv():
             if not os.path.exists(DATA_CSV_PATH):
                 os.mkdir(DATA_CSV_PATH)
             
-            path = os.path.join(DATA_CSV_PATH,f)
+            if f.endswith(".txt") or f.endswith(".log") :
+                store_name = device + "_" + f.rsplit('.',1)[0]
+                    
+            path = os.path.join(DATA_CSV_PATH,store_name)
             
             mylog.debug(f"Saving {f}.csv file")
             data_txtDF.to_csv(f"{path}.csv",index= False)
