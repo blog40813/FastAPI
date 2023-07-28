@@ -46,7 +46,7 @@ def home():
 
 
 
-# 将静态文件夹路径指向 Swagger UI 的文件夹路径
+# 將靜態文件指向Swagger UI的靜態文件資料夾
 #put the needed file to sta (index.jsx/swagger-ui.css/swagger-ui-bundle.js/swagger-ui-standalone-preset.js)
 web.mount("/sta", StaticFiles(directory="./../sta"), name="sta")
 

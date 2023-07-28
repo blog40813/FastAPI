@@ -25,8 +25,6 @@ from configs import *
 
 mylog = logger.log("File Function Logs")
 
-
-#方法可以混用，目前還沒研究為甚麼要這樣，但可以加上description
 @handlefile.get("/GetFile/{filename}")
 async def GetFile(filename:str = Path(description= "Complete_Filename (abc.txt)")):
     mylog.info("---------GetFile Function---------")
@@ -52,7 +50,11 @@ async def GetFile(filename:str = Path(description= "Complete_Filename (abc.txt)"
     else:
         return "File does not exist"
 
-@handlefile.post("/uploadfile2/")
+
+#-------------------------FastAPI練習---------------------------------#
+
+
+@handlefile.post("/uploadfile2/",include_in_schema= False)
 async def create_upload_file(
     file: UploadFile = File(description="A file read as UploadFile"),
 ):
@@ -62,7 +64,7 @@ async def create_upload_file(
     return {"filename": file.filename}
 
 
-@handlefile.post("/mul_files/")
+@handlefile.post("/mul_files/",include_in_schema= False)
 async def create_files(files: list[bytes] = File()):
     mylog.info("--------------mul_files function-------------")
     mylog.debug("output = ")
@@ -71,33 +73,40 @@ async def create_files(files: list[bytes] = File()):
     mylog.debug("")
     return {"file_sizes": [len(file) for file in files]}
 
+#-------------------------------------------------------------#
+
+
+
+
 def convert(s):
     try:
         return float(s)
     except:
         return s
 
+
+#為了將txt檔案上傳到server或是電腦裡面存放txt的資料夾
 @handlefile.post("/Upload_txt")
 async def Upload_txt(
     files: list[UploadFile] = File()
 ):
     mylog.info("--------------Upload_txt function-------------")
     
-    os.makedirs(DATA_TXT_PATH, exist_ok=True)
+    os.makedirs(DATA_TXT_PATH, exist_ok=True) #exist_OK = True是如果發現資料夾存在，也不會引發error，會繼續執行
     
     file_list = []
     
     for file in files:
         file_path = os.path.join(DATA_TXT_PATH, file.filename)
         with open(file_path, "wb") as buffer:
-            shutil.copyfileobj(file.file, buffer)
+            shutil.copyfileobj(file.file, buffer) #將file.file是代表一個可以讀取的二進制，並將此資料寫進buffer裡
         file_list.append(file.filename)
         mylog.debug(f"File :{file.filename} Saved.")
     
     return {"file":file_list }
 
 
-@handlefile.post("/txt_to_csv/")
+@handlefile.post("/usage_txt_to_csv/")
 async def create_upload_file(
     file: UploadFile = File(description="A file read as UploadFile"),
 ):
@@ -105,54 +114,54 @@ async def create_upload_file(
     mylog.info("--------------txt_to_csv function-------------")
     mylog.debug("input = "+file.filename )
     
-    content = await file.read()
+    content = await file.read()   #讀取檔案，但因為這邊是二進制，所以下面要使用utf-8的encoding將data讀進lines裡面
     lines = content.decode("utf-8").split("\n")
 
     data_txt = []
     
-    device_start_index = lines[0].find('(')
+    device_start_index = lines[0].find('(')   #獲取設備名稱
     device_end_index = lines[0].find(')')
     device = lines[0][device_start_index+1:device_end_index].strip()
     
-    data_date_index = lines[0].find("西元")
+    data_date_index = lines[0].find("西元")  #獲取資料日期
     data_obj = lines[0][data_date_index+2:data_date_index+13]
     data_date = datetime.strptime(data_obj,"%Y年%m月%d日").date()
 
     print(data_date)
     
-    column_names = lines[2].strip().split()
+    column_names = lines[2].strip().split()  #獲取資料的column names
     column_names[0] = "time"
     
     column_names.append(device)
-    column_names.append(data_date)
+    column_names.append(data_date)   #將剛剛獲得的device跟日期放進column裡面
 
     
-    for line in lines[3:-2]:
+    for line in lines[3:-2]:     #處理資料 因為第一行是資訊，第二行空行，第三行colume name 所以資料從3開始
         if line:
             column = line.strip().split()
             
-            time_str = column[0]
+            time_str = column[0]        #第一列是時間，將str資料轉換成datetime形式，資料有 時分秒
             date = datetime.strptime(time_str,"%H時%M分%S秒").time()
-            data_txt.append([date]+[convert(x) for x in column[1:]]+[None]*2)
+            data_txt.append([date]+[convert(x) for x in column[1:]]+[None]*2) #將資料放進row裡面
             
 
-    data_txtDF = pd.DataFrame(data_txt,columns= column_names)
+    data_txtDF = pd.DataFrame(data_txt,columns= column_names)   #將資料轉換成dataframe形式
 
     
     if not os.path.exists(DATA_CSV_PATH):
         os.mkdir(DATA_CSV_PATH)
     
     if file.filename.endswith(".txt") or file.filename.endswith(".log") :
-        store_name = device + "_" + file.filename.rsplit('.',1)[0]
+        store_name = device + "_" + file.filename.rsplit('.',1)[0] #只獲取檔名(不含附檔名)
         path = os.path.join(DATA_CSV_PATH,store_name)
     
-    data_txtDF.to_csv(f"{path}.csv",index= False,encoding="utf-8")
+    data_txtDF.to_csv(f"{path}.csv",index= False,encoding="utf-8") #將資料儲存為csv或xlsx
     data_txtDF.to_excel(f"{path}.xlsx",index= False)
     path += ".xlsx"
     return {"file":path}
 
 
-@handlefile.post("/txt_to_csv_all/")
+@handlefile.post("/usage_txt_to_csv_all/")
 async def to_csv():
     mylog.info("---------txt_to_csv_all Function---------")
     if not os.path.exists(DATA_TXT_PATH):

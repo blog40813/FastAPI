@@ -46,13 +46,13 @@ async def plot(
     
 
     if file.filename.endswith( ".csv"):
-        # 处理 CSV 文件
+        # 處理 CSV 文件
         data = pd.read_csv(tmp_path)
     elif file.filename.endswith((".xls", ".xlsx")):
-        # 处理 Excel 文件
+        # 處理 Excel 文件
         data = pd.read_excel(tmp_path)
     else:
-        # 未知文件类型，进行适当的错误处理或提示用户
+        # Error
         return {"error": "Unsupported file format"}
 
     
@@ -73,7 +73,8 @@ async def plot(
     second = x.apply(lambda t: t.second)
     '''
     
-    plt.rcParams['axes.unicode_minus'] = False
+    plt.rcParams['axes.unicode_minus'] = False #繪製圖表的時候希望負號不要變成破折號
+
     plt.figure(figsize=(12, 8))             #設定輸出圖片的大小
     cols = data.shape[1]                    #獲取column的數量 若shape ==0，就是獲取row的數量
     col_names = data.columns.tolist()       #將column的名稱放進list並儲存在col_names
@@ -82,14 +83,15 @@ async def plot(
     
     
     
-    x = data.iloc[:,0]
-    x_len = len(x)
+    x = data.iloc[:,0] # data在前面有先利用pandas的功能讀取成 data frame ，這邊是取用 colume = 0 的資料，在這裡通常是時間資料(時：分：秒)
+    x_len = len(x) #取得資料總共有幾筆
     
     start = 1
     end = 0
-    
+
+   
     for current in range(1,x_len):
-        if x[current] < x[current-1] or current == x_len-1:
+        if x[current] < x[current-1] or current == x_len-1:   #切分出每一天的資料 也就是當現在時間小於剛剛的時間代表跨天 並記錄這天資料的start跟end準備繪圖
             start = end + 1
             end = current-1
             mylog.debug(f"Split data region start ={start} end = {end}")
@@ -97,7 +99,7 @@ async def plot(
             subx = x[start:end]
             check =0
             
-            for item in subx:
+            for item in subx:                           #確認這個時間資料是字串還是datetime型別，如果是datetime會轉換成字串以利使用
                 if isinstance(item,str):
                     check = 1
                     
@@ -105,19 +107,20 @@ async def plot(
                 x_str = subx.apply(lambda t: t.strftime("%H:%M:%S"))   #將datetime轉換為字串格式 
             else:
                 x_str = subx
-                
-            x_values = datestr2num(x_str)# 將字串格式資料轉換為數值型別
             
-            for i,col_name in zip(range(1,cols),col_names[1:]):
+
+            x_values = datestr2num(x_str)# 將字串格式資料轉換為數值型別，讓等等繪圖的時候可以正確使用時間資料
+            
+            for i,col_name in zip(range(1,cols),col_names[1:]):  #針對每一個column繪圖，其實也可以使用 col_names[i]來取用標題內容，這邊是針對zip做練習
                 y = data.iloc[start:end,i]
-                plt.subplot(4,3,i)
-                plt.plot(x_values, y)
+                plt.subplot(4,3,i)    #因為資料最多不會超過12筆，所以這邊直接以12當標準，不過也可以使用 (cols-1)/3 , 3,i讓每一行都有三筆資料 自動分割
+                plt.plot(x_values, y)  #這邊是先plot再設定折線圖的title x/y axis等等
                 plt.xlabel('Time')
                 plt.xticks(fontsize=8)
                 plt.ylabel('Value')
                 plt.title(f"{col_name}")
                 mylog.debug(f"plot {col_name}")
-                plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M:%S'))
+                plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M:%S'))  #讓X軸的時間數值表示方式是時 分 秒
             
             
             '''
@@ -125,14 +128,14 @@ async def plot(
                 os.makedirs(DATA_USAGE_PATH)
             files = os.listdir(DATA_USAGE_PATH)
             '''
-            store_path = os.path.join(DATA_USAGE_PATH,file.filename.split('.')[0])
+            store_path = os.path.join(DATA_USAGE_PATH,file.filename.split('.')[0])  #儲存檔案(設定儲存目標資料夾)
             if not os.path.exists(store_path):
                 os.makedirs(store_path)
                 
-            files = os.listdir(store_path)
+            files = os.listdir(store_path)  #獲取資料夾裡面擁有的檔案
                 
             if files:
-                existcount = sum(1 for f in files if f.startswith(f"{file.filename}_"+date+"_"))
+                existcount = sum(1 for f in files if f.startswith(f"{file.filename}_"+date+"_")) #如果發現相同檔案相同日子已經有檔案，那就編號+1
                 
                 #maxnum = max([int(f.split('.')[0]) for f in files])  #獲取檔案裏面數字最大的
                 next = existcount + 1
@@ -141,15 +144,17 @@ async def plot(
                 
             plt.suptitle(f"{file.filename}_{date}_{next}")
             plt.tight_layout()
-            # 繪製折線圖
-            # 將圖片儲存到本地
-                
+            # 設定整張圖片的標題，以及tight layout 是讓每一個圖片有合理的間距跟布置，使得不會疊圖
+
+            # 將圖片儲存到資料夾裡面
             image_name = f"{file.filename}_{date}_{next}.png"
             image_path = os.path.join(store_path,image_name)
             plt.savefig(image_path)
             mylog.debug(f"output dir ={store_path}")
             mylog.debug(f"save image ={image_name}")
            
+            #儲存完圖片之後要將內容全部清空
+            #更新日期，先將date(str)轉換成datetime並加上一天，再將此日期轉換回str資料以利使用
             plt.clf()
             date_convert = datetime.datetime.strptime(date,"%Y%m%d").date()
             date_convert = date_convert +datetime.timedelta(days = 1)
@@ -199,7 +204,7 @@ async def plot(
     second = x.apply(lambda t: t.second)
     '''
     
-    plt.rcParams['axes.unicode_minus'] = False
+    plt.rcParams['axes.unicode_minus'] = False  #繪製圖表的時候希望負號不要變成破折號
     plt.figure(figsize=(12, 8))             #設定輸出圖片的大小
     cols = data.shape[1]                    #獲取column的數量 若shape ==0，就是獲取row的數量
     col_names = data.columns.tolist()       #將column的名稱放進list並儲存在col_names
@@ -211,14 +216,14 @@ async def plot(
     elif file_type == 1:
         date = datetime.datetime.strftime(col_names[-1],"%Y%m%d")
 
-    x = data.iloc[:,0]
-    x_len = len(x)
+    x = data.iloc[:,0]   # data在前面有先利用pandas的功能讀取成 data frame ，這邊是取用 colume = 0 的資料，在這裡通常是時間資料(時：分：秒)
+    x_len = len(x) #取得資料總共有幾筆
     
     start = 1
     end = 0
     
     for current in range(1,x_len):
-        if x[current] < x[current-1] or current == x_len-1:
+        if x[current] < x[current-1] or current == x_len-1: #切分出每一天的資料 也就是當現在時間小於剛剛的時間代表跨天 並記錄這天資料的start跟end準備繪圖
             start = end + 1
             end = current-1
             mylog.debug(f"Split data region start ={start} end = {end}")
@@ -226,7 +231,7 @@ async def plot(
             subx = x[start:end]
             check =0
             
-            for item in subx:
+            for item in subx: #確認這個時間資料是字串還是datetime型別，如果是datetime會轉換成字串以利使用
                 if isinstance(item,str):
                     check = 1
                     
@@ -237,31 +242,31 @@ async def plot(
                 
             x_values = datestr2num(x_str)# 將字串格式資料轉換為數值型別
             
-            for i,col_name in zip(range(1,cols),col_names[1:]):
+            for i,col_name in zip(range(1,cols),col_names[1:]): #針對每一個column繪圖，其實也可以使用 col_names[i]來取用標題內容，這邊是針對zip做練習
                 y = data.iloc[start:end,i]
                 if y is not None:
-                    plt.subplot(4,3,i)
-                    plt.plot(x_values, y)
+                    plt.subplot(4,3,i) #因為資料最多不會超過12筆，所以這邊直接以12當標準，不過也可以使用 (cols-1)/3 , 3,i讓每一行都有三筆資料 自動分割
+                    plt.plot(x_values, y) #這邊是先plot再設定折線圖的title x/y axis等等
                     plt.xlabel('Time')
                     plt.xticks(fontsize=8)
                     plt.ylabel('Value')
                     plt.title(f"{col_name}")
                     mylog.debug(f"plot {col_name}")
-                    plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M:%S'))
+                    plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M:%S'))  #讓X軸的時間數值表示方式是時 分 秒
             '''
             if not os.path.exists(DATA_USAGE_PATH):
                 os.makedirs(DATA_USAGE_PATH)
             files = os.listdir(DATA_USAGE_PATH)
             '''
-            store_path = os.path.join(DATA_USAGE_PATH,file.filename.split('.')[0])
+            store_path = os.path.join(DATA_USAGE_PATH,file.filename.split('.')[0]) #儲存檔案(設定儲存目標資料夾)
             if not os.path.exists(store_path):
                 os.makedirs(store_path)
             
-            files = os.listdir(store_path)
+            files = os.listdir(store_path) #獲取資料夾裡面擁有的檔案
                 
                 
             if files:
-                existcount = sum(1 for f in files if f.startswith(f"{file.filename}_"+date+"_"))
+                existcount = sum(1 for f in files if f.startswith(f"{file.filename}_"+date+"_")) #如果發現相同檔案相同日子已經有檔案，那就編號+1
                 #maxnum = max([int(f.split('.')[0]) for f in files])  #獲取檔案裏面數字最大的
                 next = existcount + 1
             else : 
@@ -269,8 +274,12 @@ async def plot(
                 
             plt.suptitle(f"{file.filename}_{date}_{next}")
             plt.tight_layout()
-            # 繪製折線圖
-            # 將圖片儲存到本地
+            # 設定整張圖片的標題，以及tight layout 是讓每一個圖片有合理的間距跟布置，使得不會疊圖
+
+            # 將圖片儲存到資料夾裡面
+            
+             #儲存完圖片之後要將內容全部清空
+            #更新日期，先將date(str)轉換成datetime並加上一天，再將此日期轉換回str資料以利使用
                 
             image_name = f"{file.filename}_{date}_{next}.png"
             image_path = os.path.join(store_path,image_name)
@@ -331,7 +340,7 @@ async def plot(input : Model):
             else:
                 deal = 0
         else:
-            # 未知文件类型，进行适当的错误处理或提示用户
+            
             return {"error": "Unsupported file format"}
         
         #sheets = pd.ExcelFile(tmp_path)

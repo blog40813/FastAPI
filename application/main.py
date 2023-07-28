@@ -4,8 +4,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 import datetime
 from datetime import timedelta,datetime
-#from fastapi.openapi.docs import get_swagger_ui_html
-#from fastapi.openapi.utils import get_openapi
 
 from routers.user import user
 from routers.init_web import web
@@ -18,8 +16,6 @@ import logger
 import os
 from configs import *
 
-#把items下寫的功能都import進來，可以執行
-#但路徑不能為空123
 
 import sys
 sys.path.append(CURRENT_PATH)
@@ -28,13 +24,12 @@ sys.path.append(CURRENT_PATH)
 #在下面的code裡面，tags就是大標題，所有從這邊include進來的函數最上面會有大標作區段
 app = FastAPI()
 
-#目前設置http credential的方法只看到可以使用在有app裡面
+
 
 mylog = logger.log("Main Function")
 
 '''-------------------------------------------'''
-##123
-##456 
+
 import secrets
 from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
@@ -43,13 +38,17 @@ security = HTTPBasic()
 
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-##進入網頁之前需要驗證的code
 
     
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url = None)
 from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.openapi.utils import get_openapi
 
+
+'''
+為了取得API的OpenAPI規範(Json格式)，使得Swagger UI 可以使用他來取得API相關資訊(get_openapi function)
+
+'''
 @app.get("/openapi.json", include_in_schema=False)
 async def openapi():
     
@@ -57,6 +56,10 @@ async def openapi():
     
     return get_openapi(title = "FastAPI", version="0.1.0", routes=app.routes)
 #include_in_schema是指要不要把此函數顯現在網頁上
+
+
+
+##進入網頁之前需要驗證的code
 
 '''-------------------------------------------'''
 '''
@@ -95,6 +98,9 @@ async def root():
     mylog.debug("output = Hello, Welcome to my FastAPI\n")
     return "Hello, Welcome to my FastAPI"
 
+
+"將所有router include進app 使得router裡面的所有function可以使用 tag是到時候會顯現在Swagger UI上面的大標題"
+
 app.include_router(items,tags=["Items"])
 app.include_router(web,tags=["Web"])
 app.include_router(user,tags=["User"])
@@ -105,8 +111,20 @@ app.include_router(chart,tags=["Chart"])
 
 
 
-# 将静态文件夹路径指向 Swagger UI 的文件夹路径
+# 將靜態文件資料夾路徑指向Swagger UI的靜態文件資料夾
 #put the needed file to sta (index.jsx/swagger-ui.css/swagger-ui-bundle.js/swagger-ui-standalone-preset.js)
+
+'''
+目的是讓FastAPI連接Swagger UI 的靜態文件 讓Swagger UI 可以正確顯示 API 文件
+index.jsx ： Swagger UI的入口文件 用於呈現API文件的HTML結構 載入所需的CSS和JavaScripts文件
+swagger-ui.css ： Swagger UI 的樣式表文件 美化、排版API文件內容 主要負責視覺體驗的部分
+swagger-ui-bundle.js ： Swagger UI 的 JavaScript 包 包含所有Swagger UI 的核心功能跟模組 負責API規範的解析、渲染、互動功能
+swagger-ui-standalone-preset.js ：
+Swagger UI 的另一個 JavaScript 包 用於設定和配置Swagger UI 的選項及外觀 有許多自定義的選項 可以讓使用者根據需要調整Swagger UI的行為跟外觀
+
+當我們綁定了靜態文件之後 進入網站時SwaggerUI會載入並渲染 嘗試向/openapi.json發出請求API規範
+所以前面才要先定義一個/openapi.json的路徑(函數)
+'''
 app.mount("/sta", StaticFiles(directory="./../sta"), name="sta")
 
 
