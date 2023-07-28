@@ -6,9 +6,8 @@ web = APIRouter()
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 import sys
-#sys.path.append("D:\Fastapi\exercise")
-#from application import main
-#from main import sta_path
+
+import main,logger
 
 
 ##可以自己設置swagger UI的路徑位置，但如果是設置在docs沒有用
@@ -41,11 +40,13 @@ def home():
         </script>
     </body>
     </html>
+    123
     """
 
 
 
-# 将静态文件夹路径指向 Swagger UI 的文件夹路径
+
+# 將靜態文件指向Swagger UI的靜態文件資料夾
 #put the needed file to sta (index.jsx/swagger-ui.css/swagger-ui-bundle.js/swagger-ui-standalone-preset.js)
 web.mount("/sta", StaticFiles(directory="./../sta"), name="sta")
 

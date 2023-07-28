@@ -1,11 +1,38 @@
 version: '3'
 services:
-  code:
+  fastapi:
+    image: fastapi
     build:
       context: .
-      args: 
-        - IMAGE_NAME=fastapi
     ports:
       - "8000:8000"
     volumes:
       - ./:/fastapi
+    container_name: fastapi
+
+
+
+  prefect:
+    image: fastapi
+    build:
+     context: .
+    ports:
+      - "42001:42001"
+
+    environment:
+      #- PREFECT__UI__HOST = 0.0.0.0
+      PREFECT_ORION_API_HOST: 0.0.0.0
+      PREFECT_ORION_ANALYTICS_ENABLED: "false"
+      PREFECT_LOGGING_SERVER_LEVEL: WARNING
+      PREFECT_API_URL: http://140.96.111.93:42001/api
+    command :
+      - prefect
+      - orion
+      - start 
+      - --port
+      - '42001'
+    volumes:
+      - ./prefect:/fastapi/prefect
+    container_name: prefect_42001
+
+ 
