@@ -25,6 +25,10 @@ services:
       PREFECT_ORION_ANALYTICS_ENABLED: "false"
       PREFECT_LOGGING_SERVER_LEVEL: WARNING
       PREFECT_API_URL: http://140.96.111.93:42001/api
+      PREFECR_ABC : '451'
+      PREFECR_USER: 'abc'
+      PREFECT_PASSWORD: '123'
+      PREFECT_API_KEY : 'pnu_3PUXb1myh8Vv4N3K3ZMJycxDTe45bP1MJlOm'
     command :
       - prefect
       - orion
