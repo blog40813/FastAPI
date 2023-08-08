@@ -3,14 +3,16 @@ from prefect.context import get_run_context
 from prefect_email import EmailServerCredentials, email_send_message
 from typing import List
 from Mailbox import mail2_admin
+
+
 '''
 from prefect.orion.schemas.schedules import CronSchedule
 from prefect.orion.schemas import schedules
 
 from prefect.server.schemas.schedules import CronSchedule
 from prefect.server.schemas import schedules
-
 '''
+
 
 '''
 credentials = EmailServerCredentials(
@@ -21,38 +23,12 @@ credentials = EmailServerCredentials(
 
 )
 credentials.save("test",overwrite= True)
-'''
 
-'''
-credentials = EmailServerCredentials(
-    username="love900687@gmail.com",
-    password="earzcvmatuyqdshx",  # must be an app password
-    host="smtp.gmail.com",  
-    port=587,  # 連接埠，Gmail 使用的是 587
-
-)
-credentials.save("test2",overwrite= True)
-'''
-
-
-'''
-
-credentials = EmailServerCredentials(
-    username="blog40813@outlook.com",
-    password="jkusmhwbikkphopi",  # must be an app password
-    host="smtp-mail.outlook.com",  
-    port=587,  # 連接埠，Gmail 使用的是 587
-    smtp_type="STARTTLS"
-
-)
-
-credentials.save("test3",overwrite= True)
-'''
-#EmailServerCredentials.load("test2")
+EmailServerCredentials.load("test")
 
 @flow
 def example_email_send_message_flow(email_addresses: List[str]):
-    email_server_credentials = EmailServerCredentials.load("test2")
+    email_server_credentials = EmailServerCredentials.load("test")
     for email_address in email_addresses:
         subject = email_send_message.with_options(name=f"email {email_address}").submit(
             email_server_credentials=email_server_credentials,
@@ -61,6 +37,7 @@ def example_email_send_message_flow(email_addresses: List[str]):
             email_to=email_addresses
         )
 #example_email_send_message_flow(["itri461776@itri.org.tw"])
+'''
 
 
 
@@ -77,18 +54,21 @@ def notify_exc_by_email(exc):
     )
 
 list = ["blog40813@gmail.com","love900687@gmail.com"]
-cclist = ["itri461776@itri.org.tw","tonyhsieh@itri.org.tw"]
+cclist = ["itri461776@itri.org.tw"]
 
 @flow
 def example_flow():
+    mail2_admin("Server test sent to multiple receiver",list)
+    
+    '''
     try:
         1 / 0
     except Exception as exc:
         mail2_admin("Server test sent to multiple receiver",list)
         mail2_admin("CCCCCCCCCCCCCCCCC",list,cclist)
         raise
-
-#example_flow()
+    '''
+    
 
 
 """
@@ -111,7 +91,6 @@ with Flow("My Flow", schedule=schedule) as flow:
 
 # 執行 Flow
 flow.run()
-
 
 """
 

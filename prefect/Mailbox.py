@@ -13,8 +13,6 @@ import configparser
 
 def mail2_admin(content,list,cclist=[]):
     sender="itri461776@itri.org.tw"
-    receiver1="itri461776@itri.org.tw"
-    ccreceivers="tonyhsieh@itri.org.tw"
     content="<p>"+content+"</p>"
     msg = MIMEMultipart()
     msg["From"] = sender
@@ -28,7 +26,6 @@ def mail2_admin(content,list,cclist=[]):
     try:
         smtp = smtplib.SMTP("smtpx.itri.org.tw")
         smtp.ehlo(name="itri.org.tw")
-        smtp.login(user="461776", password="Blog40813@itri")
         smtp.login(user="461776", password="Blog40813@itri")
         addr=list
         smtp.sendmail(from_addr=sender, to_addrs=addr+cclist, msg=msg.as_string())
