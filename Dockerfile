@@ -6,8 +6,9 @@ COPY ./requirement.txt .
 
 RUN pip install --no-cache-dir -r ./requirement.txt
 
+RUN mkdir /fastapi/application
+
 RUN mkdir /fastapi/prefect
 
-WORKDIR /fastapi/application
+WORKDIR /fastapi
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000","--reload"]
