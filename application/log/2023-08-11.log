@@ -1,0 +1,10 @@
+2023-08-11 03:34:34 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-08-11 03:34:36 | FastAPI | INFO : --------------do function----------- (Main Function)
+2023-08-11 03:34:36 | FastAPI | DEBUG : output = Hello, Welcome to my FastAPI
+ (Main Function)
+2023-08-11 03:36:00 | FastAPI | INFO : ----------/items/Your_name-------- (Item Function Logs)
+2023-08-11 03:36:00 | FastAPI | DEBUG : input :Leo (Item Function Logs)
+2023-08-11 03:36:00 | FastAPI | DEBUG : output : 
+Hello Leo, Myname is Leo, Nice to meet you...
+ (Item Function Logs)

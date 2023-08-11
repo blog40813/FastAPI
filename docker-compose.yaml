@@ -4,13 +4,14 @@ services:
     image: fastapi
     build:
       context: .
+    
+    working_dir: /fastapi/application
     ports:
       - "8000:8000"
     volumes:
       - ./:/fastapi
 
     command: bash -c "
-      cd application &&
       uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
 
     container_name: fastapi
@@ -21,6 +22,7 @@ services:
     image: fastapi
     build:
      context: .
+    working_dir: /fastapi/prefect
     ports:
       - "42001:42001"
 
@@ -39,7 +41,6 @@ services:
       - ./prefect:/fastapi/prefect
 
     command : bash -c "
-      cd prefect&&
       prefect orion start --port 42001"
       
 

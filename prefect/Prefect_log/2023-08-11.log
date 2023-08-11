@@ -1,0 +1,66 @@
+2023-08-11 06:39:33 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-11 06:39:33 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-11 06:39:33 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "fetch data fail", 
+  "report": {
+    "mainInfo": [], 
+    "projID": "", 
+    "projName": ""
+  }, 
+  "status": -1, 
+  "time_async": "0.0304479598999"
+}
+ (Function)
+2023-08-11 06:39:33 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-11 06:53:15 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-11 06:53:15 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-11 06:53:15 | Prefect | DEBUG : url = https://140.96.111.164:5998/getReport_Sync (Function)
+2023-08-11 06:53:15 | Prefect | DEBUG : input={'projName': '2QDataMarketDeId'} (Function)
+2023-08-11 06:53:15 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "fetch data fail", 
+  "report": {
+    "mainInfo": [], 
+    "projID": "", 
+    "projName": ""
+  }, 
+  "status": -1, 
+  "time_async": "0.0193350315094"
+}
+ (Function)
+2023-08-11 06:53:15 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-11 07:01:06 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-11 07:01:06 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-11 07:01:06 | Prefect | DEBUG : url = https://140.96.111.164:5998/getReport_Sync (Function)
+2023-08-11 07:01:06 | Prefect | DEBUG : input={'projName': '2QDataMarketDeId'} (Function)
+2023-08-11 07:01:06 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "fetch data fail", 
+  "report": {
+    "mainInfo": [], 
+    "projID": "", 
+    "projName": ""
+  }, 
+  "status": -1, 
+  "time_async": "0.0198838710785"
+}
+ (Function)
+2023-08-11 07:01:06 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-11 07:18:18 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-11 07:18:18 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-11 07:18:18 | Prefect | DEBUG : url = https://140.96.111.164:5998/getReport_Sync (Function)
+2023-08-11 07:18:18 | Prefect | DEBUG : input={'projName': '2QDataMarketDeId'} (Function)
+2023-08-11 07:18:18 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "fetch data fail", 
+  "report": {
+    "mainInfo": [], 
+    "projID": "", 
+    "projName": ""
+  }, 
+  "status": -1, 
+  "time_async": "0.0196869373322"
+}
+ (Function)
+2023-08-11 07:18:18 | Prefect | DEBUG : Finish Call_api() (Flow)

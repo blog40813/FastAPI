@@ -13,3 +13,7 @@ DATA_CSV_PATH = os.path.join(DATA_PATH,"csv_xlsx")
 DATA_CSV_FINISH_PATH = os.path.join(DATA_CSV_PATH,"finished")
 
 DATA_USAGE_PATH = os.path.join(DATA_PATH,"usage")
+
+
+print(CURRENT_PATH)
+print("\n\n\n")
