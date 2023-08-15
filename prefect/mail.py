@@ -1,8 +1,9 @@
-from prefect import flow
+from prefect import flow,get_run_logger
 from prefect.context import get_run_context
 from prefect_email import EmailServerCredentials, email_send_message
 from typing import List
 from Mailbox import mail2_admin
+from logger import *
 
 
 '''
@@ -41,7 +42,6 @@ def example_email_send_message_flow(email_addresses: List[str]):
 
 
 
-
 def notify_exc_by_email(exc):
     context = get_run_context()
     flow_run_name = context.flow_run.name
@@ -55,10 +55,19 @@ def notify_exc_by_email(exc):
 
 list = ["blog40813@gmail.com","love900687@gmail.com"]
 cclist = ["itri461776@itri.org.tw"]
+msg = "Server test sent to multiple receiver"
 
 @flow
-def example_flow():
-    mail2_admin("Server test sent to multiple receiver",list)
+def Mail():
+    
+    prelog = get_run_logger()
+    prelog.setLevel("DEBUG")
+    prelog.info("Enter example_flow")
+    prelog.debug(f"Enter mail2_admin function")
+    prelog.debug(f" msg = {msg}\n list = {list}\n cclist = {cclist}")
+    
+    
+    mail2_admin(msg,list)
     
     '''
     try:
@@ -95,4 +104,4 @@ flow.run()
 """
 
 if __name__  == "__main__":
-    example_flow()
+    Mail()

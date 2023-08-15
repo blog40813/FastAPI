@@ -1,0 +1,5 @@
+2023-08-10 16:36:32 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-08-10 16:36:35 | FastAPI | INFO : --------------do function----------- (Main Function)
+2023-08-10 16:36:35 | FastAPI | DEBUG : output = Hello, Welcome to my FastAPI
+ (Main Function)

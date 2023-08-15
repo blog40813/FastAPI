@@ -1,0 +1,116 @@
+2023-08-15 09:07:37 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 09:07:37 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 09:07:37 | Prefect | DEBUG : url = https://140.96.111.164:5998/getReport_Sync (Function)
+2023-08-15 09:07:37 | Prefect | DEBUG : input={'projName': '2QDataMarketDeId'} (Function)
+2023-08-15 09:07:37 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "fetch data fail", 
+  "report": {
+    "mainInfo": [], 
+    "projID": "", 
+    "projName": ""
+  }, 
+  "status": -1, 
+  "time_async": "0.0326988697052"
+}
+ (Function)
+2023-08-15 09:07:37 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 09:08:15 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 09:08:15 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 09:08:15 | Prefect | DEBUG : url = https://140.96.111.164:5998/setJsonProfile_Async (Function)
+2023-08-15 09:08:15 | Prefect | DEBUG : input={'after_col_value': '4,4,4,2,4,2,3,3', 'csv_name': 'newprofile', 'dataitem': 'id', 'datatype': 'string,string,string,string,string,string,string,string', 'gen_qi_settingvalue': '4,4*¤d,3', 'isNull': 'N,Y,Y,N,N,Y,N,N', 'minKvalue': '3', 'pro_col_cht': 'id,age,workclass,fnlwgt,education,education_num,marital_status,occupation', 'qi_col': 'fnlwgt-1,education_num-2', 'tablekeycol': 'id,marital_status,occupation'} (Function)
+2023-08-15 09:08:15 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "", 
+  "setJP_Async": {
+    "celeyId": "90a6180f-111c-4105-ab79-5a90c3e04a5f", 
+    "projStep": "setJsonProfile", 
+    "status": "1", 
+    "time_async": "0.152727127075"
+  }, 
+  "status": 1, 
+  "time_async": "0.164433956146"
+}
+ (Function)
+2023-08-15 09:08:15 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 16:07:47 | Prefect | INFO : Enter Flow : Plot() (Function)
+2023-08-15 16:07:47 | Prefect | INFO : Enter File Requsest Function (Function)
+2023-08-15 16:07:47 | Prefect | DEBUG : url = http://140.96.111.93:8000/plot_all (Function)
+2023-08-15 16:07:47 | Prefect | DEBUG : input=<built-in function input> (Function)
+2023-08-15 16:07:47 | Prefect | DEBUG : Get response:
+{
+  "detail": [
+    {
+      "loc": [
+        "query",
+        "input"
+      ],
+      "msg": "field required",
+      "type": "value_error.missing"
+    }
+  ]
+} (Function)
+2023-08-15 16:07:47 | Prefect | DEBUG : Finish Plot() (Function)
+2023-08-15 16:09:12 | Prefect | INFO : Enter Flow : Plot() (Function)
+2023-08-15 16:09:12 | Prefect | INFO : Enter File Requsest Function (Function)
+2023-08-15 16:09:12 | Prefect | DEBUG : url = http://140.96.111.93:8000/plot_all (Function)
+2023-08-15 16:09:12 | Prefect | DEBUG : Get response:
+{
+  "detail": [
+    {
+      "loc": [
+        "query",
+        "input"
+      ],
+      "msg": "field required",
+      "type": "value_error.missing"
+    }
+  ]
+} (Function)
+2023-08-15 16:09:12 | Prefect | DEBUG : Finish Plot() (Function)
+2023-08-15 16:13:57 | Prefect | INFO : Enter Flow : Plot() (Function)
+2023-08-15 16:13:57 | Prefect | INFO : Enter File Requsest Function (Function)
+2023-08-15 16:13:57 | Prefect | DEBUG : url = http://140.96.111.93:8000/plot_all (Function)
+2023-08-15 16:13:57 | Prefect | DEBUG : Get response:
+{
+  "detail": [
+    {
+      "loc": [
+        "query",
+        "input"
+      ],
+      "msg": "field required",
+      "type": "value_error.missing"
+    }
+  ]
+} (Function)
+2023-08-15 16:13:57 | Prefect | DEBUG : Finish Plot() (Function)
+2023-08-15 16:14:14 | Prefect | INFO : Enter Flow : Plot() (Function)
+2023-08-15 16:14:14 | Prefect | INFO : Enter File Requsest Function (Function)
+2023-08-15 16:14:14 | Prefect | DEBUG : url = http://140.96.111.93:8000/plot_all (Function)
+2023-08-15 16:14:14 | Prefect | DEBUG : Get response:
+{
+  "detail": [
+    {
+      "loc": [
+        "query",
+        "input"
+      ],
+      "msg": "field required",
+      "type": "value_error.missing"
+    }
+  ]
+} (Function)
+2023-08-15 16:14:14 | Prefect | DEBUG : Finish Plot() (Function)
+2023-08-15 16:15:12 | Prefect | INFO : Enter Flow : Plot() (Function)
+2023-08-15 16:15:12 | Prefect | INFO : Enter File Requsest Function (Function)
+2023-08-15 16:15:12 | Prefect | DEBUG : url = http://140.96.111.93:8000/plot_all?input=excel (Function)
+2023-08-15 16:15:13 | Prefect | DEBUG : Get response:
+"No data to plot the chart" (Function)
+2023-08-15 16:15:13 | Prefect | DEBUG : Finish Plot() (Function)
+2023-08-15 16:15:48 | Prefect | INFO : Enter Flow : Excel() (Function)
+2023-08-15 16:15:48 | Prefect | INFO : Enter File Requsest Function (Function)
+2023-08-15 16:15:48 | Prefect | DEBUG : url = http://140.96.111.93:8000/usage_txt_to_csv_all (Function)
+2023-08-15 16:15:48 | Prefect | DEBUG : Get response:
+"No data exist" (Function)
+2023-08-15 16:15:48 | Prefect | DEBUG : Finish Call_api() (Function)
