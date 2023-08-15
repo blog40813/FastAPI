@@ -106,7 +106,7 @@ async def Upload_txt(
     return {"file":file_list }
 
 
-@handlefile.post("/usage_txt_to_csv/")
+@handlefile.post("/usage_txt_to_csv")
 async def create_upload_file(
     file: UploadFile = File(description="A file read as UploadFile"),
 ):
@@ -161,7 +161,7 @@ async def create_upload_file(
     return {"file":path}
 
 
-@handlefile.post("/usage_txt_to_csv_all/")
+@handlefile.post("/usage_txt_to_csv_all")
 async def to_csv():
     mylog.info("---------txt_to_csv_all Function---------")
     if not os.path.exists(DATA_TXT_PATH):

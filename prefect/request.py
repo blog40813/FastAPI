@@ -21,8 +21,18 @@ def Post_request(url,input):
     mylog.debug(f"url = {url}")
     mylog.debug(f"input={input}")
     output = requests.post(url,json=input,verify=False)
-    a = output.text
-    mylog.debug(f"Get response:\n{a}")
-    return a
+    response_text = json.loads(output.text)
+    response_text = json.dumps(response_text,indent=2,ensure_ascii=False)
+    mylog.debug(f"Get response:\n{response_text}")
+    return response_text
         
+def File_request(url):
+    mylog.info("Enter File Requsest Function")
+    mylog.debug(f"url = {url}")
     
+    output = requests.post(url,verify=False)
+    print (output.text)
+    response_text = json.loads(output.text)
+    response_text = json.dumps(response_text,indent=2,ensure_ascii=False)
+    mylog.debug(f"Get response:\n{response_text}")
+    return response_text

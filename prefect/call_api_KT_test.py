@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 from prefect import flow,get_run_logger
 from request import Post_request
 import logger
 from configs import *
-
-#禁用不安全警告
+import json
+# 禁用不安全請求警告
 
 
 url1 = 'https://140.96.111.164:5998/setJsonProfile_Async'
@@ -39,7 +40,6 @@ input3 = {
   "projName": "2QDataMarketDeId"
 }
 
-
 url4 = 'https://140.96.111.164:5998/checkStatus_Sync'
 
 input4 = {
@@ -47,10 +47,11 @@ input4 = {
 }
 
 
+
 mylog = logger.log("Flow")
 
-url = url1
-input = input1
+url = url4
+input = input4
 
 @flow
 def Call_api():
@@ -65,7 +66,7 @@ def Call_api():
     
     
     output = Post_request(url,input)
-    
+    # body = json.dumps(output, ensure_ascii=False).encode('utf-8')
     
     prelog.debug("Finish Post Requsest Function")
     prelog.debug(f"Get response:\n{output}")

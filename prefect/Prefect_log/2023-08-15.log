@@ -1,0 +1,379 @@
+2023-08-15 00:39:04 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 00:39:04 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 00:39:04 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 00:39:04 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 00:39:04 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null, 
+    "Project Status": "\u53bb\u6b04\u4f4d\u5c6c\u6027\u5224\u5b9a", 
+    "celeryID": "1cdb2e91-7e91-476f-bfaa-789d38d2e3a6", 
+    "projName": "DeId_adult_hash", 
+    "projStep": "CheckProjStatus", 
+    "status": "1", 
+    "time_async": "0.0346660614014", 
+    "userID": "1"
+  }, 
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  }, 
+  "errMsg": "", 
+  "status": "1", 
+  "time_async": "0.0459721088409"
+}
+ (Function)
+2023-08-15 00:39:04 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 00:40:26 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 00:40:26 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 00:40:26 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 00:40:26 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 00:40:26 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null, 
+    "Project Status": "\u53bb\u6b04\u4f4d\u5c6c\u6027\u5224\u5b9a", 
+    "celeryID": "dc7edd4f-76bc-44df-9f43-fa10d123b932", 
+    "projName": "DeId_adult_hash", 
+    "projStep": "CheckProjStatus", 
+    "status": "1", 
+    "time_async": "0.0133800506592", 
+    "userID": "1"
+  }, 
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  }, 
+  "errMsg": "", 
+  "status": "1", 
+  "time_async": "0.0244920253754"
+}
+ (Function)
+2023-08-15 00:40:26 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 00:40:37 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 00:40:37 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 00:40:37 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 00:40:37 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 00:40:37 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null, 
+    "Project Status": "\u53bb\u6b04\u4f4d\u5c6c\u6027\u5224\u5b9a", 
+    "celeryID": "73b5ff5e-9212-4502-ab15-74292df4aab2", 
+    "projName": "DeId_adult_hash", 
+    "projStep": "CheckProjStatus", 
+    "status": "1", 
+    "time_async": "0.0104439258575", 
+    "userID": "1"
+  }, 
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  }, 
+  "errMsg": "", 
+  "status": "1", 
+  "time_async": "0.0213549137115"
+}
+ (Function)
+2023-08-15 00:40:37 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 01:16:56 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 01:16:56 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 01:16:56 | Prefect | DEBUG : url = https://140.96.111.164:5998/getReport_Sync (Function)
+2023-08-15 01:16:56 | Prefect | DEBUG : input={'projName': '2QDataMarketDeId'} (Function)
+2023-08-15 01:16:56 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "fetch data fail", 
+  "report": {
+    "mainInfo": [], 
+    "projID": "", 
+    "projName": ""
+  }, 
+  "status": -1, 
+  "time_async": "0.0192799568176"
+}
+ (Function)
+2023-08-15 01:16:56 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 01:18:57 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 01:18:57 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 01:18:57 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 01:18:57 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 01:18:57 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null, 
+    "Project Status": "\u53bb\u6b04\u4f4d\u5c6c\u6027\u5224\u5b9a", 
+    "celeryID": "50a8cefc-4485-4496-8a65-feb54583c826", 
+    "projName": "DeId_adult_hash", 
+    "projStep": "CheckProjStatus", 
+    "status": "1", 
+    "time_async": "0.0112161636353", 
+    "userID": "1"
+  }, 
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  }, 
+  "errMsg": "", 
+  "status": "1", 
+  "time_async": "0.0218529701233"
+}
+ (Function)
+2023-08-15 01:18:57 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 01:25:15 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 01:25:15 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 01:25:15 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 01:25:15 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 01:25:15 | Prefect | DEBUG : Get response:
+b'{\n  "CheckProjStatus": {\n    "Data_filtered": null, \n    "Project Status": "\\u53bb\\u6b04\\u4f4d\\u5c6c\\u6027\\u5224\\u5b9a", \n    "celeryID": "59d4ca46-259a-489b-b2d2-360d8b8dcbbc", \n    "projName": "DeId_adult_hash", \n    "projStep": "CheckProjStatus", \n    "status": "1", \n    "time_async": "0.0109992027283", \n    "userID": "1"\n  }, \n  "dataraw": {\n    "projName": "DeId_adult_hash"\n  }, \n  "errMsg": "", \n  "status": "1", \n  "time_async": "0.0220789909363"\n}\n' (Function)
+2023-08-15 01:25:15 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 01:29:23 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 01:29:23 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 01:29:23 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 01:29:23 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 01:29:24 | Prefect | DEBUG : Get response:
+{'CheckProjStatus': {'Data_filtered': None, 'Project Status': '去欄位屬性判定', 'celeryID': 'ac961e52-13fb-4db7-bb21-0c83cf39c1e4', 'projName': 'DeId_adult_hash', 'projStep': 'CheckProjStatus', 'status': '1', 'time_async': '0.0415370464325', 'userID': '1'}, 'dataraw': {'projName': 'DeId_adult_hash'}, 'errMsg': '', 'status': '1', 'time_async': '0.0526540279388'} (Function)
+2023-08-15 01:29:24 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 01:31:43 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 01:31:43 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 01:31:43 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 01:31:43 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 01:31:43 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null,
+    "Project Status": "\u53bb\u6b04\u4f4d\u5c6c\u6027\u5224\u5b9a",
+    "celeryID": "deecd226-52ad-4026-886d-2551a5bb5a6d",
+    "projName": "DeId_adult_hash",
+    "projStep": "CheckProjStatus",
+    "status": "1",
+    "time_async": "0.0287580490112",
+    "userID": "1"
+  },
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  },
+  "errMsg": "",
+  "status": "1",
+  "time_async": "0.0450050830841"
+} (Function)
+2023-08-15 01:31:43 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 01:35:05 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 01:35:05 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 01:35:05 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 01:35:05 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 01:35:05 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null,
+    "Project Status": "去欄位屬性判定",
+    "celeryID": "03b2644b-2b4e-493f-b2f0-dc018216e281",
+    "projName": "DeId_adult_hash",
+    "projStep": "CheckProjStatus",
+    "status": "1",
+    "time_async": "0.0103480815887",
+    "userID": "1"
+  },
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  },
+  "errMsg": "",
+  "status": "1",
+  "time_async": "0.0213358402252"
+} (Function)
+2023-08-15 01:35:05 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 01:54:21 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 01:54:21 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 01:54:21 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 01:54:21 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 01:54:21 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null,
+    "Project Status": "去欄位屬性判定",
+    "celeryID": "6c04ccff-dc9c-4f75-998a-31a777a3b466",
+    "projName": "DeId_adult_hash",
+    "projStep": "CheckProjStatus",
+    "status": "1",
+    "time_async": "0.0136070251465",
+    "userID": "1"
+  },
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  },
+  "errMsg": "",
+  "status": "1",
+  "time_async": "0.0252590179443"
+} (Function)
+2023-08-15 01:54:21 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 02:02:42 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 02:02:42 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 02:02:42 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 02:02:42 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 02:02:42 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null,
+    "Project Status": "去欄位屬性判定",
+    "celeryID": "5151fddd-2e49-4425-bb9f-fac9ea70f011",
+    "projName": "DeId_adult_hash",
+    "projStep": "CheckProjStatus",
+    "status": "1",
+    "time_async": "0.035138130188",
+    "userID": "1"
+  },
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  },
+  "errMsg": "",
+  "status": "1",
+  "time_async": "0.0464749336243"
+} (Function)
+2023-08-15 02:02:42 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 02:12:35 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 02:12:35 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 02:12:35 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 02:12:35 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 02:12:35 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null,
+    "Project Status": "去欄位屬性判定",
+    "celeryID": "6831b90d-60f3-428a-9db3-7e6344ba9ca9",
+    "projName": "DeId_adult_hash",
+    "projStep": "CheckProjStatus",
+    "status": "1",
+    "time_async": "0.023218870163",
+    "userID": "1"
+  },
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  },
+  "errMsg": "",
+  "status": "1",
+  "time_async": "0.0341811180115"
+} (Function)
+2023-08-15 02:12:35 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 02:16:46 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 02:16:46 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 02:16:46 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 02:16:46 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 02:16:46 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null,
+    "Project Status": "去欄位屬性判定",
+    "celeryID": "f2504820-e52c-4be9-9656-26a92b3bdfe3",
+    "projName": "DeId_adult_hash",
+    "projStep": "CheckProjStatus",
+    "status": "1",
+    "time_async": "0.00989699363708",
+    "userID": "1"
+  },
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  },
+  "errMsg": "",
+  "status": "1",
+  "time_async": "0.0209918022156"
+} (Function)
+2023-08-15 02:16:46 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 06:52:25 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 06:52:25 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 06:52:25 | Prefect | DEBUG : url = https://140.96.111.164:5998/checkStatus_Sync (Function)
+2023-08-15 06:52:25 | Prefect | DEBUG : input={'projName': 'DeId_adult_hash'} (Function)
+2023-08-15 06:52:25 | Prefect | DEBUG : Get response:
+{
+  "CheckProjStatus": {
+    "Data_filtered": null,
+    "Project Status": "去欄位屬性判定",
+    "celeryID": "e58f1c72-67fe-466f-a59a-633c687a4147",
+    "projName": "DeId_adult_hash",
+    "projStep": "CheckProjStatus",
+    "status": "1",
+    "time_async": "0.0246510505676",
+    "userID": "1"
+  },
+  "dataraw": {
+    "projName": "DeId_adult_hash"
+  },
+  "errMsg": "",
+  "status": "1",
+  "time_async": "0.0357971191406"
+} (Function)
+2023-08-15 06:52:25 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 06:54:00 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 06:54:00 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 06:54:00 | Prefect | DEBUG : url = https://140.96.111.164:5998/setJsonProfile_Async (Function)
+2023-08-15 06:54:00 | Prefect | DEBUG : input={'after_col_value': '4,4,4,2,4,2,3,3', 'csv_name': 'newprofile', 'dataitem': 'id', 'datatype': 'string,string,string,string,string,string,string,string', 'gen_qi_settingvalue': '4,4*千,3', 'isNull': 'N,Y,Y,N,N,Y,N,N', 'minKvalue': '3', 'pro_col_cht': 'id,age,workclass,fnlwgt,education,education_num,marital_status,occupation', 'qi_col': 'fnlwgt-1,education_num-2', 'tablekeycol': 'id,marital_status,occupation'} (Function)
+2023-08-15 06:54:00 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "",
+  "setJP_Async": {
+    "celeyId": "1e97f25e-78b6-4bd4-8da8-6e4bd7704440",
+    "projStep": "setJsonProfile",
+    "status": "1",
+    "time_async": "0.152298927307"
+  },
+  "status": 1,
+  "time_async": "0.163712024689"
+} (Function)
+2023-08-15 06:54:00 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 06:56:54 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 06:56:54 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 06:56:54 | Prefect | DEBUG : url = https://140.96.111.164:5998/setJsonProfile_Async (Function)
+2023-08-15 06:56:54 | Prefect | DEBUG : input={'after_col_value': '4,4,4,2,4,2,3,3', 'csv_name': 'newprofile', 'dataitem': 'id', 'datatype': 'string,string,string,string,string,string,string,string', 'gen_qi_settingvalue': '4,4*千,3', 'isNull': 'N,Y,Y,N,N,Y,N,N', 'minKvalue': '3', 'pro_col_cht': 'id,age,workclass,fnlwgt,education,education_num,marital_status,occupation', 'qi_col': 'fnlwgt-1,education_num-2', 'tablekeycol': 'id,marital_status,occupation'} (Function)
+2023-08-15 06:56:54 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "",
+  "setJP_Async": {
+    "celeyId": "a5def0b7-a4e5-40a8-8d00-f68d1541a946",
+    "projStep": "setJsonProfile",
+    "status": "1",
+    "time_async": "0.151881933212"
+  },
+  "status": 1,
+  "time_async": "0.163594007492"
+} (Function)
+2023-08-15 06:56:54 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 06:58:11 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 06:58:11 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 06:58:11 | Prefect | DEBUG : url = https://140.96.111.164:5998/setJsonProfile_Async (Function)
+2023-08-15 06:58:11 | Prefect | DEBUG : input={'after_col_value': '4,4,4,2,4,2,3,3', 'csv_name': 'newprofile', 'dataitem': 'id', 'datatype': 'string,string,string,string,string,string,string,string', 'gen_qi_settingvalue': '4,4*千,3', 'isNull': 'N,Y,Y,N,N,Y,N,N', 'minKvalue': '3', 'pro_col_cht': 'id,age,workclass,fnlwgt,education,education_num,marital_status,occupation', 'qi_col': 'fnlwgt-1,education_num-2', 'tablekeycol': 'id,marital_status,occupation'} (Function)
+2023-08-15 06:58:11 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "",
+  "setJP_Async": {
+    "celeyId": "251a8959-6224-4ced-bb6a-fd9467fe9c55",
+    "projStep": "setJsonProfile",
+    "status": "1",
+    "time_async": "0.202804088593"
+  },
+  "status": 1,
+  "time_async": "0.21441411972"
+} (Function)
+2023-08-15 06:58:11 | Prefect | DEBUG : Finish Call_api() (Flow)
+2023-08-15 08:35:44 | Prefect | INFO : Enter Flow : Excel() (Function)
+2023-08-15 08:35:44 | Prefect | INFO : Enter File Requsest Function (Function)
+2023-08-15 08:35:44 | Prefect | DEBUG : url = http://140.96.111.93:8000/usage_txt_to_csv_all (Function)
+2023-08-15 08:35:44 | Prefect | DEBUG : Get response:
+"No data exist" (Function)
+2023-08-15 08:35:44 | Prefect | DEBUG : Finish Call_api() (Function)
+2023-08-15 08:35:51 | Prefect | INFO : Enter Flow : Plot() (Function)
+2023-08-15 08:35:51 | Prefect | INFO : Enter File Requsest Function (Function)
+2023-08-15 08:35:51 | Prefect | DEBUG : url = http://140.96.111.93:8000/plot_all?input=excel (Function)
+2023-08-15 08:35:51 | Prefect | DEBUG : Get response:
+"No data to plot the chart" (Function)
+2023-08-15 08:35:51 | Prefect | DEBUG : Finish Plot() (Function)
+2023-08-15 08:36:29 | Prefect | INFO : Enter Flow : Call_api() (Flow)
+2023-08-15 08:36:29 | Prefect | INFO : Enter Post Requsest Function (Function)
+2023-08-15 08:36:29 | Prefect | DEBUG : url = https://140.96.111.164:5998/setJsonProfile_Async (Function)
+2023-08-15 08:36:29 | Prefect | DEBUG : input={'after_col_value': '4,4,4,2,4,2,3,3', 'csv_name': 'newprofile', 'dataitem': 'id', 'datatype': 'string,string,string,string,string,string,string,string', 'gen_qi_settingvalue': '4,4*千,3', 'isNull': 'N,Y,Y,N,N,Y,N,N', 'minKvalue': '3', 'pro_col_cht': 'id,age,workclass,fnlwgt,education,education_num,marital_status,occupation', 'qi_col': 'fnlwgt-1,education_num-2', 'tablekeycol': 'id,marital_status,occupation'} (Function)
+2023-08-15 08:36:29 | Prefect | DEBUG : Get response:
+{
+  "errMsg": "",
+  "setJP_Async": {
+    "celeyId": "71c7ceb7-0fd5-4ed1-b02e-266a6e553eea",
+    "projStep": "setJsonProfile",
+    "status": "1",
+    "time_async": "0.151714801788"
+  },
+  "status": 1,
+  "time_async": "0.162811994553"
+} (Function)
+2023-08-15 08:36:29 | Prefect | DEBUG : Finish Call_api() (Flow)

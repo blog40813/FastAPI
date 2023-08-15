@@ -461,7 +461,10 @@ async def plot(input : Model):
         
     
     # 將圖片作為響應返回到網頁上
-    return deal_list
+    if not len(deal_list) ==0:
+        return deal_list
+    else:
+        return "No data to plot the chart"
 
 
 

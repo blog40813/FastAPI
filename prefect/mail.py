@@ -58,7 +58,7 @@ cclist = ["itri461776@itri.org.tw"]
 msg = "Server test sent to multiple receiver"
 
 @flow
-def example_flow():
+def Mail():
     
     prelog = get_run_logger()
     prelog.setLevel("DEBUG")
@@ -104,4 +104,4 @@ flow.run()
 """
 
 if __name__  == "__main__":
-    example_flow()
+    Mail()
