@@ -118,10 +118,11 @@ docker images
 
 ## Function<br>
 * **Upload_txt**：上傳txt/log檔至data/txt資料夾<br><br>
-* **txt_to_csv**：從電腦中選擇txt/log檔，生成csv/xlsc檔至data/csv_xlsx資料夾<br>生成檔名為：上傳的文件名+.csv/xlsx<br>
-  舉例來說：123.log生成的名字就是123.log.csv<br><br>
+* **usage_txt_to_csv**：將linux系統sar指令生成的txt檔轉換為csv的形式，可以從電腦中選擇txt/log檔，生成csv/xlsc檔至data/csv_xlsx資料夾<br>生成檔名為：設備名+.csv/xlsx<br><br>
 * **txt_to_csv_all**：將所有在data/txt的檔案，生成csv/xlsx檔至data/csv_xlsx資料夾，結束後將已使用過檔案放至data/txt/finish資料夾中<br><br>
-* **Plot**：從電腦中選擇csv/xlsx檔案，並輸入資料的起始日期(yyyyddmm)，會自動切分日期以及每一天資料的報表<br><br>
+* **plot**：從電腦中選擇csv/xlsx檔案，並輸入資料的起始日期(yyyyddmm)，會自動切分日期以及每一天資料的報表<br><br>
+* **plot2**：從電腦中選擇csv/xlsx檔案，不用輸入資料日期，系統會自動偵測檔案內的日期，自動切分每一天資料並產生報表<br><br>
+* **chart/plot_all**：將data/csv裡面的所有檔案轉換成報表，並可以選擇要針對哪種檔案類型進行轉換(csv/xlsx/all)，結束後將已使用過檔案放至data/csv_xlsx/finish資料夾<br><br>
 
 ## Operation<br>
 
