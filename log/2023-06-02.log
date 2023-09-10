@@ -1,0 +1,369 @@
+2023-06-02 14:38:26,694 - first log - INFO : info__name
+2023-06-02 14:38:26,695 - first log - INFO : input :phone_number = 0956177644 name = Leo
+2023-06-02 14:43:09,419 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 14:43:09,419 - Item Function Logs - INFO : input : phone_number = 0956177644 name = Leo
+2023-06-02 14:43:09,419 - Item Function Logs - INFO : output :
+Username:Leo telephone:0956177644
+}
+2023-06-02 14:43:40,923 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 14:43:40,923 - Item Function Logs - INFO : input : phone_number = 0956177644 name = Leo
+2023-06-02 14:43:40,925 - Item Function Logs - INFO : output :
+	Username:Leo telephone:0956177644
+	}
+2023-06-02 14:44:07,635 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 14:44:07,635 - Item Function Logs - INFO : input : phone_number = 0956177644 name = Leo
+2023-06-02 14:44:07,635 - Item Function Logs - INFO : output :
+			Username:Leo telephone:0956177644
+			}
+2023-06-02 14:44:32,297 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 14:44:32,297 - Item Function Logs - INFO : input : phone_number = 0956177644 name = Leo
+2023-06-02 14:44:32,298 - Item Function Logs - INFO : output :
+			Username:Leo telephone:0956177644
+			}
+2023-06-02 14:44:44,694 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 14:44:44,695 - Item Function Logs - INFO : input : phone_number = 0956177644 name = Leo
+2023-06-02 14:44:44,695 - Item Function Logs - INFO : output :
+			Username:Leo telephone:0956177644
+			}
+2023-06-02 14:45:05,397 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 14:45:05,397 - Item Function Logs - INFO : input : phone_number = 0956177644 name = Leo
+2023-06-02 14:45:05,398 - Item Function Logs - INFO : output :Username:Leo telephone:0956177644}
+2023-06-02 14:57:45,424 - Main Function - DEBUG : get_current_username function
+2023-06-02 14:57:45,424 - Main Function - DEBUG : get_current_username function
+2023-06-02 14:57:45,425 - Main Function - DEBUG : input username:123
+2023-06-02 14:57:45,425 - Main Function - DEBUG : input username:123
+2023-06-02 14:57:45,425 - Main Function - DEBUG : input password:123
+2023-06-02 14:57:45,425 - Main Function - DEBUG : input password:123
+2023-06-02 14:57:45,426 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 14:57:45,426 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 14:57:51,420 - Main Function - INFO : do function
+2023-06-02 14:57:51,420 - Main Function - INFO : do function
+2023-06-02 14:57:51,420 - Main Function - INFO : output = Hello, Welcome to my FastAPI
+2023-06-02 14:57:51,420 - Main Function - INFO : output = Hello, Welcome to my FastAPI
+2023-06-02 14:59:33,254 - Main Function - DEBUG : get_current_username function
+2023-06-02 14:59:33,254 - Main Function - DEBUG : get_current_username function
+2023-06-02 14:59:33,255 - Main Function - DEBUG : input username:11
+2023-06-02 14:59:33,255 - Main Function - DEBUG : input username:11
+2023-06-02 14:59:33,255 - Main Function - DEBUG : input password:22
+2023-06-02 14:59:33,255 - Main Function - DEBUG : input password:22
+2023-06-02 14:59:33,256 - Main Function - DEBUG : output(credential.username):11
+2023-06-02 14:59:33,256 - Main Function - DEBUG : output(credential.username):11
+2023-06-02 15:00:25,473 - Main Function - INFO : do function
+2023-06-02 15:00:25,473 - Main Function - INFO : do function
+2023-06-02 15:00:25,473 - Main Function - INFO : output = Hello, Welcome to my FastAPI
+2023-06-02 15:00:25,473 - Main Function - INFO : output = Hello, Welcome to my FastAPI
+2023-06-02 15:01:12,700 - Main Function - INFO : output = Hello, Welcome to my FastAPI
+2023-06-02 15:01:12,700 - Main Function - INFO : output = Hello, Welcome to my FastAPI
+2023-06-02 15:01:58,775 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:01:58,776 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:01:58,776 - Item Function Logs - INFO : output :Username:bob telephone:123456}
+2023-06-02 15:03:24,709 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:03:24,709 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:03:24,709 - Item Function Logs - INFO : output :
+2023-06-02 15:03:24,709 - Item Function Logs - INFO : {
+2023-06-02 15:03:24,710 - Item Function Logs - INFO : Username:bob telephone:123456
+2023-06-02 15:03:24,710 - Item Function Logs - INFO : }
+2023-06-02 15:03:48,756 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:03:48,756 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:03:48,757 - Item Function Logs - INFO : output :
+2023-06-02 15:03:48,757 - Item Function Logs - INFO : {
+2023-06-02 15:03:48,757 - Item Function Logs - INFO : Username:bob
+telephone:123456
+2023-06-02 15:03:48,757 - Item Function Logs - INFO : }
+2023-06-02 15:06:39,950 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:06:39,951 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:06:39,951 - Item Function Logs - INFO : 
+output :{
+Username:bob
+telephone:123456
+}
+2023-06-02 15:07:03,337 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:07:03,337 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:07:03,338 - Item Function Logs - INFO : output :
+{
+Username:bob
+telephone:123456
+}
+2023-06-02 15:07:35,025 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:07:35,026 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:07:35,026 - Item Function Logs - INFO : output :
+{
+	Username:bob,
+	telephone:123456
+}
+2023-06-02 15:08:28,931 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:08:28,931 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:08:28,931 - Item Function Logs - INFO : output :
+{
+  Username:bob,
+  telephone:123456
+}
+2023-06-02 15:09:22,876 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:09:22,877 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:09:22,877 - Item Function Logs - INFO : output :
+{
+  "Username":bob,
+  telephone:123456
+}
+
+
+2023-06-02 15:10:36,719 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:10:36,719 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:10:36,719 - Item Function Logs - INFO : output :
+{
+  "Username":"bob",
+  "telephone:""123456"
+}
+
+
+2023-06-02 15:11:58,978 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:11:58,979 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:11:58,979 - Item Function Logs - INFO : output :
+{
+  "Username":"bob",
+  "telephone:""123456"
+}
+
+
+2023-06-02 15:12:48,547 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 15:12:48,547 - Item Function Logs - INFO : input : phone_number = 123456 name = bob
+2023-06-02 15:12:48,548 - Item Function Logs - INFO : output :
+{
+  "Username":"bob",
+  "telephone":"123456"
+}
+
+
+2023-06-02 15:15:10,150 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 15:15:10,150 - Item Function Logs - INFO : input :name = FatXiang
+2023-06-02 15:16:00,349 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 15:16:00,349 - Item Function Logs - INFO : input :name = FatXiang
+2023-06-02 15:16:34,662 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 15:16:34,662 - Item Function Logs - INFO : input :FatXiang
+2023-06-02 15:17:35,968 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 15:17:35,968 - Item Function Logs - INFO : input :FatXiang
+2023-06-02 15:17:35,968 - Item Function Logs - INFO : output: Hello FatXiang, Myname is Leo, Nice to meet you...
+
+
+2023-06-02 15:18:02,858 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 15:18:02,858 - Item Function Logs - INFO : input :FatXiang
+2023-06-02 15:18:02,859 - Item Function Logs - INFO : output: Hello FatXiang, Myname is Leo, Nice to meet you...
+
+2023-06-02 15:18:20,651 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 15:18:20,651 - Item Function Logs - INFO : input :FatXiang
+2023-06-02 15:18:20,652 - Item Function Logs - INFO : output: Hello FatXiang, Myname is Leo, Nice to meet you...
+
+2023-06-02 15:20:09,786 - Item Function Logs - INFO : ----------secret--------
+2023-06-02 15:20:09,786 - Item Function Logs - INFO : input :johndoe
+2023-06-02 15:20:09,786 - Item Function Logs - INFO : Hello johndoe, Myname is Leo.
+Nice to meet you.
+My faviorate dessert is chocolate brownie!
+Don't tell anyone!!!!!!
+
+2023-06-02 15:20:56,822 - Item Function Logs - INFO : ----------secret--------
+2023-06-02 15:20:56,822 - Item Function Logs - INFO : input :johndoe
+2023-06-02 15:20:56,822 - Item Function Logs - INFO : output :
+Hello johndoe, Myname is Leo.
+Nice to meet you.
+My faviorate dessert is chocolate brownie!
+Don't tell anyone!!!!!!
+
+2023-06-02 15:33:34,304 - Main Function - DEBUG : get_current_username function
+2023-06-02 15:33:34,304 - Main Function - DEBUG : get_current_username function
+2023-06-02 15:33:34,304 - Main Function - DEBUG : input username:123
+2023-06-02 15:33:34,304 - Main Function - DEBUG : input username:123
+2023-06-02 15:33:34,304 - Main Function - DEBUG : input password:123
+2023-06-02 15:33:34,304 - Main Function - DEBUG : input password:123
+2023-06-02 15:33:34,305 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 15:33:34,305 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 15:33:57,421 - Item Function Logs - INFO : ----------secret--------
+2023-06-02 15:33:57,422 - Item Function Logs - INFO : input :johndoe
+2023-06-02 15:33:57,422 - Item Function Logs - INFO : output :
+Hello johndoe, Myname is Leo.
+Nice to meet you.
+My faviorate dessert is chocolate brownie!
+Don't tell anyone!!!!!!
+
+2023-06-02 16:09:36,524 - User Function - INFO : ----------------users/me1 function -------------
+2023-06-02 16:09:36,524 - User Function - DEBUG : output:
+username:johndoe
+email:johndoe@example.com
+full_name:John Doe
+disable:Falsenhashed_password:$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW
+
+2023-06-02 16:10:36,635 - User Function - INFO : ----------------users/me1 function -------------
+2023-06-02 16:10:36,635 - User Function - DEBUG : output:
+username:johndoe
+email:johndoe@example.com
+full_name:John Doe
+disable:False
+hashed_password:$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW
+
+2023-06-02 16:13:08,597 - User Function - INFO : ----------------users/me1 function -------------
+2023-06-02 16:13:08,597 - User Function - DEBUG : output:
+{"username": "johndoe", "email": "johndoe@example.com", "full_name": "John Doe", "disabled": false, "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW"}
+2023-06-02 16:13:08,875 - User Function - INFO : ----------------users/me1 function -------------
+2023-06-02 16:13:08,875 - User Function - DEBUG : output:
+{"username": "johndoe", "email": "johndoe@example.com", "full_name": "John Doe", "disabled": false, "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW"}
+2023-06-02 16:13:47,887 - User Function - INFO : ----------------users/me1 function -------------
+2023-06-02 16:13:47,887 - User Function - DEBUG : output:
+{"username": "johndoe", "email": "johndoe@example.com", "full_name": "John Doe", "disabled": false, "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW"}
+
+2023-06-02 16:14:03,571 - User Function - INFO : ----------------users/me1 function -------------
+2023-06-02 16:14:03,572 - User Function - DEBUG : output:
+{"username": "johndoe", "email": "johndoe@example.com", "full_name": "John Doe", "disabled": false, "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW"}
+
+2023-06-02 16:15:08,890 - User Function - INFO : ---------password function--------------
+2023-06-02 16:15:08,891 - User Function - DEBUG : input = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg1Njk0NDkxfQ.aY3HrMSz8uQKzdcciziAHWqpwbmOjZHz5GTo6D00jeM
+2023-06-02 16:15:08,891 - User Function - DEBUG : {"token1": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg1Njk0NDkxfQ.aY3HrMSz8uQKzdcciziAHWqpwbmOjZHz5GTo6D00jeM"}
+
+2023-06-02 16:15:56,082 - User Function - INFO : ---------password function--------------
+2023-06-02 16:15:56,082 - User Function - DEBUG : input = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg1Njk0NDkxfQ.aY3HrMSz8uQKzdcciziAHWqpwbmOjZHz5GTo6D00jeM
+2023-06-02 16:15:56,082 - User Function - DEBUG : output: {"token1": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg1Njk0NDkxfQ.aY3HrMSz8uQKzdcciziAHWqpwbmOjZHz5GTo6D00jeM"}
+
+2023-06-02 16:19:44,615 - Item Function Logs - INFO : ----------secret--------
+2023-06-02 16:19:44,615 - Item Function Logs - DEBUG : input :johndoe
+2023-06-02 16:20:22,902 - Item Function Logs - INFO : ----------secret--------
+2023-06-02 16:20:22,902 - Item Function Logs - DEBUG : input :johndoe
+2023-06-02 16:20:33,807 - Item Function Logs - INFO : ----------secret--------
+2023-06-02 16:20:33,808 - Item Function Logs - DEBUG : input :johndoe
+2023-06-02 16:20:33,808 - Item Function Logs - DEBUG : output : 
+"Hello johndoe, Myname is Leo.\nNice to meet you.\nMy faviorate dessert is chocolate brownie!\nDon't tell anyone!!!!!!\n"
+
+2023-06-02 16:21:14,908 - Item Function Logs - INFO : ----------secret--------
+2023-06-02 16:21:14,909 - Item Function Logs - DEBUG : input :johndoe
+2023-06-02 16:21:14,909 - Item Function Logs - DEBUG : output : 
+Hello johndoe, Myname is Leo.
+Nice to meet you.
+My faviorate dessert is chocolate brownie!
+Don't tell anyone!!!!!!
+
+
+2023-06-02 16:32:51,814 - Item Function Logs - INFO : ----------secret--------
+2023-06-02 16:32:51,814 - Item Function Logs - DEBUG : input :johndoe
+2023-06-02 16:32:51,814 - Item Function Logs - DEBUG : output : 
+Hello johndoe, Myname is Leo.
+Nice to meet you.
+My faviorate dessert is chocolate brownie!
+Don't tell anyone!!!!!!
+
+
+2023-06-02 16:33:00,880 - User Function - INFO : ---------password function--------------
+2023-06-02 16:33:00,880 - User Function - DEBUG : input : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg1Njk2NTY4fQ.eDz6nbs63p6bd4RIKpUFAd2gz1N06syUUsRlLLsSDTM
+2023-06-02 16:33:00,880 - User Function - DEBUG : output: {"token1": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg1Njk2NTY4fQ.eDz6nbs63p6bd4RIKpUFAd2gz1N06syUUsRlLLsSDTM"}
+
+2023-06-02 16:33:05,072 - User Function - INFO : ----------------users/me1 function -------------
+2023-06-02 16:33:05,073 - User Function - DEBUG : output:
+{"username": "johndoe", "email": "johndoe@example.com", "full_name": "John Doe", "disabled": false, "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW"}
+
+2023-06-02 16:33:23,392 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 16:33:23,392 - Item Function Logs - DEBUG : input :Amy
+2023-06-02 16:34:19,619 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 16:34:19,619 - Item Function Logs - DEBUG : input :Amy
+2023-06-02 16:34:19,620 - Item Function Logs - DEBUG : ('output : \nHello Amy, Myname is Leo', 'Nice to meet you...\n')
+2023-06-02 16:34:35,958 - Item Function Logs - INFO : ----------name function--------
+2023-06-02 16:34:35,959 - Item Function Logs - DEBUG : input : phone_number = 0909121365 name = Bob
+2023-06-02 16:34:35,959 - Item Function Logs - DEBUG : output : 
+{"Username": "Bob", "telephone": "0909121365"}
+
+2023-06-02 16:34:41,517 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:34:41,517 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:34:41,517 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+2023-06-02 16:34:41,517 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+2023-06-02 16:37:49,936 - Item Function Logs - INFO : ----------/items/Your_name--------
+2023-06-02 16:37:49,936 - Item Function Logs - DEBUG : input :Amy
+2023-06-02 16:37:49,937 - Item Function Logs - DEBUG : output : 
+Hello Amy, Myname is Leo, Nice to meet you...
+
+2023-06-02 16:40:11,285 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:40:11,285 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:40:11,285 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:40:11,285 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:20,942 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:20,942 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:20,942 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:20,942 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:21,728 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:21,728 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:21,728 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:21,728 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:22,343 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:22,343 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:22,344 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:22,344 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:22,930 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:22,930 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:22,930 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:22,930 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:23,559 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:23,559 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:41:23,559 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:41:23,559 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:43:02,507 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-02 16:43:02,507 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-02 16:43:02,507 - Main Function - DEBUG : input username:123
+2023-06-02 16:43:02,507 - Main Function - DEBUG : input username:123
+2023-06-02 16:43:02,507 - Main Function - DEBUG : input password:123
+2023-06-02 16:43:02,507 - Main Function - DEBUG : input password:123
+2023-06-02 16:43:02,507 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 16:43:02,507 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 16:43:09,046 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-02 16:43:09,046 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-02 16:43:09,047 - Main Function - DEBUG : input username:123
+2023-06-02 16:43:09,047 - Main Function - DEBUG : input username:123
+2023-06-02 16:43:09,047 - Main Function - DEBUG : input password:123
+2023-06-02 16:43:09,047 - Main Function - DEBUG : input password:123
+2023-06-02 16:43:09,048 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 16:43:09,048 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 16:43:09,048 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:43:09,048 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:43:09,048 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:43:09,048 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:43:13,923 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-02 16:43:13,923 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-02 16:43:13,923 - Main Function - DEBUG : input username:123
+2023-06-02 16:43:13,923 - Main Function - DEBUG : input username:123
+2023-06-02 16:43:13,923 - Main Function - DEBUG : input password:123
+2023-06-02 16:43:13,923 - Main Function - DEBUG : input password:123
+2023-06-02 16:43:13,923 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 16:43:13,923 - Main Function - DEBUG : output(credential.username):123
+2023-06-02 16:43:13,924 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:43:13,924 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:43:13,924 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:43:13,924 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:45:54,800 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-02 16:45:54,800 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-02 16:45:54,801 - Main Function - DEBUG : input username:login_user
+2023-06-02 16:45:54,801 - Main Function - DEBUG : input username:login_user
+2023-06-02 16:45:54,802 - Main Function - DEBUG : input password:login_password
+2023-06-02 16:45:54,802 - Main Function - DEBUG : input password:login_password
+2023-06-02 16:45:54,802 - Main Function - DEBUG : output(credential.username):login_user
+2023-06-02 16:45:54,802 - Main Function - DEBUG : output(credential.username):login_user
+2023-06-02 16:54:11,911 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:54:11,911 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:54:11,911 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:54:11,911 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:55:17,377 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:55:17,377 - Main Function - INFO : --------------do function-----------
+2023-06-02 16:55:17,377 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+
+2023-06-02 16:55:17,377 - Main Function - DEBUG : output = Hello, Welcome to my FastAPI
+

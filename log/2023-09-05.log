@@ -1,0 +1,19 @@
+2023-09-05 13:37:31 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-09-05 22:44:03 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-09-05 22:46:13 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-09-05 22:47:11 | FastAPI | INFO : --------------body Function---------- (Funct Function Logs)
+2023-09-05 22:47:11 | FastAPI | DEBUG : input = {'item_id': 0, 'item': Item(name='Leo', descri='string', price=30000.0, tax=0)} (Funct Function Logs)
+2023-09-05 22:47:11 | FastAPI | DEBUG : output = {'item_id': 0, 'item': Item(name='Leo', descri='string', price=30000.0, tax=0)}
+ (Funct Function Logs)
+2023-09-05 15:02:02 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-09-05 15:02:54 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)
+2023-09-05 15:02:58 | FastAPI | INFO : --------------do function----------- (Main Function)
+2023-09-05 15:02:58 | FastAPI | DEBUG : output = Hello, Welcome to my FastAPI
+ (Main Function)
+2023-09-06 09:37:18 | FastAPI | INFO : ------------Open Web-----------
+ (Main Function)

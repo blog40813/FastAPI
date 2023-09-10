@@ -1,0 +1,42 @@
+2023-06-16 09:34:40,081 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-16 09:34:40,081 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-16 09:34:40,081 - Main Function - DEBUG : input username:johndoe
+2023-06-16 09:34:40,081 - Main Function - DEBUG : input username:johndoe
+2023-06-16 09:34:40,081 - Main Function - DEBUG : input password:secret
+2023-06-16 09:34:40,081 - Main Function - DEBUG : input password:secret
+2023-06-16 09:34:40,081 - Main Function - DEBUG : output(credential.username):johndoe
+
+2023-06-16 09:34:40,081 - Main Function - DEBUG : output(credential.username):johndoe
+
+2023-06-16 09:34:40,081 - Main Function - INFO : ------------Open Web-----------
+
+2023-06-16 09:34:40,081 - Main Function - INFO : ------------Open Web-----------
+
+2023-06-16 09:36:37,040 - User Function - INFO : ---------verify_password function--------------
+2023-06-16 09:36:37,040 - User Function - DEBUG : pwd_verfy...
+2023-06-16 09:36:46,317 - User Function - INFO : ---------verify_password function--------------
+2023-06-16 09:36:46,317 - User Function - DEBUG : pwd_verfy...
+2023-06-16 09:36:46,538 - User Function - INFO : ---------create_access_token function--------------
+2023-06-16 09:36:46,538 - User Function - DEBUG : creating...
+2023-06-16 09:37:02,749 - User Function - INFO : ---------password function--------------
+2023-06-16 09:37:02,749 - User Function - DEBUG : input : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg2ODgxMjA2fQ.TmhONgsKHbAhB65-PpOVCRoiTlm2NPZbwsj-KlD-_RY
+2023-06-16 09:37:02,749 - User Function - DEBUG : output: {"token1": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNjg2ODgxMjA2fQ.TmhONgsKHbAhB65-PpOVCRoiTlm2NPZbwsj-KlD-_RY"}
+
+2023-06-16 09:38:19,683 - Class Function Logs - INFO : ----------/Create_Item--------
+2023-06-16 09:38:19,683 - Class Function Logs - DEBUG : input :Item:Leo, description : string, price : 30000.0, tax : 0
+2023-06-16 09:38:19,683 - Class Function Logs - DEBUG : output = 生活費 = 30000.0 大於20000 -> 生活富足 {'name': 'Leo', 'descri': 'string', 'price': 30000.0, 'tax': 0}
+
+2023-06-16 10:27:49,854 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-16 10:27:49,854 - Main Function - INFO : ------------get_current_username function-----------
+2023-06-16 10:27:49,854 - Main Function - DEBUG : input username:12
+2023-06-16 10:27:49,854 - Main Function - DEBUG : input username:12
+2023-06-16 10:27:49,854 - Main Function - DEBUG : input password:123
+2023-06-16 10:27:49,854 - Main Function - DEBUG : input password:123
+2023-06-16 10:27:49,854 - Main Function - DEBUG : output(credential.username):12
+
+2023-06-16 10:27:49,854 - Main Function - DEBUG : output(credential.username):12
+
+2023-06-16 10:27:49,854 - Main Function - INFO : ------------Open Web-----------
+
+2023-06-16 10:27:49,854 - Main Function - INFO : ------------Open Web-----------
+
